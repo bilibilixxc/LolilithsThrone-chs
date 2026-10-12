@@ -1398,10 +1398,10 @@ public class TooltipInformationEventListener implements EventListener {
 						+ (owner.isElemental()
 								?"元素共享其召唤者的等级</span>"
 								:"</span>"+owner.getExperience() + " / "+ (10 * owner.getLevel()) + "经验")
-							+ (" <br><span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'> Appears to be </span>"+
+							+ (" <br><span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>看起来约</span>"+
 							"<span style='color:" + owner.getAge().getColour().toWebHexString() + ";'>"+
 							(!ModProps.isShowAgeEnabled() ? owner.getAppearsAsAge().getName() + "</span>" : owner.getAppearsAsAgeValue() + " </span>" +
-									"<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>years old</span>"))
+									"<span style='color:" + PresetColour.TEXT_GREY.toWebHexString() + ";'>岁</span>"))
 						+ "</div>");
 			
 			tooltipSB.append(

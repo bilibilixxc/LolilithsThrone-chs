@@ -5,7 +5,7 @@
 [![Mod项目](https://img.shields.io/badge/Mod项目-GitHub-blue?logo=github)](https://keldon.ninja/downloads/lilith.php)
 [![原项目](https://img.shields.io/badge/原项目-GitHub-blue?logo=github)](https://github.com/Innoxia/liliths-throne-public)
 [![汉化项目](https://img.shields.io/badge/汉化项目-GitHub-blue?logo=github)](https://github.com/chinese-liliths-throne/liliths-throne-chinese-release)
-[![汉化进度](https://img.shields.io/badge/汉化进度-0%25-brightgreen)]()
+[![汉化进度](https://img.shields.io/badge/汉化进度-40%25-brightgreen)]()
 
 </div>
 

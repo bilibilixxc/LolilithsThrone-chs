@@ -834,7 +834,7 @@ public class PregnancyRoulette {
 			
 			UtilText.nodeContentSB.append(
 					"<p>"
-						+ "伊波娜投出骰子，你盯着骰子经过一番滚动，停在了数字"+Util.intToString(roll, false)+"上。"
+						+ "伊波娜投出骰子，你盯着骰子经过一番滚动，停在了数字"+Util.intToString(roll)+"上。"
 						+ "[epona.speech(那好吧，[pc.name]，你"+Util.intToPosition(roll)+"个上！我会继续给剩下的人投！)]"
 					+ "</p>"
 					+ "<p>"
