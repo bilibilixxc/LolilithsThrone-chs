@@ -16,10 +16,10 @@ public class ConfigOptions {
     public static final MultiSliderOption PREGNANCY_LACTATION = new MultiSliderOption(
             "PREGNANCY_LACTATION",
             PresetColour.BASE_YELLOW,
-            "Average Pregnancy Lactation",
-            "Breasts",
-            "Udders",
-            "Set the <b>average</b> increase in lactation that characters will gain as a result of each pregnancy. Actual lactation increase will be within " + Units.fluid(Main.getProperties().pregnancyLactationIncreaseVariance) + " of this value.",
+            "怀孕平均泌乳量",
+            "乳房",
+            "乳头乳区",
+            "设置角色每次怀孕所能获得的<b>平均</b>泌乳量增加。实际增长值会在该值的±" + Units.fluid(Main.getProperties().pregnancyLactationIncreaseVariance) + "范围内波动。",
             "%UNIT_VOLUME",
             0,
             20,
@@ -30,10 +30,10 @@ public class ConfigOptions {
     public static final MultiSliderOption PREGNANCY_LACTATION_LIMIT = new MultiSliderOption(
             "PREGNANCY_LACTATION_LIMIT",
             PresetColour.BASE_YELLOW_LIGHT,
-            "Pregnancy Lactation Limit",
-            "Breasts",
-            "Udders",
-            "Set the maximum limit of lactation that characters will gain from pregnancies.",
+            "怀孕泌乳上限",
+            "乳房",
+            "乳头乳区",
+            "设置角色从怀孕中获得的泌乳量上限。",
             "%UNIT_VOLUME",
             0,
             Lactation.SEVEN_MONSTROUS_AMOUNT_POURING.getMaximumValue(),
@@ -44,10 +44,10 @@ public class ConfigOptions {
     public static final MultiSliderOption BREAST_SIZE_PREFERENCE = new MultiSliderOption(
             "BREAST_SIZE_PREFERENCE",
             PresetColour.NIPPLES,
-            "Cup Size Preference",
-            "Breasts",
-            "Udders",
-            "Affects randomly-generated NPCs' cup sizes (will not be reduced to below AA-cup).",
+            "罩杯尺寸偏好",
+            "乳房",
+            "乳头乳区",
+            "影响随机生成 NPC 的罩杯大小（不会减小到 AA 罩杯以下）。",
             "%VALUE",
             -20,
             -20,
@@ -59,10 +59,10 @@ public class ConfigOptions {
     public static final MultiSliderOption PREGNANCY_BREAST_GROWTH = new MultiSliderOption(
             "PREGNANCY_BREAST_GROWTH",
             PresetColour.BASE_PINK,
-            "Average Pregnancy Breast Growth",
-            "Breasts",
-            "Udders",
-            "Set the <b>average</b> cup size growth that characters will gain from each pregnancy. Actual breast growth will be within "+Util.intToString(Main.getProperties().pregnancyBreastGrowthVariance)+" sizes of this value.",
+            "怀孕平均胸部增长",
+            "乳房",
+            "乳头乳区",
+            "设置角色每次怀孕所能获得的<b>平均</b>罩杯增长。实际胸部增长会在该值的±"+Util.intToString(Main.getProperties().pregnancyBreastGrowthVariance)+"个尺寸范围内波动。",
             "%VALUE cup$",
             0,
             10,
@@ -74,10 +74,10 @@ public class ConfigOptions {
     public static final MultiSliderOption PREGNANCY_BREAST_GROWTH_LIMIT = new MultiSliderOption(
             "PREGNANCY_BREAST_GROWTH_LIMIT",
             PresetColour.BASE_PINK_LIGHT,
-            "Pregnancy Breast Growth Limit",
-            "Breasts",
-            "Udders",
-            "Set the maximum limit of cup size that characters' breasts will grow to from pregnancies.",
+            "怀孕胸部增长上限",
+            "乳房",
+            "乳头乳区",
+            "设置角色乳房从怀孕中增长到的罩杯上限。",
             "%CUP_SIZE",
             0,
             CupSize.getCupSizeFromInt(100).getMeasurement(),
@@ -90,8 +90,8 @@ public class ConfigOptions {
     public static final SliderOption PREGNANCY_DURATION = new SliderOption(
             "PREGNANCY_DURATION",
             PresetColour.BASE_PINK_DEEP,
-            "Pregnancy duration",
-            "This sets the maximum time it takes for a pregnancy to progress from conception to birth.",
+            "怀孕时长",
+            "设置怀孕从受孕到分娩所需的最长时间。",
             "%VALUE week$",
             1,
             40,
@@ -101,8 +101,8 @@ public class ConfigOptions {
     public static final SliderOption FORCED_TF = new SliderOption(
             "FORCED_TF",
             PresetColour.TRANSFORMATION_GENERIC,
-            "Forced TF",
-            "This sets the amount of NPCs spawning with the '"+ Fetish.FETISH_TRANSFORMATION_GIVING.getName(null)+"' fetish, which causes them to forcibly transform you after beating you in combat.",
+            "强制变身",
+            "设置携带「'"+ Fetish.FETISH_TRANSFORMATION_GIVING.getName(null)+"'」癖好、在你于战斗中落败后强制改造你身体的 NPC 生成比例。",
             "%VALUE%",
             0,
             20,
@@ -112,8 +112,8 @@ public class ConfigOptions {
     public static final SliderOption FORCED_FETISH = new SliderOption(
             "FORCED_FETISH",
             PresetColour.FETISH,
-            "Forced Fetishes",
-            "This sets the amount of NPCs spawning with the '"+Fetish.FETISH_KINK_GIVING.getName(null)+"' fetish, which causes them to try and forcibly give you fetishes after beating you in combat.",
+            "强制癖好",
+            "设置携带「'"+Fetish.FETISH_KINK_GIVING.getName(null)+"'」癖好、在你于战斗中落败后会尝试强行赋予你癖好的 NPC 生成比例。",
             "%VALUE%",
             0,
             100,
@@ -123,8 +123,8 @@ public class ConfigOptions {
     public static final SliderOption PENIS_SIZE_PREFERENCE = new SliderOption(
             "PENIS_SIZE_PREFERENCE",
             PresetColour.PENIS,
-            "Penis Size Preference",
-            "Affects randomly-generated NPCs' penis sizes (will not be reduced to below "+Units.size(8)+").",
+            "阴茎尺寸偏好",
+            "影响随机生成 NPC 的阴茎尺寸（不会减小到"+Units.size(8)+"以下）。",
             "%UNIT_SIZE",
             -20,
             -20,
@@ -135,8 +135,8 @@ public class ConfigOptions {
     public static final SliderOption TRAP_PENIS_SIZE_PREFERENCE = new SliderOption(
             "TRAP_PENIS_SIZE_PREFERENCE",
             PresetColour.BASE_PINK_LIGHT,
-            Util.capitaliseSentence(Gender.N_P_TRAP.getName())+" penis size",
-            "The penis size of randomly-generated "+Gender.N_P_TRAP.getName()+"s. 100% represents an unaltered size. Testicle size and cum production will also be altered in proportion to this setting.",
+            Util.capitaliseSentence(Gender.N_P_TRAP.getName())+"的阴茎尺寸",
+            "随机生成的"+Gender.N_P_TRAP.getName()+"的阴茎尺寸。100% 表示未经改动的尺寸。睾丸大小和精液产量也会随此设置按比例改变。",
             "%VALUE%",
             -90,
             -9,
@@ -148,8 +148,8 @@ public class ConfigOptions {
     public static final ToggleOption AUTO_LOCALE = new ToggleOption(
             "AUTO_LOCALE",
             PresetColour.BASE_BLUE_LIGHT,
-            "Automatic",
-            "When enabled, the system locale is used. Otherwise, the following options are applied.",
+            "自动",
+            "启用后使用系统区域设置。否则将应用以下设置。",
             PropertyValue.autoLocale,
             () -> {
                 Units.FORMATTER.updateSettings();
@@ -160,8 +160,8 @@ public class ConfigOptions {
     public static final ToggleOption METRIC_SIZES = new ToggleOption(
             "METRIC_SIZES",
             PresetColour.BASE_BLUE_STEEL,
-            "Metric sizes",
-            "The game will use metres and centimetres instead of feet and inches.",
+            "公制尺寸",
+            "游戏将使用米和厘米，而不是英尺和英寸。",
             PropertyValue.metricSizes,
             MainController::overrideAutoLocale
     );
@@ -169,8 +169,8 @@ public class ConfigOptions {
     public static final ToggleOption METRIC_FLUIDS = new ToggleOption(
             "METRIC_FLUIDS",
             PresetColour.BASE_BLUE_STEEL,
-            "Metric fluids",
-            "The game will use litres and millilitres instead of gallons and ounces.",
+            "公制液体",
+            "游戏将使用升和毫升，而不是加仑和盎司。",
             PropertyValue.metricFluids,
             MainController::overrideAutoLocale
     );
@@ -178,8 +178,8 @@ public class ConfigOptions {
     public static final ToggleOption METRIC_WEIGHTS = new ToggleOption(
             "METRIC_WEIGHTS",
             PresetColour.BASE_BLUE_STEEL,
-            "Metric weights",
-            "The game will use kilograms and grams instead of pounds and ounces.",
+            "公制重量",
+            "游戏将使用千克和克，而不是磅和盎司。",
             PropertyValue.metricWeights,
             MainController::overrideAutoLocale
     );
@@ -187,8 +187,8 @@ public class ConfigOptions {
     public static final ToggleOption TWENTYFOUR_HOUR_TIME = new ToggleOption(
             "TWENTYFOUR_HOUR_TIME",
             PresetColour.BASE_LILAC_LIGHT,
-            "24 hour time",
-            "The time will be displayed as 24 hours instead of AM/PM.",
+            "24 小时制",
+            "时间将以 24 小时制显示，而不是上午/下午。",
             PropertyValue.twentyFourHourTime,
             () -> {
                 MainController.overrideAutoLocale();
@@ -199,8 +199,8 @@ public class ConfigOptions {
     public static final ToggleOption INTERNATIONAL_DATE = new ToggleOption(
             "INTERNATIONAL_DATE",
             PresetColour.BASE_LILAC_LIGHT,
-            "International date",
-            "The abbreviated date will be displayed as day.month.year instead of month/day/year.",
+            "国际日期格式",
+            "缩写日期将以日.月.年 的形式显示，而非 月/日/年。",
             PropertyValue.internationalDate,
             () -> {
                 MainController.overrideAutoLocale();
@@ -211,65 +211,65 @@ public class ConfigOptions {
     public static final ToggleOption ARTWORK = new ToggleOption(
             "ARTWORK",
             PresetColour.BASE_BLUE_LIGHT,
-            "Artwork",
-            "Enables artwork to be displayed in characters' information screens.",
+            "立绘",
+            "在角色的信息界面中显示立绘。",
             PropertyValue.artwork
     );
 
     public static final ToggleOption THUMBNAIL = new ToggleOption(
             "THUMBNAIL",
             PresetColour.BASE_BLUE_STEEL,
-            "Thumbnails",
-            "Enables tooltips containing thumbnail images of the character.",
+            "缩略图",
+            "启用包含角色缩略图图片的工具提示。",
             PropertyValue.thumbnail
     );
 
     public static final ToggleOption SHARED_ENCYCLOPEDIA = new ToggleOption(
             "SHARED_ENCYCLOPEDIA",
             PresetColour.GENERIC_EXCELLENT,
-            "Shared Encyclopedia",
-            "When enabled, your character will use the shared Encyclopedia (whose entries are unlocked across any playthrough). If disabled, unlocked Encyclopedia entries are only shown if your current character has discovered them.",
+            "共享图鉴",
+            "启用后，你的角色将使用共享图鉴（其条目可在任何一次游玩中被解锁）。若禁用，则只有在当前角色已发现图鉴条目时才会显示。",
             PropertyValue.sharedEncyclopedia
     );
 
     public static final ToggleOption WEATHER_INTERRUPTION = new ToggleOption(
             "WEATHER_INTERRUPTION",
             PresetColour.GENERIC_ARCANE,
-            "Storm interruptions",
-            "When enabled, arcane storms will interrupt dialogue to let you know that they've started.",
+            "暴风打断",
+            "启用后，奥术风暴会打断对话，以告知你风暴已经来临。",
             PropertyValue.weatherInterruptions
     );
 
     public static final ToggleOption DIALOGUE_COPY = new ToggleOption(
             "DIALOGUE_COPY",
             PresetColour.BASE_BLUE_STEEL,
-            "Automatic text copying",
-            "When enabled, the current scene's text will automatically be copied to your system's clipboard every time a new scene is loaded. This option is so that you can easily paste the game's text into text readers without needing to select and copy the scene's text every time.",
+            "自动复制文本",
+            "启用后，每次加载新场景时，当前场景的文本都会自动复制到你的系统剪贴板中。此选项是为了让你无需每次都手动选中并复制场景文本，便可轻松将游戏文本粘贴到文本阅读器中。",
             PropertyValue.automaticDialogueCopy
     );
 
     public static final ToggleOption SILLY = new ToggleOption(
             "SILLY",
             PresetColour.GENERIC_GOOD,
-            "Silly mode",
-            "This enables funny flavour text throughout the game.",
+            "搞笑模式",
+            "这会启用整个游戏中的趣味风味文本。",
             PropertyValue.sillyMode
     );
 
     public static final ToggleOption ENCHANTMENT_LIMITS = new ToggleOption(
             "ENCHANTMENT_LIMITS",
             PresetColour.GENERIC_ARCANE,
-            "Enchantment Capacity",
-            "Toggle the 'enchantment capacity' mechanic, which restricts how many enchanted items you can wear. This is on by default, and you will potentially break the balance of the game's combat by turning it off.",
+            "附魔容量",
+            "切换「附魔容量」机制，该机制会限制你所能穿戴的附魔物品数量。此选项默认开启，若将其关闭，你可能会破坏游戏战斗的平衡。",
             PropertyValue.enchantmentLimits
     );
 
     public static final ToggleOption BAD_END = new ToggleOption(
             "BAD_END",
             PresetColour.GENERIC_TERRIBLE,
-            "Bad Ends",
-            "Toggle the ability to trigger 'bad ends', which end the game for your character when encountered."
-                    + "<br/>[style.italicsMinorBad(Please note that bad ends involve non-con content, and so ignore your non-con setting.)]",
+            "坏结局",
+            "切换触发「坏结局」的能力，坏结局会在触发时为你的角色终结游戏。"
+                    + "<br/>[style.italicsMinorBad(请注意，坏结局涉及非自愿内容，因此会忽略你的非自愿设置。)]",
 //							+"<br/>[style.italicsTerrible(Please be aware that some bad ends are unaffected by this setting and are always present in the game.)]"
             PropertyValue.badEndContent
     );
@@ -277,328 +277,328 @@ public class ConfigOptions {
     public static final ToggleOption LEVEL_DRAIN = new ToggleOption(
             "LEVEL_DRAIN",
             PresetColour.GENERIC_TERRIBLE,
-            "Level Drain",
-            "Toggle the use of the 'orgasmic level drain' perk by unique NPCs (such as some scenes with Amber), which causes them to drain your level for each orgasm you have in sex with them.",
+            "等级吸取",
+            "切换特殊 NPC（例如与琥珀的某些场景）使用的「高潮等级吸取」天赋。该天赋会在你与之发生性关系的每次高潮中吸取你的等级。",
             PropertyValue.levelDrain
     );
 
     public static final ToggleOption OPPORTUNISTIC_ATTACKERS = new ToggleOption(
             "OPPORTUNISTIC_ATTACKERS",
             PresetColour.BASE_CRIMSON,
-            "Opportunistic attackers",
-            "This makes random attacks more likely when you're high on lust, low on health, covered in fluids, exposed, or drunk.",
+            "机会主义袭击者",
+            "这会使随机袭击在你纵欲值高、生命值低、沾满液体、暴露或醉酒时更有可能发生。",
             PropertyValue.opportunisticAttackers
     );
 
     public static final ToggleOption OFFSPRING_ENCOUNTERS = new ToggleOption(
             "OFFSPRING_ENCOUNTERS",
             PresetColour.BASE_INDIGO,
-            "Offspring Encounters",
-            "This enables you to randomly encounter your offspring throught the world.<br/><i>This setting has no effect on the Offspring Map, nor on offspring who you've already met.</i>",
+            "后代遭遇",
+            "这使你能在世界的各个角落随机遇到你的后代。<br/><i>此设置对后代地图以及你已经遇到的后代没有影响。</i>",
             PropertyValue.offspringEncounters
     );
 
     public static final ToggleOption SPITTING_ENABLED = new ToggleOption(
             "SPITTING_ENABLED",
             PresetColour.BASE_BLUE,
-            "Rejecting TF potions",
-            "Forced TF potions may be spat out if this is enabled.",
+            "抗拒变身药水",
+            "若启用此选项，强制变身药水可能会被吐出。",
             PropertyValue.spittingEnabled
     );
 
     public static final ToggleOption COMPANION = new ToggleOption(
             "COMPANION",
             PresetColour.BASE_GREEN_LIGHT,
-            "Companions",
-            "Enable the ability to add slaves or friendly occupants as your companion.<br/>[style.boldBad(Warning:)] This is an experimental feature, and support for companions was dropped in v0.3.9, so there will be no special dialogue or actions involving your companions outside of Dominion.",
+            "同伴",
+            "启用将奴隶或友好居民添加为同伴的能力。<br/>[style.boldBad(警告：)] 这是一个实验性功能，而且在 v0.3.9 中已停止对同伴提供支持，因此除 Dominion 之外，不会有任何涉及你同伴的特殊对话或动作。",
             PropertyValue.companionContent
     );
 
     public static final ToggleOption NON_CON = new ToggleOption(
             "NON_CON",
             PresetColour.BASE_CRIMSON,
-            "Non-consent",
-            "This enables the 'resist' pace in sex scenes, which contains some more extreme non-consensual descriptions, as well as dialogue references and actions related to this content.<br/>[style.italicsMinorBad(Please note that bad ends involve non-con content, regardless of whether or not this option is enabled.)]",
+            "非自愿",
+            "这会在性场面中启用「抵抗」节奏，其中包含一些更极端的非自愿描述，以及与这些内容相关的对话引用和动作。<br/>[style.italicsMinorBad(请注意，无论此选项是否启用，坏结局都会涉及非自愿内容。)]",
             PropertyValue.nonConContent
     );
 
     public static final ToggleOption SADISTIC_SEX = new ToggleOption(
             "SADISTIC_SEX",
             PresetColour.BASE_RED,
-            "Sadistic sex",
-            "This unlocks 'sadistic' sex actions, such as choking, slapping, and spitting on partners in sex.",
+            "施虐性行为",
+            "这会解锁「施虐」性行为动作，例如在性生活中掐住伙伴、扇巴掌以及朝伙伴吐口水。",
             PropertyValue.sadisticSexContent
     );
 
     public static final ToggleOption LIPSTICK_MARKING = new ToggleOption(
             "LIPSTICK_MARKING",
             PresetColour.BASE_RED_DARK,
-            "Lipstick marking",
-            "This enables lipstick marking of bodyparts via kisses during sex.",
+            "唇印标记",
+            "这会在性爱过程中通过亲吻在身体部位上留下口红印记。",
             PropertyValue.lipstickMarkingContent
     );
 
     public static final ToggleOption VOLUNTARY_NTR = new ToggleOption(
             "VOLUNTARY_NTR",
             PresetColour.GENERIC_MINOR_BAD,
-            "Voluntary NTR",
-            "When enabled, you will get the option to offer certain enemies sex with your companions as a way to avoid combat.",
+            "自愿 NTR",
+            "启用后，你将有机会提议让某些敌人与你的同伴发生性关系，以作为避免战斗的一种方式。",
             PropertyValue.voluntaryNTR
     );
 
     public static final ToggleOption INVOLUNTARY_NTR = new ToggleOption(
             "INVOLUNTARY_NTR",
             PresetColour.GENERIC_BAD,
-            "Involuntary NTR",
-            "When enabled, enemies might choose to only have sex with your companion after beating your party in combat. When disabled, all post-combat-loss sex scenes will involve you.",
+            "非自愿 NTR",
+            "启用后，敌人在战斗中击败你的队伍后，可能会选择只与你的同伴发生性关系。禁用时，所有战败后的性场面都会涉及到你。",
             PropertyValue.involuntaryNTR
     );
 
     public static final ToggleOption INCEST = new ToggleOption(
             "INCEST",
             PresetColour.BASE_ROSE,
-            "Incest",
-            "This will enable sexual actions between characters who are related to one another.",
+            "乱伦",
+            "这将启用彼此有亲属关系的角色之间的性行为动作。",
             PropertyValue.incestContent
     );
 
     public static final ToggleOption LACTATION = new ToggleOption(
             "LACTATION",
             PresetColour.BASE_YELLOW_LIGHT,
-            "Lactation",
-            "This enables lactation content.",
+            "泌乳",
+            "这会启用泌乳内容。",
             PropertyValue.lactationContent
     );
 
     public static final ToggleOption SEXUAL_UDDERS = new ToggleOption(
             "SEXUAL_UDDERS",
             PresetColour.BASE_ORANGE_LIGHT,
-            "Crotch-boob & udder content",
-            "This enables crotch-boob & udder-related sex actions and allows crotch-boob & udder transformations to be inflicted upon the player.",
+            "耻部乳房与乳区内容",
+            "这会启用与耻部乳房及乳区相关的性行为动作，并允许对玩家施加耻部乳房与乳区变身。",
             PropertyValue.udderContent
     );
 
     public static final ToggleOption URETHRAL = new ToggleOption(
             "URETHRAL",
             PresetColour.BASE_PINK_DEEP,
-            "Urethral content",
-            "This enables urethral transformations and penetrations.",
+            "尿道内容",
+            "这会启用尿道变身与插入。",
             PropertyValue.urethralContent
     );
 
     public static final ToggleOption NIPPLE_PEN = new ToggleOption(
             "NIPPLE_PEN",
             PresetColour.BASE_PINK_DEEP,
-            "Nipple penetrations",
-            "This enables nipple-penetration transformations and sex actions.",
+            "乳头插入",
+            "这会启用乳头插入变身与性行为动作。",
             PropertyValue.nipplePenContent
     );
 
     public static final ToggleOption ANAL = new ToggleOption(
             "ANAL",
             PresetColour.BASE_ORANGE,
-            "Anal content",
-            "When disabled, removes all anal-related actions from being available during sex.",
+            "肛交内容",
+            "禁用后，会移除性生活中所有与肛交相关的动作。",
             PropertyValue.analContent
     );
 
     public static final ToggleOption GAPE = new ToggleOption(
             "GAPE",
             PresetColour.BASE_PINK_DEEP,
-            "Gape content",
-            "When disabled, changes descriptions of gaping orifices to simply be 'loose', and also hides any special gape-related content.",
+            "扩张内容",
+            "禁用后，会将张开孔洞的描述改为简单的「松弛」，并隐藏任何特殊的扩张相关内容。",
             PropertyValue.gapeContent
     );
 
     public static final ToggleOption PENETRATION_LIMITATION = new ToggleOption(
             "PENETRATION_LIMITATION",
             PresetColour.BASE_PINK_DEEP,
-            "Penetrative size-difference",
-            "When enabled, orifices will have a limited depth to them, meaning that penetrative objects (penises and tails) can be too long to fit all the way inside.",
+            "插入尺寸差",
+            "启用后，孔洞将具有有限的深度，这意味着插入物（阴茎和尾巴）可能过长，无法完全进入内部。",
             PropertyValue.penetrationLimitations
     );
 
     public static final ToggleOption PENETRATION_LIMITATION_DYNAMIC = new ToggleOption(
             "PENETRATION_LIMITATION_DYNAMIC",
             PresetColour.BASE_PINK_DEEP,
-            "Elasticity depth effects",
-            "When enabled, if an orifice has an elasticity of at least 'limber', the maximum 'uncomfortable depth' value will be increased, with greater elasticity values increasing it further. (Note: Only applies when 'Penetrative size-difference' is also turned on.)",
+            "弹性深度效果",
+            "启用后，若孔洞的弹性达到「柔软」或更高，最大「不舒适深度」值将会增加，弹性值越高，增加的幅度越大。（注意：仅在「插入尺寸差」同时开启时生效。）",
             PropertyValue.elasticityAffectDepth
     );
 
     public static final ToggleOption FOOT = new ToggleOption(
             "FOOT",
             PresetColour.BASE_TAN,
-            "Foot content",
-            "When disabled, removes all foot-related actions from being available during sex.",
+            "足部内容",
+            "禁用后，会移除性生活中所有与足部相关的动作。",
             PropertyValue.footContent
     );
 
     public static final ToggleOption ARMPIT = new ToggleOption(
             "ARMPIT",
             PresetColour.BASE_PINK_LIGHT,
-            "Armpit content",
-            "When disabled, removes all armpit-related actions from being available during sex.",
+            "腋下内容",
+            "禁用后，会移除性生活中所有与腋下相关的动作。",
             PropertyValue.armpitContent
     );
 
     public static final ToggleOption MUSK = new ToggleOption(
             "MUSK",
             PresetColour.BASE_YELLOW_LIGHT,
-            "Musk content",
-            "When disabled, some scenes will either have reduced musk content or be omitted entirely, and the 'marked by musk' status effect will be disabled.",
+            "体味内容",
+            "禁用后，某些场景将会减少体味内容或被完全省略，同时「体味标记」状态效果也会被禁用。",
             PropertyValue.muskContent
     );
 
     public static final ToggleOption FURRY_TAIL_PENETRATION = new ToggleOption(
             "FURRY_TAIL_PENETRATION",
             PresetColour.BASE_MAGENTA,
-            "Furry tail penetrations",
-            "This marks all tail types as being suitable for penetration, thereby enabling furry tails to engage in penetrative actions in sex.",
+            "兽尾插入",
+            "这会将所有尾巴类型标记为适合插入，从而让兽尾能够在性生活中进行插入类动作。",
             PropertyValue.furryTailPenetrationContent
     );
 
     public static final ToggleOption INFLATION_CONTENT = new ToggleOption(
             "INFLATION_CONTENT",
             PresetColour.CUM,
-            "Cum inflation",
-            "This enables cum inflation mechanics.",
+            "膨胀",
+            "这会启用膨胀机制。",
             PropertyValue.inflationContent
     );
 
     public static final ToggleOption AUTO_SEX_CLOTHING_MANAGEMENT = new ToggleOption(
             "AUTO_SEX_CLOTHING_MANAGEMENT",
             PresetColour.BASE_BLUE_STEEL,
-            "Post-sex clothing replacement",
-            "Enables equipped clothing to be automatically pulled back into their pre-sex states after sex scenes.",
+            "性行为后衣物复原",
+            "启用后，在性场面结束后，已穿着的衣物将被自动拉回性行为前的状态。",
             PropertyValue.autoSexClothingManagement
     );
 
     public static final ToggleOption AUTO_SEX_CLOTHING_STRIP = new ToggleOption(
             "AUTO_SEX_CLOTHING_STRIP",
             PresetColour.BASE_PINK_LIGHT,
-            "Automatic stripping",
-            "When enabled, all non-spectating characters which you are allowed to strip during sex (including yourself) will start sex naked.",
+            "自动脱衣",
+            "启用后，性生活中所有你被允许脱下衣物的非旁观角色（包括你自己）都将以裸体开始。",
             PropertyValue.autoSexStrip
     );
 
     public static final ToggleOption RAPE_PLAY_BY_DEFAULT = new ToggleOption(
             "RAPE_PLAY_BY_DEFAULT",
             PresetColour.BASE_CRIMSON,
-            "Rape-play allowed by default",
-            "When enabled, submissive characters in sex who have the 'unwilling fuck-toy' fetish will be able to engage in rape-play without first being given permission to do so.",
+            "默认允许强暴扮演",
+            "启用后，在性生活中具有「不情愿的性玩具」癖好的顺从角色，将无需事先获得许可即可进行强暴扮演。",
             PropertyValue.rapePlayAtSexStart
     );
 
     public static final ToggleOption AGE = new ToggleOption(
             "AGE",
             PresetColour.AGE_TWENTIES,
-            "Age",
-            "This enables descriptions of the age that characters appear to be.",
+            "年龄",
+            "这会启用对角色看起来年龄的描述。",
             PropertyValue.ageContent
     );
 
     public static final ToggleOption FERAL = new ToggleOption(
             "FERAL",
             PresetColour.BASE_TAN,
-            "Feral",
-            "This enables feral content, which contains sexual and non-sexual interactions with sapient characters who have fully-animal bodies.",
+            "野兽",
+            "这会启用野兽内容，其中包含与拥有完全动物身体且有智能的角色之间的性与非性互动。",
             PropertyValue.feralContent
     );
 
     public static final ToggleOption CUM_REGENERATION = new ToggleOption(
             "CUM_REGENERATION",
             PresetColour.CUM,
-            "Cum Regeneration",
-            "This enables cum regeneration related content, such as decreasing quantity for multiple orgasms in one session and the full balls status effect.<br>When disabled, balls will always be treated as full, but without any negative effects.",
+            "精液再生",
+            "这会启用与精液再生相关的内容，例如同一次性爱中多次高潮会减少精液量，以及「精囊充盈」状态效果。<br>禁用时，睾丸将始终被视为充满状态，但不会产生任何负面效果。",
             PropertyValue.cumRegenerationContent
     );
 
     public static final ToggleOption FUTA_BALLS = new ToggleOption(
             "FUTA_BALLS",
             PresetColour.BASE_PINK,
-            "Futanari Testicles",
-            "When enabled, futanari NPCs will be able to have external testicles. When disabled, they are locked to always being internal.",
+            "扶她睾丸",
+            "启用后，扶她 NPC 将能够拥有体外睾丸。禁用时，它们将始终被锁定为体内状态。",
             PropertyValue.futanariTesticles
     );
 
     public static final ToggleOption CLOACA = new ToggleOption(
             "CLOACA",
             PresetColour.BASE_PINK_LIGHT,
-            "Bipedal Cloacas",
-            "When enabled, certain bipedal races (such as harpies and alligator-morphs) will have cloacas. When disabled, all bipeds with cloacas will be treated as having a regular genitalia configuration. Some special races, such as lamia, always have cloacas, and are not affected by this.",
+            "双足泄殖腔",
+            "启用后，某些双足种族（例如鹰身女妖和鳄鱼形态）将拥有泄殖腔。禁用时，所有拥有泄殖腔的双足种族都将被视为具有常规生殖器结构。某些特殊种族（如拉米亚蛇女）始终拥有泄殖腔，不受此设置影响。",
             PropertyValue.bipedalCloaca
     );
 
     public static final ToggleOption VESTIGIAL_MULTI_BREAST = new ToggleOption(
             "VESTIGIAL_MULTI_BREAST",
             PresetColour.BASE_PURPLE_LIGHT,
-            "Vestigial Multi-breasts",
-            "When enabled, characters who have multiple rows of breasts will have the rows beneath their top one described as being vestigial in size. When disabled, breast rows will be described as being one cup size smaller than the one above them.",
+            "退化性多乳房",
+            "启用后，拥有多排乳房的角色，其乳房位于顶端一排以下的排数将被描述为在尺寸上呈退化状态。禁用时，乳房排数将被描述为比上一排小一个罩杯。",
             PropertyValue.vestigialMultiBreasts
     );
 
     public static final ToggleOption HAIR_FACIAL = new ToggleOption(
             "HAIR_FACIAL",
             PresetColour.BASE_LILAC_LIGHT,
-            "Facial hair",
-            "This enables facial hair descriptions and content.",
+            "面部毛发",
+            "这会启用面部毛发的描述与内容。",
             PropertyValue.facialHairContent
     );
 
     public static final ToggleOption HAIR_PUBIC = new ToggleOption(
             "HAIR_PUBIC",
             PresetColour.BASE_LILAC,
-            "Pubic hair",
-            "This enables pubic hair descriptions and content.",
+            "阴毛",
+            "这会启用阴毛的描述与内容。",
             PropertyValue.pubicHairContent
     );
 
     public static final ToggleOption HAIR_BODY = new ToggleOption(
             "HAIR_BODY",
             PresetColour.BASE_PURPLE,
-            "Underarm hair",
-            "This enables underarm hair descriptions and content.",
+            "腋毛",
+            "这会启用腋毛的描述与内容。",
             PropertyValue.bodyHairContent
     );
 
     public static final ToggleOption HAIR_ASS = new ToggleOption(
             "HAIR_ASS",
             PresetColour.BASE_PURPLE_DARK,
-            "Ass hair",
-            "This enables ass hair descriptions and content.",
+            "肛毛",
+            "这会启用肛毛的描述与内容。",
             PropertyValue.assHairContent
     );
 
     public static final ToggleOption FEMININE_BEARD = new ToggleOption(
             "FEMININE_BEARD",
             PresetColour.BASE_BLUE_STEEL,
-            "Feminine beards",
-            "This enables feminine characters to grow beards.",
+            "女性胡须",
+            "这会启用女性角色长出胡须的能力。",
             PropertyValue.feminineBeardsContent
     );
 
     public static final ToggleOption FURRY_HAIR = new ToggleOption(
             "FURRY_HAIR",
             PresetColour.CLOTHING_DESATURATED_BROWN,
-            "Furry hair",
-            "Toggles whether or not characters with a furry head type will spawn with human-like hair on their heads.",
+            "毛茸茸头发",
+            "切换拥有毛茸茸头部类型（fur）的角色是否会在头上生成类似人类的头发。",
             PropertyValue.furryHairContent
     );
 
     public static final ToggleOption SCALY_HAIR = new ToggleOption(
             "SCALY_HAIR",
             PresetColour.BASE_GREEN_DARK,
-            "Scaly Hair",
-            "Toggles whether or not characters with a reptilian or amphibious head type will spawn with human-like hair on their heads.",
+            "鳞状头发",
+            "切换拥有爬行类或两栖类头部类型的角色是否会在头上生成类似人类的头发。",
             PropertyValue.scalyHairContent
     );
 
     public static final ToggleOption LIP_LISP = new ToggleOption(
             "LIP_LISP",
             PresetColour.BASE_PINK_SALMON,
-            "Lip lisps",
-            "Toggles whether or not characters with very large lips will speak with a lisp.",
+            "厚唇口齿不清",
+            "切换嘴唇非常巨大的角色说话时是否会夹杂口齿不清。",
             PropertyValue.lipLispContent
     );
 }
