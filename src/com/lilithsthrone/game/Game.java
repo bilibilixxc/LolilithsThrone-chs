@@ -4007,7 +4007,7 @@ public class Game implements XMLSaving {
 								: "")
 					+ "</div>"
 				+ "</div>"
-				+"<p style='text-align:center;font-size:0.6em;color:#777;'>Dialogue written by "+currentDialogueNode.getAuthor()+" for <i>"+(Configurations.DEGEN_MODE ? Main.NAME_OF_GAME :"Lilith's Throne")+" v"+Main.VERSION_NUMBER+"</i></p>"
+				+"<p style='text-align:center;font-size:0.6em;color:#777;'>当前对话由"+currentDialogueNode.getAuthor()+"创作于<i>"+(Configurations.DEGEN_MODE ? Main.NAME_OF_GAME :"Lilith's Throne")+"的"+Main.VERSION_NUMBER+"版本</i></p>"
 				+ "</body>";
 	}
 

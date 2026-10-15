@@ -301,17 +301,17 @@ public class PresetColour {
 //	public static Colour AGE_SIXTIES = new Colour(false, Util.newColour(0x6B9023), Util.newColour(0x232E05), "green", Util.newArrayListOfValues("ageSixties")) {};
 //
 
-	public static final Colour AGE_INFANT = new Colour(false, Util.newColour(0xaa55ff), Util.newColour(0xA160F1), "magenta", Util.newArrayListOfValues("ageChild")) {};
-	public static final Colour AGE_CHILD = new Colour(false, Util.newColour(0x00ffff), Util.newColour(0xE1F0C1), "green", Util.newArrayListOfValues("ageChild")) {};
-	public static final Colour AGE_PRETEENS = new Colour(false, Util.newColour(0x66ffcc), Util.newColour(0x00cc88), "green", Util.newArrayListOfValues("agePreTeen")) {};
-	public static final Colour AGE_TEENS = new Colour(false, Util.newColour(0x66ff99), Util.newColour(0x00cc44), "green", Util.newArrayListOfValues("ageTeens")) {};
-	public static final Colour AGE_LATE_TEENS = new Colour(false, Util.newColour(0xE1F0C1), Util.newColour(0x73A112), "green", Util.newArrayListOfValues("ageLateTeens")) {};
-	public static final Colour AGE_TWENTIES = new Colour(false, Util.newColour(0xCCE698), Util.newColour(0x638A0F), "green", Util.newArrayListOfValues("ageTwenties")) {};
-	public static final Colour AGE_THIRTIES = new Colour(false, Util.newColour(0xB8DC6F), Util.newColour(0x52730D), "green", Util.newArrayListOfValues("age", "ageThirties")) {}; // This is the 'default' age colour
-	public static final Colour AGE_FORTIES = new Colour(false, Util.newColour(0xA4D246), Util.newColour(0x41590D), "green", Util.newArrayListOfValues("ageForties")) {};
-	public static final Colour AGE_FIFTIES = new Colour(false, Util.newColour(0x8AB92D), Util.newColour(0x334408), "green", Util.newArrayListOfValues("ageFifties")) {};
-	public static final Colour AGE_SIXTIES = new Colour(false, Util.newColour(0x6B9023), Util.newColour(0x232E05), "green", Util.newArrayListOfValues("ageSixties")) {};
-	public static final Colour AGE_HUNDREDS = new Colour(false, Util.newColour(0x999966), Util.newColour(0x7a7a52), "green", Util.newArrayListOfValues("ageHundreds")) {};
+	public static final Colour AGE_INFANT = new Colour(false, Util.newColour(0xaa55ff), Util.newColour(0xA160F1), "品红", Util.newArrayListOfValues("ageChild")) {};
+	public static final Colour AGE_CHILD = new Colour(false, Util.newColour(0x00ffff), Util.newColour(0xE1F0C1), "绿色", Util.newArrayListOfValues("ageChild")) {};
+	public static final Colour AGE_PRETEENS = new Colour(false, Util.newColour(0x66ffcc), Util.newColour(0x00cc88), "绿色", Util.newArrayListOfValues("agePreTeen")) {};
+	public static final Colour AGE_TEENS = new Colour(false, Util.newColour(0x66ff99), Util.newColour(0x00cc44), "绿色", Util.newArrayListOfValues("ageTeens")) {};
+	public static final Colour AGE_LATE_TEENS = new Colour(false, Util.newColour(0xE1F0C1), Util.newColour(0x73A112), "绿色", Util.newArrayListOfValues("ageLateTeens")) {};
+	public static final Colour AGE_TWENTIES = new Colour(false, Util.newColour(0xCCE698), Util.newColour(0x638A0F), "绿色", Util.newArrayListOfValues("ageTwenties")) {};
+	public static final Colour AGE_THIRTIES = new Colour(false, Util.newColour(0xB8DC6F), Util.newColour(0x52730D), "绿色", Util.newArrayListOfValues("age", "ageThirties")) {}; // This is the 'default' age colour
+	public static final Colour AGE_FORTIES = new Colour(false, Util.newColour(0xA4D246), Util.newColour(0x41590D), "绿色", Util.newArrayListOfValues("ageForties")) {};
+	public static final Colour AGE_FIFTIES = new Colour(false, Util.newColour(0x8AB92D), Util.newColour(0x334408), "绿色", Util.newArrayListOfValues("ageFifties")) {};
+	public static final Colour AGE_SIXTIES = new Colour(false, Util.newColour(0x6B9023), Util.newColour(0x232E05), "绿色", Util.newArrayListOfValues("ageSixties")) {};
+	public static final Colour AGE_HUNDREDS = new Colour(false, Util.newColour(0x999966), Util.newColour(0x7a7a52), "绿色", Util.newArrayListOfValues("ageHundreds")) {};
 
 	public static Colour ALCOHOL = new Colour(false, BaseColour.YELLOW_LIGHT, "浅黄色", Util.newArrayListOfValues("alcohol")) {};
 	public static Colour ALCOHOL_LEVEL_ZERO = new Colour(false, Util.newColour(0xF2E8C0), Util.newColour(0x967F22), "浅黄色") {};
@@ -438,7 +438,7 @@ public class PresetColour {
 	public static Colour TEXT = new Colour(false, Util.newColour(0xDDDDDD), Util.newColour(0x262626), "灰色", Util.newArrayListOfValues("text")) {};
 	public static Colour TEXT_HALF_GREY = new Colour(false, Util.newColour(0xBBBBBB), Util.newColour(0x444444), "灰色", Util.newArrayListOfValues("halfDisabled")) {};
 //	public static Colour TEXT_GREY = new Colour(false, Util.newColour(0x777777), Util.newColour(0x777777), "grey", Util.newArrayListOfValues("disabled")) {};
-	public static Colour TEXT_GREY = new Colour(false, Util.newColour(0xB3B3B3), Util.newColour(0xB3B3B3), "grey", Util.newArrayListOfValues("disabled")) {};
+	public static Colour TEXT_GREY = new Colour(false, Util.newColour(0xB3B3B3), Util.newColour(0xB3B3B3), "灰色", Util.newArrayListOfValues("disabled")) {};
 	public static Colour TEXT_GREY_DARK = new Colour(false, Util.newColour(0x444444), Util.newColour(0xcccccc), "灰色", Util.newArrayListOfValues("disabledDark")) {};
 
 	

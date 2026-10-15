@@ -100,6 +100,8 @@ public class Main extends Application {
 	public static final String AUTHOR = "Loliphile";
 	public static final String NAME_OF_GAME = "Lolilith's Throne";
 	public static final String VERSION_NUMBER = "0.4.11.9"; // Remember to do the stuff below!
+    public static final String CHINESEAUTHOR = "TiTyaN";
+    public static final String CHINESEAUTHOROTHER = "CKRainbow Team";
 	/*
 	 * BEFORE BUILDING:
 	 * update pom.xml!
@@ -127,9 +129,9 @@ public class Main extends Application {
 	
 	private static String patchNotes = "";
 	
-	public static String disclaimer = "<h6 style='text-align: center; color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>You must enjoy yourself!</h6>" +
-			"<p>This once was a long winded disclaimer of legal protections, lmao. Play or don't I'm not a lawyer.</br>" +
-			"Most content can be disabled/changed. </br>Contains <span style='color:#FF0;'>Watersports</span>, <span style='color:#F66;'>Ageplay</span>, <span style='color:#FAA;'>Sexual Violence</span>, <span style='color:#F0F;'>Sex with animate creatures and inanimate objects alike</span>" +
+	public static String disclaimer = "<h6 style='text-align: center; color:" + PresetColour.GENERIC_ARCANE.toWebHexString() + ";'>享受吧！</h6>" +
+			"<p>这原本是一段冗长的法律保护声明，lmao。汉化由TiTyaN制作，汉化文本来自CKRainbow大佬及其汉化团队。</br>" +
+			"大多数内容都可以禁用或启用</br>包含<span style='color:#FF0;'>Watersports</span>, <span style='color:#F66;'>Ageplay</span>, <span style='color:#FAA;'>Sexual Violence</span>, <span style='color:#F0F;'>Sex with animate creatures and inanimate objects alike</span>" +
 			"</p>";
 	
 	public static List<CreditsSlot> credits = new ArrayList<>();
@@ -385,10 +387,10 @@ public class Main extends Application {
 				stream.printData();
 			} catch (FileNotFoundException e) {
 				Alert a = new Alert(AlertType.ERROR,
-						"Unable to create or modify error.log ("+ (new File("./data/error.log")).getAbsolutePath()+")."
-								+ "\nMake sure that data exists, and that the file has write permissions."
-								+ "\n(Please do not extract the game into protected folders [C:\\, Desktop, OneDrive, etc...])"
-								+ "\nContinue?",
+						"无法创建或修改错误日志 ("+ (new File("./data/error.log")).getAbsolutePath()+")。"
+								+ "\n请确保 data 目录存在，且该文件具有写入权限。"
+								+ "\n(请不要将游戏解压到受保护的系统文件夹中 [C:\\、桌面、OneDrive 等...])"
+								+ "\n是否继续?",
 						ButtonType.YES, ButtonType.NO);
 				System.err.println("Failed to create/modify error.log");
 				a.showAndWait().ifPresent(response -> {

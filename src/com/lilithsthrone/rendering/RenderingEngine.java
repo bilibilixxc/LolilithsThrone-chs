@@ -1352,8 +1352,8 @@ public enum RenderingEngine {
 				"<div class='full-width-container' style='background-color:"+PresetColour.BACKGROUND_DARK.toWebHexString()+"; border-radius:5px; margin-bottom:8px;'>"
 					+ "<div class='full-width-container'>"
 						+ "<p class='character-name' style='color:"+ (Main.sex.isDom(Main.game.getPlayer())
-								? PresetColour.GENERIC_SEX_AS_DOM.toWebHexString()+";'>Dominant"+(Main.sex.getDominantParticipants(true).size()>1?"s":"")+"</b>"
-								: PresetColour.GENERIC_SEX.toWebHexString()+";'>Submissive"+(Main.sex.getSubmissiveParticipants(true).size()>1?"s":"")+"</b>")
+								? PresetColour.GENERIC_SEX_AS_DOM.toWebHexString()+";'>支配方"+(Main.sex.getDominantParticipants(true).size()>1?"s":"")+"</b>"
+								: PresetColour.GENERIC_SEX.toWebHexString()+";'>服从方"+(Main.sex.getSubmissiveParticipants(true).size()>1?"s":"")+"</b>")
 						+"</p>"
 					+ "</div>"
 				+ "</div>"
