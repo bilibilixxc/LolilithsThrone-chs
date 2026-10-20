@@ -44,31 +44,31 @@ public class MenuOverrides {
                     "Lilith's Throne") +
                     "</h1>"
                     + (Main.game.isSillyMode()// More like cheesy mode
-                        ? "<p class='special-text' style='text-align:center; margin:0 0; padding:0 0;'><i>Or, I can't believe I fell into a magic mirror and entered a world in which my aunt is a demon?!</i></p>"
+                        ? "<p class='special-text' style='text-align:center; margin:0 0; padding:0 0;'><i>或者，我真不敢相信我掉进了一面魔镜，进入了一个我阿姨是恶魔的世界？！</i></p>"
                         : "")
                     + "<h5 class='special-text' style='text-align:center;'>Modded by " + (Configurations.DEGEN_MODE ? Main.AUTHOR : "KeldonSlayer") + "</h5>"
                     + "<br/>"
-                    + (Configurations.DEVELOPER_MODE ? paragraphWrap("Developer Mode is enabled, if you're not a developer, turn it off, or expect things to be broken",
+                    + (Configurations.DEVELOPER_MODE ? paragraphWrap("开发者模式已启用，如果你不是开发者，请将其关闭，否则可能会遇到各种问题",
                     PresetColour.BASE_RED_LIGHT.toWebHexString()) : "")
-                    + paragraphWrap("This game is a text-based erotic RPG, and contains a lot of graphic sexual content.")
+                    + paragraphWrap("本游戏是一款文字为基础的成人RPG，包含大量露骨的色情内容。")
 //                    + (updateFound ? paragraphWrap("Version " + newVersion.replace("_", "") + " is available!", "#0FC") : "")
 //                    + (updateFound && !versionInfo.isEmpty() ? paragraphWrap(versionInfo, "#0FC") : "")
 //                    + paragraphWrap(versionInfo, "#0FC") // KELDON TEMP
-                    + (updateFound ? paragraphWrap("Version " + newVersion.replace("_", "") + " is available!<br>"+versionInfo, "#0FC") : "")
-                    + (updateFound ? paragraphWrap("<b style='#0CC;'>Please use either my website or github to get the latest modified version of Lilith's Throne!</b>") : paragraphWrap("<b style='#0CC;'>Please report any issues you find to my DMs or on the github issues page!</b>"))
+                    + (updateFound ? paragraphWrap("版本 " + newVersion.replace("_", "") + " 已发布！<br>"+versionInfo, "#0FC") : "")
+                    + (updateFound ? paragraphWrap("<b style='#0CC;'>请通过我的网站或github获取最新版本的Lilith's Throne修改版！</b>") : paragraphWrap("<b style='#0CC;'>请将你发现的任何问题报告到我的私信或github issues页面！</b>"))
                     + getJavaVersionInformation()
-                    + (Library.newErrorLog ? paragraphWrap("You have a new error log file in /data/", "#F44") : "")
+                    + (Library.newErrorLog ? paragraphWrap("你在 /data/ 目录中有一个新的错误日志文件", "#F44") : "")
                     + (Toolkit.getDefaultToolkit().getScreenSize().getHeight() < 800
-                        ? paragraphWrap("If the game's resolution isn't fitting to your screen, press the keys: 'Windows' + 'Up Arrow' to maximise!", PresetColour.GENERIC_ARCANE.toWebHexString())
+                        ? paragraphWrap("如果游戏分辨率不适合你的屏幕，请按 'Windows' + '↑' 键来最大化窗口！", PresetColour.GENERIC_ARCANE.toWebHexString())
                         : "")
                     + (Main.game.isStarted() || Main.getProperties().name.isEmpty()
                     ? ""
-                    : "<h4 style='text-align:center;'>Last save:</h4>"
+                    : "<h4 style='text-align:center;'>上次存档：</h4>"
                     + "<h5 style='color:" + Main.getProperties().nameColour + ";text-align:center;'>" + Main.getProperties().name + "</h5>"
-                    + paragraphWrap("<b>Level " + Main.getProperties().level + " " + Util.capitaliseSentence(Main.getProperties().race) + "</b>")
+                    + paragraphWrap("<b>等级 " + Main.getProperties().level + " " + Util.capitaliseSentence(Main.getProperties().race) + "</b>")
                     + paragraphWrap(UtilText.formatAsMoney(Main.getProperties().money, "b"))
                     + "<div style='text-align:center; display:block; margin:auto;'>" + UtilText.formatAsEssences(Main.getProperties().arcaneEssences, "b", false) + "</div>"
-                    + paragraphWrap("Quest: " + Util.capitaliseSentence(Main.getProperties().quest)));
+                    + paragraphWrap("任务: " + Util.capitaliseSentence(Main.getProperties().quest)));
         }
 
         @Override
@@ -85,9 +85,9 @@ public class MenuOverrides {
     private static Response getMainMenuButtons(int responseTab, int index) {
          if (index == 0) {
             if (MULTITHREADED_PRELOADING && !PreInitializationThread.HelperThread1.finished())
-                return new Response("Game Loading", "The game is still loading", null);
+                return new Response("游戏加载中", "游戏仍在加载中", null);
             if (Main.game.isStarted()) {
-                return new ResponseEffectsOnly("Resume", "Return to whatever you were doing before opening this menu.") {
+                return new ResponseEffectsOnly("继续游戏", "返回你打开此菜单之前正在做的事情。") {
                     @Override
                     public void effects() {
                         Main.mainController.openOptions();
@@ -96,7 +96,7 @@ public class MenuOverrides {
                 };
             } else {
                 if (Main.isLoadGameAvailable(Main.getProperties().lastSaveLocation)) {
-                    return new ResponseEffectsOnly("Resume", "Continue playing from your last save.") {
+                    return new ResponseEffectsOnly("继续游戏", "继续你上次的存档。") {
                         @Override
                         public void effects() {
                             Main.loadGame(Main.getProperties().lastSaveLocation);
@@ -104,21 +104,21 @@ public class MenuOverrides {
                         }
                     };
                 } else if ("".equals(Main.getProperties().lastSaveLocation)) {
-                    return new Response("Resume", "There is no previously saved game to resume.", null);
-                } else return new Response("Resume", "Previously saved game (by the title '" + Main.getProperties().lastSaveLocation + "') not found in 'data/saves' " +
-                        "folder.", null);
+                    return new Response("继续游戏", "没有可恢复的之前存档。", null);
+                } else return new Response("继续游戏", "之前的存档（标题为 '" + Main.getProperties().lastSaveLocation + "') 未在 'data/saves' " +
+                        "文件夹中找到。", null);
             }
         } else if (index == 1) {
             if (MULTITHREADED_PRELOADING && !PreInitializationThread.finished())
-                return new Response("Game Loading", "The game is still loading", null);
+                return new Response("游戏加载中", "游戏仍在加载中", null);
             if (confirmNewGame || !Main.game.isStarted()) {
                 return new ResponseEffectsOnly(
                         (!Main.game.isStarted()
-                                ? "New Game"
-                                : "<b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>Confirm</b>"),
-                        "Start a new game."
+                                ? "新游戏"
+                                : "<b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>确认</b>"),
+                        "开始新游戏。"
                                 + (Main.game.isStarted()
-                                ? "<br/><br/>[style.italicsMinorBad(Remember to save your game first!)]</b>"
+                                ? "<br/><br/>[style.italicsMinorBad(请记得先保存你的游戏！)]</b>"
                                 : "")) {
                     @Override
                     public void effects() {
@@ -143,8 +143,8 @@ public class MenuOverrides {
                     }
                 };
             } else {
-                return new Response("New Game", "Start a new game."
-                                + (Main.game.isStarted() ? "<br/><br/>[style.italicsMinorBad(Remember to save your game first!)]" : ""), MENU) {
+                return new Response("新游戏", "开始新游戏。"
+                                + (Main.game.isStarted() ? "<br/><br/>[style.italicsMinorBad(请记得先保存你的游戏！)]" : ""), MENU) {
                     @Override
                     public void effects() {
                         confirmNewGame = true;
@@ -153,8 +153,8 @@ public class MenuOverrides {
             }
         } else if (index == 2) {
             if (MULTITHREADED_PRELOADING && !PreInitializationThread.finished())
-                return new Response("Game Loading", "The game is still loading", null);
-            return new Response("Save/Load", "Open the save/load game window.", OptionsDialogue.SAVE_LOAD) {
+                return new Response("游戏加载中", "游戏仍在加载中", null);
+            return new Response("存档/读档", "打开存档/读档窗口。", OptionsDialogue.SAVE_LOAD) {
                 @Override
                 public void effects() {
                     OptionsDialogue.loadConfirmationName = "";
@@ -164,7 +164,7 @@ public class MenuOverrides {
                 }
             };
         } else if (index == 3) {
-            return new Response("Export character", "Open the character export game window.", OptionsDialogue.IMPORT_EXPORT) {
+            return new Response("导出角色", "打开角色导出窗口。", OptionsDialogue.IMPORT_EXPORT) {
                 @Override
                 public void effects() {
                     OptionsDialogue.loadConfirmationName = "";
@@ -174,7 +174,7 @@ public class MenuOverrides {
                 }
             };
         } else if (index == 4) {
-            return new ResponseEffectsOnly("Github", "Opens the page:<br/><br/><i>https://github.com/DegenDomain/LolilithsThroneIssueTracker/releases/latest</i><br/><br/><b>Externally in your default browser.</b>") {
+            return new ResponseEffectsOnly("Github", "在默认浏览器中打开页面：<br/><br/><i>https://github.com/DegenDomain/LolilithsThroneIssueTracker/releases/latest</i>") {
                 @Override
                 public void effects() {
                     Util.openLinkInDefaultBrowser("https://github.com/DegenDomain/LolilithsThroneIssueTracker/releases/latest");
@@ -182,7 +182,7 @@ public class MenuOverrides {
                 }
             };
         } else if (index == 5) {
-            return new ResponseEffectsOnly("Quit", "Quits your current game and closes the program.<br/><br/><b>Remember to save your game first!</b>") {
+            return new ResponseEffectsOnly("退出", "退出当前游戏并关闭程序。<br/><br/><b>请记得先保存你的游戏！</b>") {
                 @Override
                 public void effects() {
                     Main.primaryStage.close();
@@ -192,12 +192,12 @@ public class MenuOverrides {
             };
         } else if (index == 6 && EXPERIMENTAL) {
             if (MULTITHREADED_PRELOADING && !PreInitializationThread.finished())
-                return new Response("Game Loading", "The game is still loading", null);
-            return new Response("NPC Mod", "NPC Mod System, Heavily WIP", (Main.game == null || !Main.game.isStarted()) ? NPCModSys.NPC_MOD_SYS : null);
+                return new Response("游戏加载中", "游戏仍在加载中", null);
+            return new Response("NPC修改", "NPC修改系统，重度开发中", (Main.game == null || !Main.game.isStarted()) ? NPCModSys.NPC_MOD_SYS : null);
         } else if (index == 10) {
-            return new Response("Links", "Quick Links for messaging, issue reporting, or checking for updates.", ExtraDialogue.LINKS_OUT);
+            return new Response("链接", "用于联系、报告问题或检查更新的快速链接。", ExtraDialogue.LINKS_OUT);
         } else if (index == 11) {
-            return new ResponseEffectsOnly("Open Config Folder", "Opens the configurations folder in File Explorer") {
+            return new ResponseEffectsOnly("打开配置文件夹", "在文件资源管理器中打开配置文件夹") {
                 @Override
                 public void effects() {
                     Desktop desktop = null;
@@ -213,21 +213,21 @@ public class MenuOverrides {
                 }
             };
         } else if (index == 12) {
-            return new Response("Options", "Open the options page.", OptionsDialogue.OPTIONS) {
+            return new Response("选项", "打开选项页面。", OptionsDialogue.OPTIONS) {
                 @Override
                 public void effects() {
                     confirmNewGame = false;
                 }
             };
         } else if (index == 13) {
-            return new Response("Content Options", "Set your preferred content settings.", OptionsDialogue.MISCELLANEOUS) {
+            return new Response("内容选项", "设置你偏好的内容选项。", OptionsDialogue.MISCELLANEOUS) {
                 @Override
                 public void effects() {
                     confirmNewGame = false;
                 }
             };
         } else if (index == 14) {
-            return new Response("Mod Options", "Set your preferred Mod settings.", ModOptions.MOD_CONTENT_PREFERENCE) {
+            return new Response("Mod选项", "设置你偏好的Mod选项。", ModOptions.MOD_CONTENT_PREFERENCE) {
                 @Override
                 public void effects() {
                     confirmNewGame = false;
@@ -240,7 +240,7 @@ public class MenuOverrides {
 
     private static Response getLexiMainMenuButtons(int responseTab, int index) {
         if (index == 0) { // Last Button, bottom row
-            return new ResponseEffectsOnly("Quit", "Quits your current game and closes the program.<br/><br/><b>Remember to save your game first!</b>") {
+            return new ResponseEffectsOnly("退出", "退出当前游戏并关闭程序。<br/><br/><b>请记得先保存你的游戏！</b>") {
                 @Override
                 public void effects() {
                     Main.primaryStage.close();
@@ -250,9 +250,9 @@ public class MenuOverrides {
             };
         } else if (index == 1) { // First Button, Top row
             if (MULTITHREADED_PRELOADING && !PreInitializationThread.HelperThread1.finished())
-                return new Response("Game Loading", "The game is still loading", null);
+                return new Response("游戏加载中", "游戏仍在加载中", null);
             if (Main.game.isStarted()) {
-                return new ResponseEffectsOnly("Resume", "Return to whatever you were doing before opening this menu.") {
+                return new ResponseEffectsOnly("继续游戏", "返回你打开此菜单之前正在做的事情。") {
                     @Override
                     public void effects() {
                         Main.mainController.openOptions();
@@ -261,7 +261,7 @@ public class MenuOverrides {
                 };
             } else {
                 if (Main.isLoadGameAvailable(Main.getProperties().lastSaveLocation)) {
-                    return new ResponseEffectsOnly("Resume", "Continue playing from your last save.") {
+                    return new ResponseEffectsOnly("继续游戏", "继续你上次的存档。") {
                         @Override
                         public void effects() {
                             Main.loadGame(Main.getProperties().lastSaveLocation);
@@ -269,23 +269,23 @@ public class MenuOverrides {
                         }
                     };
                 } else if ("".equals(Main.getProperties().lastSaveLocation)) {
-                    return new Response("Resume", "There is no previously saved game to resume.", null);
+                    return new Response("继续游戏", "没有可恢复的之前存档。", null);
                 } else {
-                    return new Response("Resume", "Previously saved game (by the title '" + Main.getProperties().lastSaveLocation + "') not found in 'data/saves' folder.", null);
+                    return new Response("继续游戏", "之前的存档（标题为 '" + Main.getProperties().lastSaveLocation + "') 未在 'data/saves' 文件夹中找到。", null);
                 }
             }
 
         } else if (index == 2) {
             if (MULTITHREADED_PRELOADING && !PreInitializationThread.finished())
-                return new Response("Game Loading", "The game is still loading", null);
+                return new Response("游戏加载中", "游戏仍在加载中", null);
             if (confirmNewGame || !Main.game.isStarted()) {
                 return new ResponseEffectsOnly(
                         (!Main.game.isStarted()
-                                ? "New Game"
-                                : "<b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>Confirm</b>"),
-                        "Start a new game."
+                                ? "新游戏"
+                                : "<b style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>确认</b>"),
+                        "开始新游戏。"
                                 + (Main.game.isStarted()
-                                ? "<br/><br/>[style.italicsMinorBad(Remember to save your game first!)]</b>"
+                                ? "<br/><br/>[style.italicsMinorBad(请记得先保存你的游戏！)]</b>"
                                 : "")) {
                     @Override
                     public void effects() {
@@ -311,8 +311,8 @@ public class MenuOverrides {
                 };
 
             } else {
-                return new Response("New Game", "Start a new game."
-                                + (Main.game.isStarted() ? "<br/><br/>[style.italicsMinorBad(Remember to save your game first!)]" : ""), MENU) {
+                return new Response("新游戏", "开始新游戏。"
+                                + (Main.game.isStarted() ? "<br/><br/>[style.italicsMinorBad(请记得先保存你的游戏！)]" : ""), MENU) {
                     @Override
                     public void effects() {
                         confirmNewGame = true;
@@ -322,8 +322,8 @@ public class MenuOverrides {
 
         } else if (index == 3) {
             if (MULTITHREADED_PRELOADING && !PreInitializationThread.finished())
-                return new Response("Game Loading", "The game is still loading", null);
-            return new Response("Save/Load", "Open the save/load game window.", OptionsDialogue.SAVE_LOAD) {
+                return new Response("游戏加载中", "游戏仍在加载中", null);
+            return new Response("存档/读档", "打开存档/读档窗口。", OptionsDialogue.SAVE_LOAD) {
                 @Override
                 public void effects() {
                     OptionsDialogue.loadConfirmationName = "";
@@ -334,7 +334,7 @@ public class MenuOverrides {
             };
 
         } else if (index == 4) {
-            return new Response("Export character", "Open the character export game window.", OptionsDialogue.IMPORT_EXPORT) {
+            return new Response("导出角色", "打开角色导出窗口。", OptionsDialogue.IMPORT_EXPORT) {
                 @Override
                 public void effects() {
                     OptionsDialogue.loadConfirmationName = "";
@@ -345,7 +345,7 @@ public class MenuOverrides {
             };
 
         } else if (index == 5) {
-            return new ResponseEffectsOnly("Github", "Opens the page:<br/><br/><i>https://github.com/DegenDomain/LolilithsThroneIssueTracker/releases/latest</i><br/><br/><b>Externally in your default browser.</b>") {
+            return new ResponseEffectsOnly("Github", "在默认浏览器中打开页面：<br/><br/><i>https://github.com/DegenDomain/LolilithsThroneIssueTracker/releases/latest</i>") {
                 @Override
                 public void effects() {
                     Util.openLinkInDefaultBrowser("https://github.com/DegenDomain/LolilithsThroneIssueTracker/releases/latest");
@@ -355,12 +355,12 @@ public class MenuOverrides {
 
         } else if (index == 6 && EXPERIMENTAL) {
             if (MULTITHREADED_PRELOADING && !PreInitializationThread.finished())
-                return new Response("Game Loading", "The game is still loading", null);
-            return new Response("NPC Mod", "NPC Mod System, Heavily WIP", (Main.game == null || !Main.game.isStarted()) ? NPCModSys.NPC_MOD_SYS : null);
+                return new Response("游戏加载中", "游戏仍在加载中", null);
+            return new Response("NPC修改", "NPC修改系统，重度开发中", (Main.game == null || !Main.game.isStarted()) ? NPCModSys.NPC_MOD_SYS : null);
         } else if (index == 10) {
-            return new Response("Links", "Quick Links for messaging, issue reporting, or checking for updates.", ExtraDialogue.LINKS_OUT);
+            return new Response("链接", "用于联系、报告问题或检查更新的快速链接。", ExtraDialogue.LINKS_OUT);
         } else if (index == 11) {
-            return new ResponseEffectsOnly("Open Config Folder", "Opens the configurations folder in File Explorer") {
+            return new ResponseEffectsOnly("打开配置文件夹", "在文件资源管理器中打开配置文件夹") {
                 @Override
                 public void effects() {
                     Desktop desktop = null;
@@ -377,21 +377,21 @@ public class MenuOverrides {
             };
 
         } else if (index == 12) {
-            return new Response("Options", "Open the options page.", OptionsDialogue.OPTIONS) {
+            return new Response("选项", "打开选项页面。", OptionsDialogue.OPTIONS) {
                 @Override
                 public void effects() {
                     confirmNewGame = false;
                 }
             };
         } else if (index == 13) {
-            return new Response("Content Options", "Set your preferred content settings.", OptionsDialogue.MISCELLANEOUS) {
+            return new Response("内容选项", "设置你偏好的内容选项。", OptionsDialogue.MISCELLANEOUS) {
                 @Override
                 public void effects() {
                     confirmNewGame = false;
                 }
             };
         } else if (index == 14) {
-            return new Response("Mod Options", "Set your preferred Mod settings.", ModOptions.MOD_CONTENT_PREFERENCE) {
+            return new Response("Mod选项", "设置你偏好的Mod选项。", ModOptions.MOD_CONTENT_PREFERENCE) {
                 @Override
                 public void effects() {
                     confirmNewGame = false;
@@ -404,6 +404,6 @@ public class MenuOverrides {
 
 
     private static String getJavaVersionInformation() {
-        return "<p style='text-align:center;'>Your java version: " + System.getProperty("java.version") + "</p>";
+        return "<p style='text-align:center;'>你的 Java 版本: " + System.getProperty("java.version") + "</p>";
     }
 }
