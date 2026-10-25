@@ -24,12 +24,12 @@ public class SelfPenisTussy {
 
         @Override
         public String getActionTitle() {
-            return "Tease own tussy";
+            return "挑逗自己的尾穴";
         }
 
         @Override
         public String getActionDescription() {
-            return "Tease [npc.herself] by sliding the [npc.cockHead] of your [npc.cock] over [npc.her] [npc.tussy+].";
+            return "将你的[npc.cock]的[npc.cockHead]贴着你的[npc.tussy+]滑动，挑逗[npc.herself]。";
         }
 
         @Override
@@ -57,12 +57,12 @@ public class SelfPenisTussy {
 
         @Override
         public String getActionTitle() {
-            return "Start Tussy Selfcest";
+            return "开始尾穴自交";
         }
 
         @Override
         public String getActionDescription() {
-            return "Slide your [npc.penis] into your [npc.tail+] and start masturbating with your [npc.tussy].";
+            return "将你的[npc.penis]滑入你的[npc.tail+]内，开始用自己的[npc.tussy]自慰。";
         }
         @Override
         public String getDescription() {
@@ -84,11 +84,11 @@ public class SelfPenisTussy {
             SexPace.DOM_GENTLE) {
         @Override
         public String getActionTitle() {
-            return "Gentle Tussy Selfcest";
+            return "温柔尾穴自交";
         }
         @Override
         public String getActionDescription() {
-            return "Gently masturbate using your own [npc.tussy+].";
+            return "用你自己的[npc.tussy+]温柔地自慰。";
         }
         @Override
         public String getDescription() {
@@ -110,11 +110,11 @@ public class SelfPenisTussy {
             SexPace.DOM_NORMAL) {
         @Override
         public String getActionTitle() {
-            return "Tussy Selfcest";
+            return "尾穴自交";
         }
         @Override
         public String getActionDescription() {
-            return "Continue thrusting your [npc.penis] into your [npc.tussy+].";
+            return "继续将你的[npc.penis]插入你自己的[npc.tussy+]。";
         }
         @Override
         public String getDescription() {
@@ -135,11 +135,11 @@ public class SelfPenisTussy {
             SexParticipantType.SELF) {
         @Override
         public String getActionTitle() {
-            return "Stop Tussy Selfcest";
+            return "停止尾穴自交";
         }
         @Override
         public String getActionDescription() {
-            return "Pull your [npc.penis] out of your [npc.tail+]'s pussy and stop performing self tussy penetration.";
+            return "将你的[npc.penis]从你的[npc.tail+]的尾穴中抽出，停止自我尾穴插入。";
         }
         @Override
         public String getDescription() {

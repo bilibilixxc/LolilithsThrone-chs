@@ -40,12 +40,12 @@ public class SelfClitAnus {
 
 		@Override
 		public String getActionTitle() {
-			return "Start anal clit self-fuck";
+			return "开始阴蒂肛交自慰";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Bend [npc.her] [npc.clit+] and start fucking [npc.herself] in the [npc.ass] with it.";
+			return "[npc.her]把[npc.clit+]弯曲，然后开始在[npc.ass]里自慰。";
 		}
 
 		@Override
@@ -53,9 +53,9 @@ public class SelfClitAnus {
 			UtilText.nodeContentSB.setLength(0);
 
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Bending [npc.her] [npc.clit+] in an impressive display of flexibility, [npc.name] [npc.verb(line)] the [npc.clitTip+] of [npc.her] [npc.clit+] up against [npc.her] [npc.asshole+], before slowly pushing it inside and starting to fuck [npc.herself].",
-					"[npc.Name] [npc.verb(bend)] [npc.her] [npc.clit+] in a display of impressive flexibility, [npc.moaning] in delight as [npc.she] [npc.verb(press)] the tip of [npc.her] [npc.clit+] against [npc.her] [npc.asshole+], [npc.verb(slide)] it deep inside [npc.herself], and [npc.verb(start)] to fuck [npc.herself].",
-					"Using [npc.her] enlarged clit to put [npc.her] flexibility to the test, [npc.name] [npc.verb(guide)] [npc.her] throbbing [npc.clit+] between [npc.her] [npc.ass] cheeks and [npc.verb(push)] it deep inside [npc.her] [npc.asshole+], letting out [npc.a_moan+] as [npc.she] [npc.verb(start)] fucking [npc.herself]."));
+					"[npc.Name]以一种令人惊叹的柔韧姿态弯下[npc.her][npc.clit+]，把[npc.her][npc.clitTip+]抵在[npc.her][npc.asshole+]上，然后慢慢将其推入，开始了对自己的抽送。",
+					"[npc.Name]展现出惊人的柔韧性，弯曲[npc.her][npc.clit+]，[npc.moaning]着将[npc.her][npc.clit+]的顶端抵住[npc.her][npc.asshole+]，[npc.verb(slide)]至深处，然后[npc.verb(start)]抽插[npc.herself]。",
+					"[npc.Name]借助增大的阴蒂来考验自己的柔韧性，将[npc.her]悸动的[npc.clit+]引导至[npc.her][npc.ass]股缝之间，并[npc.verb(push)]进[npc.her][npc.asshole+]深处，随着[npc.she]开始自慰而发出一声[npc.a_moan+]。"));
 
 			return UtilText.nodeContentSB.toString();
 		}
@@ -72,20 +72,20 @@ public class SelfClitAnus {
 
 		@Override
 		public String getActionTitle() {
-			return "Gentle anal clit self-fuck";
+			return "温柔地用阴蒂自慰后穴";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Gently fuck [npc.herself] in the [npc.ass] with [npc.her] [npc.clit+].";
+			return "用[npc.her][npc.clit+]在[npc.her][npc.ass]里温柔地自慰。";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] slowly [npc.verb(push)] [npc.her] [npc.clit+] deep inside [npc.her] [npc.asshole+].",
-					"Gently pumping [npc.her] [npc.clit+] in and out of [npc.her] [npc.asshole+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] rhythmically [npc.verb(fuck)] [npc.herself].",
-					"Slowly driving [npc.her] [npc.clit+] deep inside [npc.her] [npc.asshole+], [npc.name] [npc.verb(let)] out a little whimper as [npc.she] [npc.verb(start)] gently fucking [npc.herself].");
+					"一声[npc.A_moan+]从[npc.namePos][npc.lips+]间溢出，[npc.she]缓慢地[npc.verb(push)]着[npc.her][npc.clit+]深入[npc.her][npc.asshole+]。",
+					"[npc.Name]轻轻地把[npc.her][npc.clit+]在[npc.her][npc.asshole+]里抽送进出，随着[npc.she]有节奏地自慰而发出一连串愉悦的[npc.moans]。",
+					"当[npc.name]缓慢地将[npc.her][npc.clit+]深入[npc.her][npc.asshole+]时，[npc.she][npc.verb(let)]出一声轻微的呜咽，然后开始温柔地自慰。");
 		}
 	};
 
@@ -100,20 +100,20 @@ public class SelfClitAnus {
 
 		@Override
 		public String getActionTitle() {
-			return "Anal clit self-fuck";
+			return "用阴蒂自慰后穴";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Concentrate on fucking [npc.herself] in the [npc.ass] with [npc.her] [npc.clit+].";
+			return "专注于用[npc.her][npc.clit+]在[npc.her][npc.ass]里自慰。";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] greedily [npc.verb(push)] [npc.her] [npc.clit+] deep inside [npc.her] [npc.asshole+].",
-					"Pumping [npc.her] [npc.clit+] in and out of [npc.her] [npc.asshole+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] rhythmically [npc.verb(fuck)] [npc.herself].",
-					"Driving [npc.her] [npc.clit+] deep inside [npc.her] [npc.asshole+], [npc.name] [npc.verb(let)] out [npc.a_moan] as [npc.she] [npc.verb(start)] happily fucking [npc.herself].");
+					"一声[npc.A_moan+]从[npc.namePos][npc.lips+]间溢出，[npc.she]贪婪地[npc.verb(push)]着[npc.her][npc.clit+]深入[npc.her][npc.asshole+]。",
+					"[npc.Name]把[npc.her][npc.clit+]在[npc.her][npc.asshole+]里抽送进出，随着[npc.she]有节奏地自慰而发出一连串愉悦的[npc.moans]。",
+					"[npc.Name]将[npc.her][npc.clit+]深入[npc.her][npc.asshole+]，在[npc.she]开心地自慰时[npc.verb(let)]出一声[npc.a_moan]。");
 		}
 	};
 
@@ -128,20 +128,20 @@ public class SelfClitAnus {
 
 		@Override
 		public String getActionTitle() {
-			return "Rough anal clit self-fuck";
+			return "粗暴地用阴蒂自慰后穴";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Roughly fuck [npc.herself] in the [npc.ass] with [npc.her] [npc.clit+].";
+			return "用[npc.her][npc.clit+]在[npc.her][npc.ass]里粗暴地自慰。";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] roughly [npc.verb(slam)] [npc.her] [npc.clit+] deep inside [npc.her] [npc.asshole+], before starting to roughly fuck [npc.herself].",
-					"Roughly pumping [npc.her] [npc.clit+] in and out of [npc.her] [npc.asshole+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] ruthlessly [npc.verb(fuck)] [npc.herself].",
-					"Driving [npc.her] [npc.clit+] deep inside [npc.her] [npc.asshole+], [npc.name] [npc.verb(let)] out [npc.a_moan] as [npc.she] [npc.verb(start)] roughly grinding it up inside [npc.herself].");
+					"一声[npc.A_moan+]从[npc.namePos][npc.lips+]间溢出，[npc.she]粗暴地[npc.verb(slam)]着[npc.her][npc.clit+]深入[npc.her][npc.asshole+]，然后开始猛烈地自慰。",
+					"[npc.Name]粗暴地把[npc.her][npc.clit+]在[npc.her][npc.asshole+]里抽送进出，随着[npc.she]无情地自慰而发出一连串愉悦的[npc.moans]。",
+					"[npc.Name]将[npc.her][npc.clit+]深入[npc.her][npc.asshole+]，在[npc.she]粗暴地研磨它时[npc.verb(let)]出一声[npc.a_moan]。");
 		}
 	};
 
@@ -156,20 +156,20 @@ public class SelfClitAnus {
 
 		@Override
 		public String getActionTitle() {
-			return "Anal clit self-fuck";
+			return "用阴蒂自慰后穴";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Concentrate on fucking [npc.herself] in the [npc.ass] with [npc.her] [npc.clit+].";
+			return "专注于用[npc.her][npc.clit+]在[npc.her][npc.ass]里自慰。";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] [npc.verb(push)] [npc.her] [npc.clit+] deep inside [npc.her] [npc.asshole+].",
-					"Pumping [npc.her] [npc.clit+] in and out of [npc.her] [npc.asshole+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] rhythmically [npc.verb(fuck)] [npc.herself].",
-					"Driving [npc.her] [npc.clit+] deep inside [npc.her] [npc.asshole+], [npc.name] [npc.verb(let)] out [npc.a_moan] as [npc.she] [npc.verb(start)] fucking [npc.herself].");
+					"一声[npc.A_moan+]从[npc.namePos][npc.lips+]间溢出，[npc.she][npc.verb(push)]着[npc.her][npc.clit+]深入[npc.her][npc.asshole+]。",
+					"[npc.Name]把[npc.her][npc.clit+]在[npc.her][npc.asshole+]里抽送进出，随着[npc.she]有节奏地自慰而发出一连串愉悦的[npc.moans]。",
+					"[npc.Name]将[npc.her][npc.clit+]深入[npc.her][npc.asshole+]，在[npc.she]自慰时[npc.verb(let)]出一声[npc.a_moan]。");
 		}
 	};
 
@@ -184,20 +184,20 @@ public class SelfClitAnus {
 
 		@Override
 		public String getActionTitle() {
-			return "Eager anal clit self-fuck";
+			return "渴望地用阴蒂自慰后穴";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Eagerly fuck [npc.herself] in the [npc.ass] with [npc.her] [npc.clit+].";
+			return "渴望地用[npc.her][npc.clit+]在[npc.her][npc.ass]里自慰。";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"[npc.A_moan+] escapes from between [npc.namePos] [npc.lips+] as [npc.she] eagerly [npc.verb(slam)] [npc.her] [npc.clit+] deep inside [npc.her] [npc.asshole+], before starting to desperately fuck [npc.herself].",
-					"Enthusiastically pumping [npc.her] [npc.clit+] in and out of [npc.her] [npc.asshole+], [npc.name] [npc.verb(start)] letting out a series of delighted [npc.moans] as [npc.she] frantically [npc.verb(fuck)] [npc.herself].",
-					"Desperately driving [npc.her] [npc.clit+] deep inside [npc.her] [npc.asshole+], [npc.name] [npc.verb(let)] out [npc.a_moan] as [npc.she] [npc.verb(start)] eagerly grinding it up inside [npc.herself].");
+					"一声[npc.A_moan+]从[npc.namePos][npc.lips+]间溢出，[npc.she]急切地[npc.verb(slam)]着[npc.her][npc.clit+]深入[npc.her][npc.asshole+]，然后开始拼命地自慰。",
+					"[npc.Name]热切地把[npc.her][npc.clit+]在[npc.her][npc.asshole+]里抽送进出，随着[npc.she]疯狂地自慰而发出一连串愉悦的[npc.moans]。",
+					"[npc.Name]拼命地将[npc.her][npc.clit+]深入[npc.her][npc.asshole+]，在[npc.she]急切地研磨它时[npc.verb(let)]出一声[npc.a_moan]。");
 		}
 	};
 
@@ -211,17 +211,17 @@ public class SelfClitAnus {
 
 		@Override
 		public String getActionTitle() {
-			return "Stop anal clit self-fuck";
+			return "停止用阴蒂自慰后穴";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Stop fucking [npc.herself] in the [npc.ass] with [npc.her] [npc.clit+].";
+			return "停止用[npc.her][npc.clit+]在[npc.her][npc.ass]里自慰。";
 		}
 
 		@Override
 		public String getDescription() {
-			return "Letting out [npc.a_moan], [npc.name] [npc.verb(slide)] [npc.her] [npc.clit+] out of [npc.her] [npc.asshole+].";
+			return "[npc.Name]发出一声[npc.a_moan]，从[npc.her][npc.asshole+]中抽出[npc.her][npc.clit+]。";
 		}
 	};
 }

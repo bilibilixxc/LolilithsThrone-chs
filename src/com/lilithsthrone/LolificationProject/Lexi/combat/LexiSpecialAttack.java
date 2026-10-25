@@ -45,21 +45,21 @@ public class LexiSpecialAttack {
             return new Util.Value<>(
                     (source.getTailType().isSuitableForAttack() && source.getTailLength(false)>=100)
                             || source.getLegConfiguration()== LegConfiguration.TAIL_LONG,
-                    "Available to characters who have a suitable tail which is at least [units.sizeShort(100)] long, or a '"+LegConfiguration.TAIL_LONG.getName()+"' lower body.");
+                    "可用于拥有合适的尾巴且尾巴长度至少为 [units.sizeShort(100)] 的角色，或拥有 '"+LegConfiguration.TAIL_LONG.getName()+"' 型下半身的角色。");
         }
         @Override
         public String getPrediction(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
             boolean isCrit = canCrit(turnIndex, source, target, enemies, allies);
             DamageType damageType = getDamageType(turnIndex, source);
             return UtilText.parse(source, target,
-                    "Deliver a thunderous tail-smack to " + (target==null?"[npc.her] target":"[npc2.name]") + ", dealing "
-                            + getFormattedDamage(damageType, getDamage(turnIndex, source, target, isCrit), target, false, isTargetAtMaximumLust(target)) + " damage.");
+                    "向 " + (target==null?"[npc.her] 目标":"[npc2.name]") + " 挥出雷霆般的一记尾击，造成 "
+                            + getFormattedDamage(damageType, getDamage(turnIndex, source, target, isCrit), target, false, isTargetAtMaximumLust(target)) + " 点伤害。");
         }
         @Override
         public String getDescription(int turnIndex, GameCharacter source) {
             DamageType damageType = getDamageType(turnIndex, source);
             return UtilText.parse(source,
-                    "[npc.Name] can use [npc.her] [npc.tailRace]-tail to deliver a thunderous smack to [npc.her] target, dealing base " + getFormattedDamage(damageType, getBaseDamage(source), null, false, false) + " damage.");
+                    "[npc.Name] 可以用 [npc.her] [npc.tailRace] 尾巴向 [npc.her] 目标挥出雷霆一击，造成基础 " + getFormattedDamage(damageType, getBaseDamage(source), null, false, false) + " 点伤害。");
         }
         @Override
         public String perform(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
@@ -69,12 +69,12 @@ public class LexiSpecialAttack {
             Util.Value<String, Integer> damageValue = damageType.damageTarget(source, target, getDamage(turnIndex, source, target, isCrit));
 
             return formatAttackOutcome(source, target,
-                    "[npc.Name] [npc.verb(turn)] to one side, using the momentum to smack [npc.her] huge [npc.tailRace]-tail straight into [npc2.name]!"+damageValue.getKey(),
-                    "[npc2.Name] took " + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + " damage!",
+                    "[npc.Name] [npc.verb(turn)] 侧过身，借助惯性将 [npc.her] 巨大的 [npc.tailRace] 尾巴径直抽向 [npc2.name]！"+damageValue.getKey(),
+                    "[npc2.Name] 受到了 " + getFormattedDamage(damageType, damageValue.getValue(), target, true, maxLust) + " 点伤害！",
                     (isCrit
-                            ?"[npc.NamePos] tail swipe is particularly effective!"
+                            ?"[npc.NamePos] 的尾击格外凌厉有效！"
                             :null),
-                    "The duration of '"+StatusEffect.DAZED.getName(target)+"' is doubled!");
+                    "'" + StatusEffect.DAZED.getName(target) + "' 的持续时间翻倍！");
         }
         @Override
         public float getCritStatusEffectDurationMultiplier() {
@@ -83,7 +83,7 @@ public class LexiSpecialAttack {
         @Override
         public List<String> getCritRequirements(GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {
             return Util.newArrayListOfValues(
-                    (source!=null?UtilText.parse(source,"[npc.NamePos]"):"Attacker's")+" tail is at least '<span style='color:"+ PenetrationGirth.FIVE_THICK.getColour().toWebHexString()+";'>"+PenetrationGirth.FIVE_THICK.getName()+"</span>'.");
+                    (source!=null?UtilText.parse(source,"[npc.NamePos]"):"攻击者的")+" 尾巴至少要有 '<span style='color:"+ PenetrationGirth.FIVE_THICK.getColour().toWebHexString()+";'>"+PenetrationGirth.FIVE_THICK.getName()+"</span>'。");
         }
         @Override
         public boolean canCrit(int turnIndex, GameCharacter source, GameCharacter target, List<GameCharacter> enemies, List<GameCharacter> allies) {

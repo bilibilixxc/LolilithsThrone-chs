@@ -22,18 +22,18 @@ public class CombatExtras {
                 if (player.hasFetish(OtherRegistrars.FETISH_PEE_RECEIVING)) {
                     extraAttackEffectsSB.append(
                             "<div class='container-full-width' style='text-align:center;'>"
-                                    + "You feel a little aroused from the warmth running down your legs.<br/>"
+                                    + "双腿间流淌的暖意让你感到有些兴奋。<br/>"
                                     + Main.game.getPlayer().incrementLust(Util.random.nextInt(7), false)
                                     + "</div>");
                 } else {
                     extraAttackEffectsSB.append(
                             "<div class='container-full-width' style='text-align:center;'>"
-                                    + "You have leaked a little under the force of that blow!<br/></div>");
+                                    + "在那股冲击之下，你忍不住漏了一点！<br/></div>");
                 }
                 if (attacker.hasFetish(OtherRegistrars.FETISH_PEE_GIVING))
                     extraAttackEffectsSB.append(
                             "<div class='container-full-width' style='text-align:center;'>"
-                                    + UtilText.parse(attacker, "[npc.Name] feels a little aroused from causing you to wet yourself.<br/>")
+                                    + UtilText.parse(attacker, "[npc.Name]因害得你湿了裤子而感到有些兴奋。<br/>")
                                     + attacker.incrementLust(Util.random.nextInt(7), false)
                                     + "</div>");
                 player.addWetSlot(InventorySlot.GROIN);
@@ -47,17 +47,17 @@ public class CombatExtras {
             if (attacker.isPlayer()) {
                 extraAttackEffectsSB.append(
                         "<div class='container-full-width' style='text-align:center;'>"
-                                + UtilText.parse(target, "You made [npc.Name] urinate a little under the force of that blow!<br/></div>"));
+                                + UtilText.parse(target, "在那一击的冲击之下，你让[npc.Name]忍不住漏了一点尿！<br/></div>"));
                 if (target.hasFetish(OtherRegistrars.FETISH_PEE_RECEIVING))
                     extraAttackEffectsSB.append(
                             "<div class='container-full-width' style='text-align:center;'>"
-                                    + UtilText.parse(target, "[npc.Name] feels a little aroused from the warmth running down their legs.<br/>")
+                                    + UtilText.parse(target, "[npc.Name]因双腿间流淌的暖意而感到有些兴奋。<br/>")
                                     + attacker.incrementLust(Util.random.nextInt(7), false)
                                     + "</div>");
                 if (attacker.hasFetish(OtherRegistrars.FETISH_PEE_GIVING))
                     extraAttackEffectsSB.append(
                             "<div class='container-full-width' style='text-align:center;'>"
-                                    + UtilText.parse(target, "You feel a little aroused from causing [npc.Name] to wet their self.<br/>")
+                                    + UtilText.parse(target, "你因害得[npc.Name]湿了裤子而感到有些兴奋。<br/>")
                                     + Main.game.getPlayer().incrementLust(Util.random.nextInt(7), false)
                                     + "</div>");
                 target.addWetSlot(InventorySlot.GROIN);
@@ -79,13 +79,13 @@ public class CombatExtras {
                     if (target.isPlayer())
                         extraAttackEffectsSB.append(
                                 "<div class='container-full-width' style='text-align:center;'>"
-                                        + UtilText.parse(target, "You feel more aroused due to their enhanced seduction.<br/>")
+                                        + UtilText.parse(target, "由于她们那充满挑逗的诱惑，你变得更加兴奋。<br/>")
                                         + target.incrementLust(Util.random.nextInt(7), false)
                                         + "</div>");
                     else
                         extraAttackEffectsSB.append(
                                 "<div class='container-full-width' style='text-align:center;'>"
-                                        + UtilText.parse(target, "[npc.Name] feels more aroused due to your enhanced seduction.<br/>")
+                                        + UtilText.parse(target, "[npc.Name]由于你那充满挑逗的诱惑而变得更加兴奋。<br/>")
                                         + target.incrementLust(Util.random.nextInt(7), false)
                                         + "</div>");
                 }
@@ -96,13 +96,13 @@ public class CombatExtras {
                     if (target.isPlayer())
                         extraAttackEffectsSB.append(
                                 "<div class='container-full-width' style='text-align:center;'>"
-                                        + UtilText.parse(target, "You feel more aroused due to their age.<br/>")
+                                        + UtilText.parse(target, "由于她们的年龄，你变得更加兴奋。<br/>")
                                         + target.incrementLust(Util.random.nextInt(7), false)
                                         + "</div>");
                     else
                         extraAttackEffectsSB.append(
                                 "<div class='container-full-width' style='text-align:center;'>"
-                                        + UtilText.parse(target, "[npc.Name] feels more aroused due to your age.<br/>")
+                                        + UtilText.parse(target, "[npc.Name]由于你的年龄而变得更加兴奋。<br/>")
                                         + target.incrementLust(Util.random.nextInt(7), false)
                                         + "</div>");
                 }
@@ -114,13 +114,13 @@ public class CombatExtras {
                     if (target.isPlayer())
                         extraAttackEffectsSB.append(
                                 "<div class='container-full-width' style='text-align:center;'>"
-                                        + UtilText.parse(target, "You feel more aroused due to their enhanced seduction.<br/>")
+                                        + UtilText.parse(target, "由于她们那充满挑逗的诱惑，你变得更加兴奋。<br/>")
                                         + target.incrementLust(Util.random.nextInt(7), false)
                                         + "</div>");
                     else
                         extraAttackEffectsSB.append(
                                 "<div class='container-full-width' style='text-align:center;'>"
-                                        + UtilText.parse(target, "[npc.Name] feels more aroused due to your enhanced seduction.<br/>")
+                                        + UtilText.parse(target, "[npc.Name]由于你那充满挑逗的诱惑而变得更加兴奋。<br/>")
                                         + target.incrementLust(Util.random.nextInt(7), false)
                                         + "</div>");
                 }
@@ -131,13 +131,13 @@ public class CombatExtras {
                     if (target.isPlayer())
                         extraAttackEffectsSB.append(
                                 "<div class='container-full-width' style='text-align:center;'>"
-                                        + UtilText.parse(target, "You feel more aroused due to their age.<br/>")
+                                        + UtilText.parse(target, "由于她们的年龄，你变得更加兴奋。<br/>")
                                         + target.incrementLust(Util.random.nextInt(7), false)
                                         + "</div>");
                     else
                         extraAttackEffectsSB.append(
                                 "<div class='container-full-width' style='text-align:center;'>"
-                                        + UtilText.parse(target, "[npc.Name] feels more aroused due to your age.<br/>")
+                                        + UtilText.parse(target, "[npc.Name]由于你的年龄而变得更加兴奋。<br/>")
                                         + target.incrementLust(Util.random.nextInt(7), false)
                                         + "</div>");
                 }

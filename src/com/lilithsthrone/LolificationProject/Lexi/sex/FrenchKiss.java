@@ -39,12 +39,12 @@ public class FrenchKiss {
 
 		@Override
 		public String getActionTitle() {
-			return "Start french kissing";
+			return "开始法式舌吻";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Press your [npc.lips] against [npc2.namePos] mouth and slide [npc.her] [npc.tongue+] into [npc2.her] [npc2.mouth].";
+			return "将你的[npc.lips]贴上[npc2.namePos]的嘴，将[npc.her]的[npc.tongue+]滑入[npc2.her]的[npc2.mouth]。";
 		}
 
 		@Override
@@ -57,80 +57,80 @@ public class FrenchKiss {
 
 				if (Main.sex.getAllOngoingSexAreas(Main.sex.getCharacterPerformingAction(), SexAreaOrifice.ANUS).contains(SexAreaPenetration.PENIS)) {
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"[npc.Name] [npc.verb(sink)] down onto [npc2.namePos] [npc2.penis], letting out [npc.a_moan+] as [npc.her] [npc.asshole+] grips down around [npc2.her] [npc2.penisGirth] [npc2.penis+]."
-									+ " As [npc.her] [npc.moan] trails off, [npc.name] [npc.verb(lean)] down and [npc.verb(grab)] [npc2.namePos] head in both hands,"
-									+ " before pressing [npc.her] [npc.lips+] against [npc2.hers] and [npc.verb(slither)] [npc.her] [npc.tongue+] into [npc.her] mouth.",
+							"[npc.Name] [npc.verb(sink)]坐到[npc2.namePos]的[npc2.penis]上，当[npc.her]的[npc.asshole+]紧箍住[npc2.her]的[npc2.penisGirth] [npc2.penis+]时，[npc.she]发出一声[npc.a_moan+]。"
+									+ " 随着[npc.her]的[npc.moan]声渐弱，[npc.name] [npc.verb(lean)]下身子，双手[npc.verb(grab)]住[npc2.namePos]的头，"
+									+ " 然后将[npc.her]的[npc.lips+]贴上[npc2.hers]，[npc.verb(slither)]着把[npc.her]的[npc.tongue+]滑入[npc.her]的嘴里。",
 
-							"With [npc.a_moan+], [npc.name] [npc.verb(slide)] down onto [npc2.namePos] [npc2.penis+], before leaning down and pressing [npc.herself] against [npc2.her] [npc2.breasts]."
-									+ " Breathing in [npc2.namePos] [npc2.scent+], [npc.name] [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.hers] and [npc.verb(start)] to passionately surge [npc.her] in [npc2.her] mouth,"
-									+ "tasting [npc2.her] saliva as [npc.her] tongues intertwine.",
+							"带着一声[npc.a_moan+]，[npc.name] [npc.verb(slide)]坐到[npc2.namePos]的[npc2.penis+]上，随即俯身将自己压向[npc2.her]的[npc2.breasts]。"
+									+ " 呼吸着[npc2.namePos]的[npc2.scent+]，[npc.name]把[npc.her]的[npc.lips+]贴上[npc2.hers]，开始[npc.verb(start)]激情地向[npc2.her]嘴中探入[npc.her]的舌头，"
+									+ "在双舌交缠时品尝着[npc2.her]的唾液。",
 
-							"[npc.Name] [npc.verb(let)] [npc2.namePos] [npc2.penis+] slide even deeper into [npc.her] [npc.asshole+] as [npc.she] [npc.verb(lean)] down and [npc.verb(pull)] [npc2.herHim] into a desperate tongue lock.",
+							"[npc.Name] [npc.verb(let)]着让[npc2.namePos]的[npc2.penis+]在[npc.her]的[npc.asshole+]里滑得更深，[npc.she]同时[npc.verb(lean)]下身子，把[npc2.herHim]拉入一个绝望的舌吻。",
 
-							"Dropping down, [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(bury)] [npc2.namePos] [npc2.penis+] in [npc.her] [npc.asshole+],"
-									+ " before leaning down and pressing [npc.her] [npc.lips+] against [npc2.hers]."
-									+ " Intending to make this much more than a passionate kiss, [npc.her] [npc.tongue+] parts [npc2.her] [npc2.lips+], pushes [npc2.her] tongue aside before delving down [npc.her] throat, causing it to bulge"
-									+ " as [npc.her] [npc.tongue+] squirms in [npc2.her] throat."));
+							"俯身向下，[npc.name] [npc.verb(let)]出一声[npc.a_moan+]，[npc.she]把[npc2.namePos]的[npc2.penis+]深埋进[npc.her]的[npc.asshole+]，"
+									+ " 然后俯身将自己的[npc.lips+]贴上[npc2.hers]。"
+									+ " 打算让这远超一场热烈的亲吻，[npc.her]的[npc.tongue+]分开[npc2.her]的[npc2.lips+]，将[npc2.her]的舌头挤到一旁，随后探入[npc2.her]的喉咙深处，使其鼓胀起来"
+									+ " 而[npc.her]的[npc.tongue+]在[npc2.her]的喉咙里扭动着。"));
 
 				} else if (Main.sex.getAllOngoingSexAreas(Main.sex.getCharacterPerformingAction(), SexAreaOrifice.VAGINA).contains(SexAreaPenetration.PENIS)) {
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"[npc.Name] [npc.verb(sink)] down onto [npc2.namePos] [npc2.penis], letting out [npc.a_moan+] as [npc.her] [npc.vagina+] grips down around [npc2.her] [npc2.penisGirth] [npc2.penis+]."
-									+ " As [npc.her] [npc.moan] trails off, [npc.name] [npc.verb(lean)] down and [npc.verb(grab)] [npc2.namePos] head in both hands,"
-									+ " before pressing [npc.her] [npc.lips+] against [npc2.hers] and [npc.verb(slither)] [npc.her] [npc.tongue+] into [npc.her] mouth.",
+							"[npc.Name] [npc.verb(sink)]坐到[npc2.namePos]的[npc2.penis]上，当[npc.her]的[npc.vagina+]紧箍住[npc2.her]的[npc2.penisGirth] [npc2.penis+]时，[npc.she]发出一声[npc.a_moan+]。"
+									+ " 随着[npc.her]的[npc.moan]声渐弱，[npc.name] [npc.verb(lean)]下身子，双手[npc.verb(grab)]住[npc2.namePos]的头，"
+									+ " 然后将[npc.her]的[npc.lips+]贴上[npc2.hers]，[npc.verb(slither)]着把[npc.her]的[npc.tongue+]滑入[npc.her]的嘴里。",
 
-							"With [npc.a_moan+], [npc.name] [npc.verb(slide)] down onto [npc2.namePos] [npc2.penis+], before leaning down and pressing [npc.herself] against [npc2.her] [npc2.breasts]."
-									+ " Breathing in [npc2.namePos] [npc2.scent+], [npc.name] [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.hers] and [npc.verb(start)] to passionately surge [npc.her] in [npc2.her] mouth,"
-									+ "tasting [npc2.her] saliva as [npc.her] tongues intertwine.",
+							"带着一声[npc.a_moan+]，[npc.name] [npc.verb(slide)]坐到[npc2.namePos]的[npc2.penis+]上，随即俯身将自己压向[npc2.her]的[npc2.breasts]。"
+									+ " 呼吸着[npc2.namePos]的[npc2.scent+]，[npc.name]把[npc.her]的[npc.lips+]贴上[npc2.hers]，开始[npc.verb(start)]激情地向[npc2.her]嘴中探入[npc.her]的舌头，"
+									+ "在双舌交缠时品尝着[npc2.her]的唾液。",
 
-							"[npc.Name] [npc.verb(let)] [npc2.namePos] [npc2.penis+] [npc2.verb(slide)] even deeper into [npc.her] [npc.vagina+] as [npc.she] [npc.verb(lean)] down and [npc.verb(pull)] [npc2.herHim] into a desperate tongue lock.",
+							"[npc.Name] [npc.verb(let)]着让[npc2.namePos]的[npc2.penis+]在[npc.her]的[npc.vagina+]里滑得更深，[npc.she]同时[npc.verb(lean)]下身子，把[npc2.herHim]拉入一个绝望的舌吻。",
 
-							"Dropping down, [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(bury)] [npc2.namePos] [npc2.penis+] in [npc.her] [npc.vagina+],"
-									+ " before leaning down and pressing [npc.her] [npc.lips+] against [npc2.hers]."
-									+ " Intending to make this much more than a passionate kiss, [npc.her] [npc.tongue+] parts [npc2.her] [npc2.lips+], pushes [npc2.her] tongue aside before delving down [npc.her] throat, causing it to bulge"
-									+ " as [npc.her] [npc.tongue+] squirms in [npc2.her] throat."));
+							"俯身向下，[npc.name] [npc.verb(let)]出一声[npc.a_moan+]，[npc.she]把[npc2.namePos]的[npc2.penis+]深埋进[npc.her]的[npc.vagina+]，"
+									+ " 然后俯身将自己的[npc.lips+]贴上[npc2.hers]。"
+									+ " 打算让这远超一场热烈的亲吻，[npc.her]的[npc.tongue+]分开[npc2.her]的[npc2.lips+]，将[npc2.her]的舌头挤到一旁，随后探入[npc2.her]的喉咙深处，使其鼓胀起来"
+									+ " 而[npc.her]的[npc.tongue+]在[npc2.her]的喉咙里扭动着。"));
 				} else {
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"[npc.Name] [npc.verb(lean)] down, pressing [npc.her] [npc.lips+] against [npc2.namePos] mouth as [npc.she] passionately surge [npc.her] [npc.tongue+] in [npc2.her] mouth,"
-									+ " tasting [npc2.her] saliva as [npc.her] tongues intertwine.",
+							"[npc.Name] [npc.verb(lean)]下身子，将[npc.her]的[npc.lips+]贴上[npc2.namePos]的嘴，同时[npc.she]激情地将[npc.her]的[npc.tongue+]探入[npc2.her]的嘴里，"
+									+ " 在双舌交缠时品尝着[npc2.her]的唾液。",
 
-							"With a grin, [npc.name] leans down into [npc2.namePos] breasts, trailing [npc.her] [npc.tongue+] over them and leaving behind a sloppy trail before reaching [npc2.her] mouth."
-								+ "Licking [npc2.her] lips and leaving them dripping, [npc.she] glides [npc.her] [npc.tongue+] into [npc2.her] mouth, squirming around freely as [npc.she] intakes the taste of [npc2.her] oral delight.",
+							"带着一丝微笑，[npc.name]俯身埋入[npc2.namePos]的胸前，用[npc.her]的[npc.tongue+]在它们上面舔过，留下一道湿漉漉的痕迹，直到抵达[npc2.her]的嘴唇。"
+								+ "舔着[npc2.her]的嘴唇并让它们湿润淋漓，[npc.she]将[npc.her]的[npc.tongue+]滑入[npc2.her]的嘴里，自由地扭动着，品尝着[npc2.her]口中的甜蜜滋味。",
 
-							"Leaning down, [npc.name] [npc.verb(let)] out [npc.a_moan+] as [npc.she] [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.namePos] and [npc.verb(start)] to eagerly kiss [npc2.her], with each heartbeat [npc.her] [npc.tongue+] exploring more of [npc2.her] mouth. "
-								+ "Desperate for more, [npc.she] eagerly pushes [npc.her] [npc.tongue+] deeper and deeper in until [npc.she] reach the back of [npc2.her] mouth and [npc.verb(start)] to slide down [npc2.her] throat, a small bulge visible in [npc2.her] throat."));
+							"俯身向下，[npc.name] [npc.verb(let)]出一声[npc.a_moan+]，[npc.she]将[npc.her]的[npc.lips+]贴上[npc2.namePos]，开始[npc.verb(start)]热切地亲吻[npc2.her]，每一下心跳间，[npc.her]的[npc.tongue+]都更深地探索[npc2.her]口中的更多地方。 "
+								+ "渴望更多，[npc.she]急切地把[npc.her]的[npc.tongue+]越推越深，直到[npc.she]触及[npc2.her]口腔的后端，开始[npc.verb(start)]滑入[npc2.her]的喉咙，一道小小的隆起在[npc2.her]的喉咙里浮现。"));
 				}
 
 				if(!isTargetedCharacterInanimate()) {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
 						case SUB_NORMAL:
 							UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-									" [npc2.Name] [npc2.verb(push)] [npc2.her] [npc2.tongue] into [npc.namePos] mouth,"
-											+ " pressing [npc2.her] [npc2.lips+] against [npc.hers] as [npc2.she] eagerly [npc2.verb(return)] [npc.namePos] display of affection.",
+									" [npc2.Name] [npc2.verb(push)]将[npc2.her]的[npc2.tongue]推入[npc.namePos]的嘴里，"
+											+ " 把[npc2.her]的[npc2.lips+]贴上[npc.hers]，[npc2.she]热切地[npc2.verb(return)]着[npc.namePos]表达的爱意。",
 
-									" With [npc2.a_moan], [npc2.name] [npc2.verb(lean)] into [npc.name],"
-											+ " muffling [npc2.her] [npc2.moans] into [npc.her] mouth as [npc2.she] eagerly [npc2.verb(thrust)] [npc2.her] [npc2.tongue] past [npc.her] [npc.lips+].",
+									" 随着一声[npc2.a_moan]，[npc2.name] [npc2.verb(lean)]向[npc.name]，"
+											+ " 把[npc2.her]的[npc2.moans]闷进[npc.her]的嘴里，[npc2.she]急切地用[npc2.her]的[npc2.tongue]穿过[npc.her]的[npc.lips+]用力探入。",
 
-									" [npc2.Moaning] in delight, [npc2.name] [npc2.verb(lean)] into [npc.name],"
-											+ " pressing [npc2.her] [npc2.lips+] against [npc.nameHers] as [npc2.she] happily [npc2.verb(slide)] [npc2.her] [npc2.tongue] into [npc.her] mouth."));
+									" [npc2.Moaning]出喜悦的呻吟，[npc2.name] [npc2.verb(lean)]向[npc.name]，"
+											+ " 把[npc2.her]的[npc2.lips+]贴上[npc.nameHers]，[npc2.she]开心地将[npc2.her]的[npc2.tongue]滑入[npc.her]的嘴里。"));
 							break;
 						case SUB_RESISTING:
 							UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-									" [npc2.Name] [npc2.verb(try)] to pull away, [npc2.sobbing] and squirming in discomfort as [npc.name] [npc.verb(force)] [npc.her] [npc.tongue+] into [npc2.herHim] mouth.",
+									" [npc2.Name] [npc2.verb(try)]着想要抽身避开，[npc2.sobbing]着在不适中扭动，因为[npc.name] [npc.verb(force)]把[npc.her]的[npc.tongue+]强行塞入[npc2.herHim]的嘴里。",
 
-									" [npc2.NamePos] [npc2.sob+] is muffled into [npc.namePos] mouth as [npc2.she] [npc2.verb(try)] to pull away, squirming in discomfort as [npc.name] [npc.verb(force)] [npc.her] [npc.tongue+] into [npc2.herHim] mouth.",
+									" [npc2.NamePos]的[npc2.sob+]被闷进[npc.namePos]的嘴里，[npc2.she] [npc2.verb(try)]着想抽身避开，在不适中扭动，因为[npc.name] [npc.verb(force)]把[npc.her]的[npc.tongue+]强行塞入[npc2.herHim]的嘴里。",
 
-									" With [npc2.a_sob+], [npc2.name] [npc2.verb(try)], in vain, to pull away from [npc.name],"
-											+ " protesting and squirming in discomfort as [npc.name] [npc.verb(force)] [npc.her] [npc.tongue] past [npc2.her] reluctant [npc2.lips] and down [npc2.her] throat, causing tears to form in [npc2.her] eyes."));
+									" 随着一声[npc2.a_sob+]，[npc2.name] [npc2.verb(try)]着，徒劳无功地，想从[npc.name]身边抽身避开，"
+											+ " 在不适中抗议扭动着，因为[npc.name] [npc.verb(force)]把[npc.her]的[npc.tongue]穿过[npc2.her]不情愿的[npc2.lips]探进[npc2.her]的喉咙深处，泪水在[npc2.her]的眼中泛起。"));
 							break;
 						default:
 							UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-									" [npc2.Name] happily [npc2.verb(push)] [npc2.her] [npc2.tongue] deep into [npc.namePos] mouth,"
-											+ " eagerly pressing [npc2.her] [npc2.lips+] back against [npc.hers] and [npc2.moaning] in delight as [npc2.she] greedily [npc2.verb(return)] [npc.her] display of affection.",
+									" [npc2.Name]开心地[npc2.verb(push)]把[npc2.her]的[npc2.tongue]深探入[npc.namePos]的嘴里，"
+											+ " 急切地将[npc2.her]的[npc2.lips+]压回[npc.hers]上，[npc2.she]带着喜悦[npc2.moaning]，贪婪地[npc2.verb(return)]着她的爱意。",
 
-									" With an eager [npc2.moan], [npc2.name] desperately [npc2.verb(grind)] back against [npc.name],"
-											+ " muffling [npc2.her] [npc2.moans] into [npc.her] mouth as [npc2.she] greedily [npc2.verb(thrust)] [npc2.her] [npc2.tongue] past [npc.her] [npc.lips+].",
+									" 带着一声急切的[npc2.moan]，[npc2.name]绝望地[npc2.verb(grind)]压回[npc.name]身上，"
+											+ " 把[npc2.her]的[npc2.moans]闷进[npc.her]的嘴里，[npc2.she]贪婪地用[npc2.her]的[npc2.tongue]穿过[npc.her]的[npc.lips+]用力探入。",
 
-									" [npc2.Moaning] in delight, [npc2.name] eagerly [npc2.verb(press)] [npc2.her] [npc2.lips+] firmly against [npc.nameHers] as [npc2.she] happily [npc2.verb(push)] [npc2.her] [npc2.tongue] into [npc.her] mouth."));
+									" [npc2.Moaning]出喜悦的呻吟，[npc2.name]急切地把[npc2.her]的[npc2.lips+]用力贴上[npc.nameHers]，[npc2.she]开心地将[npc2.her]的[npc2.tongue]推入[npc.her]的嘴里。"));
 							break;
 					}
 				}
@@ -140,77 +140,77 @@ public class FrenchKiss {
 				switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 					case DOM_GENTLE:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								"Reaching up to take hold of [npc2.namePos] chin, [npc.name] [npc.verb(tilt)] [npc2.her] head to one side as [npc.she] [npc.verb(lean)] forwards,"
-										+ " pressing [npc.her] [npc.lips+] against [npc2.hers] as [npc.she] [npc.verb(pull)] [npc2.herHim] into a gentle kiss,"
-										+ " tenderly parting [npc2.her] [npc2.lips] with [npc.her] [npc.tongue+] letting [npc2.her] taste [npc.her] saliva.",
+								"伸手托住[npc2.namePos]的下巴，[npc.name] [npc.verb(tilt)]把[npc2.her]的头侧向一边，[npc.she]同时[npc.verb(lean)]前倾，"
+										+ " 将[npc.her]的[npc.lips+]贴上[npc2.hers]，[npc.she]把[npc2.herHim]拉入一个轻柔的吻，"
+										+ " 温柔地用[npc.her]的[npc.tongue+]分开[npc2.her]的[npc2.lips]，让[npc2.her]品尝[npc.her]的唾液。",
 
-								"[npc.Name] [npc.verb(lean)] forwards, pressing into [npc2.namePos] back and breathing in [npc2.her] [npc2.scent+]."
-										+ " Reaching up, [npc.she] [npc.verb(turn)] [npc2.namePos] head to one side and gently [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.hers],"
-										+ " before [npc.verb(ease)] them apart and [npc.verb(allowing)] entry for [npc.her] [npc.tongue+], gently [npc.verb(stroke)] the inside of [npc2.her] cheek, causing it to bulge.",
+								"[npc.Name] [npc.verb(lean)]前倾，贴上[npc2.namePos]的后背，呼吸着[npc2.her]的[npc2.scent+]。"
+										+ " 举起手，[npc.she] [npc.verb(turn)]把[npc2.namePos]的头转向一边，温柔地[npc.verb(press)]将[npc.her]的[npc.lips+]贴上[npc2.hers]，"
+										+ " 随即[npc.verb(ease)]将它们分开，为[npc.her]的[npc.tongue+]让出空间，轻柔地[npc.verb(stroke)]抚过[npc2.her]脸颊内侧，使其鼓胀起来。",
 
-								"[npc.Name] [npc.verb(lean)] into [npc2.namePos] back, turning [npc2.her] head slightly to one side before gently pulling [npc2.herHim] into a soft french kiss,"
-										+" tongues surging and [npc.verb(intertwine)] in a lubricated bond."));
+								"[npc.Name] [npc.verb(lean)]贴上[npc2.namePos]的后背，把[npc2.her]的头微微转向一侧，随即轻柔地把[npc2.herHim]拉入一个温柔的深吻，"
+										+"双舌激烈交缠，在润湿的牵绊中缠绕。"));
 						break;
 					case DOM_ROUGH:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								"Reaching up to roughly grab [npc2.namePos] chin, [npc.name] [npc.verb(yank)] [npc2.her] head to one side,"
-										+ " before grinding [npc.her] [npc.lips+] against [npc2.hers] as [npc.she] [npc.verb(pull)] [npc2.herHim] into a forceful french kiss."
-										+ " hungrily parting [npc2.her] [npc2.lips] with [npc.her] [npc.tongue+] letting [npc2.her] taste [npc.her] saliva.",
+								"伸手粗暴地抓住[npc2.namePos]的下巴，[npc.name] [npc.verb(yank)]猛地将[npc2.her]的头甩向一侧，"
+										+ " 随即把[npc.her]的[npc.lips+]碾在[npc2.hers]上，[npc.she]将[npc2.herHim]拉入一个强势的深吻。"
+										+ " 贪婪地用[npc.her]的[npc.tongue+]分开[npc2.her]的[npc2.lips]，让[npc2.her]品尝[npc.her]的唾液。",
 
 
-								"[npc.Name] [npc.verb(lean)] forwards, pressing into [npc2.namePos] back and breathing in [npc2.her] [npc2.scent+]."
-										+ " Reaching up, [npc.she] roughly [npc.verb(yank)] [npc2.namePos] head to one side before forcefully [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.hers]."
-										+ " before [npc.verb(shove)] them apart with [npc.her] tongue and [npc.verb(allowing)] entry for [npc.her] [npc.tongue+], roughly [npc.verb(push)] the inside of [npc2.her] [npc2.tongue] against [npc2.her] cheek, causing it to bulge.",
+								"[npc.Name] [npc.verb(lean)]前倾，贴上[npc2.namePos]的后背，呼吸着[npc2.her]的[npc2.scent+]。"
+										+ " 举起手，[npc.she]粗暴地[npc.verb(yank)]把[npc2.namePos]的头甩向一侧，随即用力[npc.verb(press)]把[npc.her]的[npc.lips+]贴上[npc2.hers]。"
+										+ " 随后[npc.verb(shove)]用舌头将它们挤开，为[npc.her]的[npc.tongue+]让出空间，用力[npc.verb(push)]把[npc2.her]的[npc2.tongue]抵在[npc2.her]的脸颊上，使其鼓胀起来。",
 
 
-								"[npc.Name] [npc.verb(lean)] into [npc2.namePos] back, yanking [npc2.her] head to one side before roughly [npc.verb(force)] [npc.her] [npc.tongue+] down [npc2.her] throat,"
-										+ " causing it to bulge from the sudden penetration."));
+								"[npc.Name] [npc.verb(lean)]贴上[npc2.namePos]的后背，猛地将[npc2.her]的头甩向一侧，随即粗暴地[npc.verb(force)]将[npc.her]的[npc.tongue+]探入[npc2.her]的喉咙深处，"
+										+ " 因这突如其来的侵入而鼓胀起来。"));
 						break;
 					default:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								"Reaching up to take hold of [npc2.her] chin, [npc.name] [npc.verb(lean)] forwards,"
-										+ " eagerly pressing [npc.her] [npc.lips+] against [npc2.hers] as [npc.she] [npc.verb(pull)] [npc2.herHim] into a passionate deep kiss,"
-										+ " [npc.her] tongues intertwining.",
+								"伸手托住[npc2.her]的下巴，[npc.name] [npc.verb(lean)]前倾，"
+										+ " 急切地把[npc.her]的[npc.lips+]贴上[npc2.hers]，[npc.she]顺势将[npc2.herHim]拉入一个热烈的深吻，"
+										+ " 双舌交缠。",
 
-								"[npc.Name] [npc.verb(lean)] forwards, pressing into [npc2.namePos] back and breathing in [npc2.her] [npc2.scent+]."
-										+ " Reaching up, [npc.she] [npc.verb(turn)] [npc2.namePos] head to one side and passionately [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.hers]."
-										+ " before [npc.verb(slide)] them apart with [npc.her] tongue and [npc.verb(allowing)] entry for [npc.her] [npc.tongue+], vigorously [npc.verb(stroke)] the inside of [npc2.her] cheek, causing it to bulge.",
+								"[npc.Name] [npc.verb(lean)]前倾，贴上[npc2.namePos]的后背，呼吸着[npc2.her]的[npc2.scent+]。"
+										+ " 举起手，[npc.she] [npc.verb(turn)]把[npc2.namePos]的头转向一边，充满激情地[npc.verb(press)]将[npc.her]的[npc.lips+]贴上[npc2.hers]。"
+										+ " 随即[npc.verb(slide)]用舌头将它们分开，为[npc.her]的[npc.tongue+]让出空间，有力地[npc.verb(stroke)]抚过[npc2.her]的脸颊内侧，使其鼓胀起来。",
 
-								"[npc.Name] [npc.verb(lean)] into [npc2.namePos] back, turning [npc2.her] head slightly to one side before eagerly pulling [npc2.herHim] into a passionate french kiss."
-										+" tongues surging and [npc.verb(intertwine)] in a messy parade."));
+								"[npc.Name] [npc.verb(lean)]贴上[npc2.namePos]的后背，把[npc2.her]的头微微转向一侧，随即急切地把[npc2.herHim]拉入一个热烈的深吻。"
+										+"双舌激烈交缠，在混乱的交错中缠绕。"));
 						break;
 				}
 				if(!isTargetedCharacterInanimate()) {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
 						case SUB_NORMAL:
 							UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-									" [npc2.Name] [npc2.verb(push)] [npc2.her] [npc2.tongue] into [npc.name] mouth,"
-											+ " pressing [npc2.her] [npc2.lips+] firmly against [npc.hers] as [npc2.she] eagerly [npc2.verb(return)] [npc.her] display of affection.",
+									" [npc2.Name] [npc2.verb(push)]将[npc2.her]的[npc2.tongue]推入[npc.name]的嘴里，"
+											+ " 把[npc2.her]的[npc2.lips+]用力贴上[npc.hers]，[npc2.she]热切地[npc2.verb(return)]着她的爱意。",
 
-									" With [npc2.a_moan], [npc2.name] [npc2.verb(lean)] back against [npc.name],"
-											+ " muffling [npc2.her] [npc2.moans] into [npc.her] mouth as [npc2.she] eagerly [npc2.verb(thrust)] [npc2.her] [npc2.tongue] past [npc.her] [npc.lips+].",
+									" 随着一声[npc2.a_moan]，[npc2.name] [npc2.verb(lean)]靠回[npc.name]身上，"
+											+ " 把[npc2.her]的[npc2.moans]闷进[npc.her]的嘴里，[npc2.she]急切地用[npc2.her]的[npc2.tongue]穿过[npc.her]的[npc.lips+]用力探入。",
 
-									" [npc2.Moaning] in delight, [npc2.name] [npc2.verb(lean)] back against [npc.name],"
-											+ " pressing [npc2.her] [npc2.lips+] against [npc.hers] as [npc2.she] happily [npc2.verb(slide)] [npc2.her] [npc2.tongue] into [npc.her] mouth."));
+									" [npc2.Moaning]出喜悦的呻吟，[npc2.name] [npc2.verb(lean)]靠回[npc.name]身上，"
+											+ " 把[npc2.her]的[npc2.lips+]贴上[npc.hers]，[npc2.she]开心地将[npc2.her]的[npc2.tongue]滑入[npc.her]的嘴里。"));
 							break;
 						case SUB_RESISTING:
 							UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-									" [npc2.Name] [npc2.verb(try)] to pull away, [npc2.sobbing] and squirming in discomfort as [npc.name] [npc.verb(force)] [npc.her] [npc.tongue+] into [npc2.herHim] mouth.",
+									" [npc2.Name] [npc2.verb(try)]着想要抽身避开，[npc2.sobbing]着在不适中扭动，因为[npc.name] [npc.verb(force)]把[npc.her]的[npc.tongue+]强行塞入[npc2.herHim]的嘴里。",
 
-									" [npc2.NamePos] [npc2.sob+] is muffled into [npc.namePos] mouth as [npc2.she] [npc2.verb(try)] to pull away, squirming in discomfort as [npc.name] [npc.verb(force)] [npc.her] [npc.tongue+] into [npc2.herHim] mouth.",
+									" [npc2.NamePos]的[npc2.sob+]被闷进[npc.namePos]的嘴里，[npc2.she] [npc2.verb(try)]着想抽身避开，在不适中扭动，因为[npc.name] [npc.verb(force)]把[npc.her]的[npc.tongue+]强行塞入[npc2.herHim]的嘴里。",
 
-									" With [npc2.a_sob+], [npc2.name] [npc2.verb(try)], in vain, to pull away from [npc.name],"
-											+ " protesting and squirming in discomfort as [npc.name] [npc.verb(force)] [npc.her] [npc.tongue] past [npc2.her] reluctant [npc2.lips] and down [npc2.her] throat, causing tears to form in [npc2.her] eyes."));
+									" 随着一声[npc2.a_sob+]，[npc2.name] [npc2.verb(try)]着，徒劳无功地，想从[npc.name]身边抽身避开，"
+											+ " 在不适中抗议扭动着，因为[npc.name] [npc.verb(force)]把[npc.her]的[npc.tongue]穿过[npc2.her]不情愿的[npc2.lips]探进[npc2.her]的喉咙深处，泪水在[npc2.her]的眼中泛起。"));
 							break;
 						default:
 							UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-									" [npc2.Name] happily [npc2.verb(push)] [npc2.her] [npc2.tongue] deep into [npc.namePos] mouth,"
-											+ " eagerly pressing [npc2.her] [npc2.lips+] back against [npc.hers] and [npc2.moaning] in delight as [npc2.she] greedily [npc2.verb(return)] [npc.her] display of affection.",
+									" [npc2.Name]开心地[npc2.verb(push)]把[npc2.her]的[npc2.tongue]深探入[npc.namePos]的嘴里，"
+											+ " 急切地将[npc2.her]的[npc2.lips+]压回[npc.hers]上，[npc2.she]带着喜悦[npc2.moaning]，贪婪地[npc2.verb(return)]着她的爱意。",
 
-									" With an eager [npc2.moan], [npc2.name] desperately [npc2.verb(grind)] back against [npc.name],"
-											+ " muffling [npc2.her] [npc2.moans] into [npc.her] mouth as [npc2.she] greedily [npc2.verb(thrust)] [npc2.her] [npc2.tongue] past [npc.her] [npc.lips+].",
+									" 带着一声急切的[npc2.moan]，[npc2.name]绝望地[npc2.verb(grind)]压回[npc.name]身上，"
+											+ " 把[npc2.her]的[npc2.moans]闷进[npc.her]的嘴里，[npc2.she]贪婪地用[npc2.her]的[npc2.tongue]穿过[npc.her]的[npc.lips+]用力探入。",
 
-									" [npc2.Moaning] in delight, [npc2.name] eagerly [npc2.verb(press)] [npc2.her] [npc2.lips+] firmly against [npc.nameHers] as [npc2.she] happily [npc2.verb(push)] [npc2.her] [npc2.tongue] into [npc.her] mouth."));
+									" [npc2.Moaning]出喜悦的呻吟，[npc2.name]急切地把[npc2.her]的[npc2.lips+]用力贴上[npc.nameHers]，[npc2.she]开心地将[npc2.her]的[npc2.tongue]推入[npc.her]的嘴里。"));
 							break;
 					}
 				}
@@ -220,58 +220,58 @@ public class FrenchKiss {
 				switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 					case DOM_GENTLE:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								"Gazing into [npc2.namePos] [npc2.eyes], [npc.name] [npc.verb(lean)] forwards, pressing [npc.her] [npc.lips+] against [npc2.hers] as [npc.she] [npc.verb(pull)] [npc2.herHim] into a gentle kiss."
-										+ " tenderly parting [npc2.her] [npc2.lips] with [npc.her] [npc.tongue+] letting [npc2.her] taste [npc.her] saliva.",
+								"凝视着[npc2.namePos]的[npc2.eyes]，[npc.name] [npc.verb(lean)]前倾，将[npc.her]的[npc.lips+]贴上[npc2.hers]，[npc.she]把[npc2.herHim]拉入一个轻柔的吻。"
+										+ " 温柔地用[npc.her]的[npc.tongue+]分开[npc2.her]的[npc2.lips]，让[npc2.her]品尝[npc.her]的唾液。",
 
-								"[npc.Name] [npc.verb(lean)] into [npc2.name], breathing in [npc2.her] [npc2.scent+] as [npc.she] gently [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.hers]."
-										+ " before [npc.verb(ease)] them apart and [npc.verb(allowing)] entry for [npc.her] [npc.tongue+], gently [npc.verb(stroke)] the inside of [npc2.her] cheek, causing it to bulge.",
+								"[npc.Name] [npc.verb(lean)]靠向[npc2.name]，呼吸着[npc2.her]的[npc2.scent+]，[npc.she]温柔地[npc.verb(press)]把[npc.her]的[npc.lips+]贴上[npc2.hers]。"
+										+ " 随即[npc.verb(ease)]将它们分开，为[npc.her]的[npc.tongue+]让出空间，轻柔地[npc.verb(stroke)]抚过[npc2.her]的脸颊内侧，使其鼓胀起来。",
 
-								"[npc.Name] [npc.verb(lean)] in against [npc2.namePos] [npc2.breasts+], tilting [npc.her] head slightly to one side before gently pulling [npc2.herHim] into a loving french kiss."));
+								"[npc.Name] [npc.verb(lean)]靠在[npc2.namePos]的[npc2.breasts+]上，把[npc.her]的头微微侧向一边，随即轻柔地把[npc2.herHim]拉入一个深情的深吻。"));
 						break;
 					case DOM_NORMAL:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								"Gazing into [npc2.namePos] [npc2.eyes], [npc.name] [npc.verb(lean)] forwards, pressing [npc.her] [npc.lips+] against [npc2.hers] as [npc.she] [npc.verb(pull)] [npc2.herHim] into a passionate deep kiss."
-										+ " [npc.her] tongues intertwining.",
+								"凝视着[npc2.namePos]的[npc2.eyes]，[npc.name] [npc.verb(lean)]前倾，将[npc.her]的[npc.lips+]贴上[npc2.hers]，[npc.she]把[npc2.herHim]拉入一个热烈的深吻。"
+										+ " 双舌交缠。",
 
-								"[npc.Name] [npc.verb(lean)] into [npc2.name], breathing in [npc2.her] [npc2.scent+] as [npc.she] eagerly [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.hers]."
-										+ " before [npc.verb(slide)] them apart with [npc.her] tongue and [npc.verb(allowing)] entry for [npc.her] [npc.tongue+], vigorously [npc.verb(stroke)] the inside of [npc2.her] cheek, causing it to bulge.",
+								"[npc.Name] [npc.verb(lean)]靠向[npc2.name]，呼吸着[npc2.her]的[npc2.scent+]，[npc.she]急切地[npc.verb(press)]把[npc.her]的[npc.lips+]贴上[npc2.hers]。"
+										+ " 随即[npc.verb(slide)]用舌头将它们分开，为[npc.her]的[npc.tongue+]让出空间，有力地[npc.verb(stroke)]抚过[npc2.her]的脸颊内侧，使其鼓胀起来。",
 
-								"[npc.Name] [npc.verb(lean)] in against [npc2.namePos] [npc2.breasts+], tilting [npc.her] head slightly to one side before eagerly pulling [npc2.herHim] into a passionate french kiss."
-										+" tongues surging and [npc.verb(intertwine)] in a messy parade."));
+								"[npc.Name] [npc.verb(lean)]靠在[npc2.namePos]的[npc2.breasts+]上，把[npc.her]的头微微侧向一边，随即急切地把[npc2.herHim]拉入一个热烈的深吻。"
+										+"双舌激烈交缠，在混乱的交错中缠绕。"));
 
 						break;
 					case DOM_ROUGH:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								"Gazing into [npc2.namePos] [npc2.eyes], [npc.name] [npc.verb(lean)] forwards, roughly pressing [npc.her] [npc.lips+] against [npc2.hers] as [npc.she] [npc.verb(pull)] [npc2.herHim] into a forceful french kiss."
-										+ " hungrily parting [npc2.her] [npc2.lips] with [npc.her] [npc.tongue+] letting [npc2.her] taste [npc.her] saliva.",
+								"凝视着[npc2.namePos]的[npc2.eyes]，[npc.name] [npc.verb(lean)]前倾，粗暴地把[npc.her]的[npc.lips+]碾在[npc2.hers]上，[npc.she]把[npc2.herHim]拉入一个强势的深吻。"
+										+ " 贪婪地用[npc.her]的[npc.tongue+]分开[npc2.her]的[npc2.lips]，让[npc2.her]品尝[npc.her]的唾液。",
 
-								"[npc.Name] [npc.verb(lean)] into [npc2.name], breathing in [npc2.her] [npc2.scent+] as [npc.she] roughly [npc.verb(grind)] [npc.her] [npc.lips+] against [npc2.hers]."
-										+ " before [npc.verb(shove)] them apart with [npc.her] tongue and [npc.verb(allowing)] entry for [npc.her] [npc.tongue+], roughly [npc.verb(push)] the inside of [npc2.her] [npc2.tongue] against [npc2.her] cheek, causing it to bulge.",
+								"[npc.Name] [npc.verb(lean)]靠向[npc2.name]，呼吸着[npc2.her]的[npc2.scent+]，[npc.she]粗暴地把[npc.her]的[npc.lips+]碾在[npc2.hers]上。"
+										+ " 随即[npc.verb(shove)]用舌头将它们挤开，为[npc.her]的[npc.tongue+]让出空间，用力[npc.verb(push)]把[npc2.her]的[npc2.tongue]抵在[npc2.her]的脸颊上，使其鼓胀起来。",
 
-								"[npc.Name] [npc.verb(lean)] in against [npc2.namePos] [npc2.breasts+], tilting [npc.her] head to one side before violently pulling [npc2.herHim] into a rough kiss, [npc.verb(force)] [npc.her] [npc.tongue+] down [npc2.her] throat,"
-										+ " causing it to bulge from the sudden penetration."));
+								"[npc.Name] [npc.verb(lean)]靠在[npc2.namePos]的[npc2.breasts+]上，把[npc.her]的头侧向一边，随即粗暴地把[npc2.herHim]拉到一起，粗暴地亲吻，[npc.verb(force)]将[npc.her]的[npc.tongue+]探入[npc2.her]的喉咙深处，"
+										+ " 因这突如其来的侵入而鼓胀起来。"));
 						break;
 					case SUB_EAGER:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								"Gazing into [npc2.namePos] [npc2.eyes], [npc.name] [npc.verb(lean)] forwards, eagerly pressing [npc.her] [npc.lips+] against [npc2.hers] and delivering a passionate kiss."
-										+ " fervently sliding [npc.her] [npc.tongue+] into [npc2.her] delicious mouth.",
+								"凝视着[npc2.namePos]的[npc2.eyes]，[npc.name] [npc.verb(lean)]前倾，急切地把[npc.her]的[npc.lips+]贴上[npc2.hers]，献上热烈的一吻。"
+										+ " 热切地将[npc.her]的[npc.tongue+]滑入[npc2.her]美味的嘴里。",
 
-								"[npc.Name] [npc.verb(lean)] into [npc2.name], breathing in [npc2.her] [npc2.scent+] as [npc.she] eagerly [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.hers], excitedly [npc.verb(push)] [npc.her] [npc.tongue+] into [npc2.her] mouth.",
+								"[npc.Name] [npc.verb(lean)]靠向[npc2.name]，呼吸着[npc2.her]的[npc2.scent+]，[npc.she]急切地[npc.verb(press)]把[npc.her]的[npc.lips+]贴上[npc2.hers]，兴奋地[npc.verb(push)]把[npc.her]的[npc.tongue+]探入[npc2.her]的嘴里。",
 
-								"[npc.Name] [npc.verb(lean)] in against [npc2.namePos] [npc2.breasts+], tilting [npc.her] head slightly to one side before planting a passionate kiss on [npc2.her] [npc2.lips+],"
-										+ " desperately [npc.verb(suck)] [npc2.her] [npc2.tongue], [npc.verb(desire)] to feel it in [npc.her] mouth."));
+								"[npc.Name] [npc.verb(lean)]靠在[npc2.namePos]的[npc2.breasts+]上，把[npc.her]的头微微侧向一边，随即在[npc2.her]的[npc2.lips+]上献上热烈的一吻，"
+										+ " 绝望地[npc.verb(suck)]吮着[npc2.her]的[npc2.tongue]，[npc.verb(desire)]渴望在[npc.her]的嘴里感受它的触感。"));
 						break;
 					case SUB_NORMAL:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								"Gazing into [npc2.namePos] [npc2.eyes], [npc.name] [npc.verb(lean)] forwards, before pressing [npc.her] [npc.lips+] against [npc2.hers] and delivering a passionate kiss, "
-										+ "happily [npc.verb(slide)] [npc.her] [npc.tongue+] into [npc2.her] mouth.",
+								"凝视着[npc2.namePos]的[npc2.eyes]，[npc.name] [npc.verb(lean)]前倾，先把[npc.her]的[npc.lips+]贴上[npc2.hers]献上热烈的一吻，"
+										+ "开心地[npc.verb(slide)]把[npc.her]的[npc.tongue+]滑入[npc2.her]的嘴里。",
 
-								"[npc.Name] [npc.verb(lean)] into [npc2.name], breathing in [npc2.her] [npc2.scent+] as [npc.she] happily [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.hers]."
-										+ " as [npc.she] [npc.verb(slide)] [npc.her] [npc.tongue] into [npc2.her] mouth.",
+								"[npc.Name] [npc.verb(lean)]靠向[npc2.name]，呼吸着[npc2.her]的[npc2.scent+]，[npc.she]开心地[npc.verb(press)]把[npc.her]的[npc.lips+]贴上[npc2.hers]。"
+										+ " [npc.she]同时[npc.verb(slide)]把[npc.her]的[npc.tongue]滑入[npc2.her]的嘴里。",
 
 
-								"[npc.Name] [npc.verb(lean)] in against [npc2.namePos] [npc2.breasts+], tilting [npc.her] head slightly to one side before planting a wet kiss on [npc2.her] [npc2.lips+]."
-										+ " before [npc.verb(push)] [npc.her] [npc.tongue+] into [npc2.name] mouth."));
+								"[npc.Name] [npc.verb(lean)]靠在[npc2.namePos]的[npc2.breasts+]上，把[npc.her]的头微微侧向一边，随即在[npc2.her]的[npc2.lips+]上落下一个湿润的吻。"
+										+ " 随后[npc.verb(push)]把[npc.her]的[npc.tongue+]推入[npc2.name]的嘴里。"));
 						break;
 					default:
 						break;
@@ -281,67 +281,67 @@ public class FrenchKiss {
 					switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
 						case DOM_GENTLE:
 							UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-									" [npc2.Name] slowly [npc2.verb(push)] [npc2.her] [npc2.tongue] into [npc.namePos] mouth,"
-											+ " reaching up to gently caress [npc.her] [npc.face] as [npc2.she] happily [npc2.verb(return)] [npc.her] display of affection.",
+									" [npc2.Name]慢慢地[npc2.verb(push)]把[npc2.her]的[npc2.tongue]推入[npc.namePos]的嘴里，"
+											+ " 抬起手温柔地爱抚[npc.her]的[npc.face]，[npc2.she]开心地[npc2.verb(return)]着她的爱意。",
 
-									" With an approving hum, [npc2.name] [npc2.verb(lean)] into [npc.name],"
-											+ " muffling [npc.her] [npc.moans] with [npc2.her] [npc2.lips+] as [npc2.she] gently [npc2.verb(push)] [npc2.her] [npc2.tongue] into [npc.her] mouth.",
+									" 带着赞许的低吟，[npc2.name] [npc2.verb(lean)]靠向[npc.name]，"
+											+ " 用[npc2.her]的[npc2.lips+]把[npc.her]的[npc.moans]声堵住，[npc2.she]温柔地[npc2.verb(push)]把[npc2.her]的[npc2.tongue]推入[npc.her]的嘴里。",
 
-									" [npc2.Moaning] in approval, [npc2.name] [npc2.verb(lean)] into [npc.name],"
-											+ " pressing [npc2.her] [npc2.lips+] gently against [npc.hers] as [npc2.she] slowly [npc2.verb(slide)] [npc2.her] [npc2.tongue] into [npc.her] mouth."));
+									" [npc2.Moaning]出赞许的呻吟，[npc2.name] [npc2.verb(lean)]靠向[npc.name]，"
+											+ " 把[npc2.her]的[npc2.lips+]轻柔地贴上[npc.hers]，[npc2.she]慢慢地[npc2.verb(slide)]把[npc2.her]的[npc2.tongue]滑入[npc.her]的嘴里。"));
 							break;
 						case DOM_NORMAL:
 							UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-									" [npc2.Name] [npc2.verb(push)] [npc2.her] [npc2.tongue] into [npc.namePos] mouth,"
-											+ " greedily pressing [npc2.her] [npc2.lips+] back against [npc.hers] as [npc2.she] eagerly [npc2.verb(return)] [npc.her] display of affection.",
+									" [npc2.Name] [npc2.verb(push)]把[npc2.her]的[npc2.tongue]推入[npc.namePos]的嘴里，"
+											+ " 贪婪地把[npc2.her]的[npc2.lips+]迎上去与[npc.hers]相接，[npc2.she]急切地[npc2.verb(return)]着她的爱意。",
 
-									" With an approving [npc2.moan], [npc2.name] [npc2.verb(lean)] into [npc.name],"
-											+ " muffling [npc.her] [npc.moans] with [npc2.her] [npc2.lips+] as [npc2.she] eagerly [npc2.verb(thrust)] [npc2.her] [npc2.tongue] into [npc.her] mouth.",
+									" 带着赞许的[npc2.moan]，[npc2.name] [npc2.verb(lean)]靠向[npc.name]，"
+											+ " 用[npc2.her]的[npc2.lips+]把[npc.her]的[npc.moans]声堵住，[npc2.she]急切地[npc2.verb(thrust)]把[npc2.her]的[npc2.tongue]探入[npc.her]的嘴里。",
 
-									" [npc2.Moaning] in approval, [npc2.name] [npc2.verb(lean)] into [npc.name],"
-											+ " pressing [npc2.her] [npc2.lips+] firmly against [npc.hers] as [npc2.she] eagerly [npc2.verb(slide)] [npc2.her] [npc2.tongue] into [npc.her] mouth."));
+									" [npc2.Moaning]出赞许的呻吟，[npc2.name] [npc2.verb(lean)]靠向[npc.name]，"
+											+ " 把[npc2.her]的[npc2.lips+]用力贴上[npc.hers]，[npc2.she]急切地[npc2.verb(slide)]把[npc2.her]的[npc2.tongue]滑入[npc.her]的嘴里。"));
 							break;
 						case DOM_ROUGH:
 							UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-									" [npc2.Name] [npc2.verb(force)] [npc2.her] [npc2.tongue] deep into [npc.namePos] mouth,"
-											+ " roughly pressing [npc2.her] [npc2.lips+] against [npc.hers] as [npc2.she] greedily [npc2.verb(return)] [npc.her] display of affection.",
+									" [npc2.Name] [npc2.verb(force)]把[npc2.her]的[npc2.tongue]深深探入[npc.namePos]的嘴里，"
+											+ " 粗暴地把[npc2.her]的[npc2.lips+]压在[npc.hers]上，[npc2.she]贪婪地[npc2.verb(return)]着她的爱意。",
 
-									" With an approving [npc2.moan], [npc2.name] forcefully [npc2.verb(grind)] up against [npc.herHim],"
-											+ " muffling [npc.her] [npc.moans] with [npc2.her] [npc2.lips+] as [npc2.she] roughly [npc2.verb(thrust)] [npc2.her] [npc2.tongue] deep into [npc.her] mouth.",
+									" 带着赞许的[npc2.moan]，[npc2.name]用力地[npc2.verb(grind)]贴向[npc.herHim]，"
+											+ " 用[npc2.her]的[npc2.lips+]把[npc.her]的[npc.moans]声堵住，[npc2.she]粗暴地[npc2.verb(thrust)]把[npc2.her]的[npc2.tongue]深深探入[npc.her]的嘴里。",
 
-									" [npc2.Moaning] in approval, [npc2.name] [npc2.verb(grind)] [npc2.herself] up against [npc.name],"
-											+ " forcefully pressing [npc2.her] [npc2.lips+] against [npc.hers] as [npc2.she] roughly [npc2.verb(push)] [npc2.her] [npc2.tongue] deep into [npc.her] mouth."));
+									" [npc2.Moaning]出赞许的呻吟，[npc2.name] [npc2.verb(grind)]把[npc2.herself]贴向[npc.name]，"
+											+ " 用力地把[npc2.her]的[npc2.lips+]压在[npc.hers]上，[npc2.she]粗暴地[npc2.verb(push)]把[npc2.her]的[npc2.tongue]深深推入[npc.her]的嘴里。"));
 							break;
 						case SUB_EAGER:
 							UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-									" [npc2.Name] happily [npc2.verb(push)] [npc2.her] [npc2.tongue] deep into [npc.namePos] mouth,"
-											+ " eagerly pressing [npc2.her] [npc2.lips+] against [npc.hers] and [npc2.moaning] in delight as [npc2.she] greedily [npc2.verb(return)] [npc.her] display of affection.",
+									" [npc2.Name]开心地[npc2.verb(push)]把[npc2.her]的[npc2.tongue]深深探入[npc.namePos]的嘴里，"
+											+ " 急切地把[npc2.her]的[npc2.lips+]贴上[npc.hers]，欣喜地[npc2.moaning]着，[npc2.she]贪婪地[npc2.verb(return)]着她的爱意。",
 
-									" With an eager [npc2.moan], [npc2.name] desperately [npc2.verb(grind)] up against [npc.name],"
-											+ " muffling [npc2.her] [npc2.moans] into [npc.her] mouth as [npc2.she] greedily [npc2.verb(thrust)] [npc2.her] [npc2.tongue] past [npc.her] [npc.lips+].",
+									" 带着急切的[npc2.moan]，[npc2.name]绝望地[npc2.verb(grind)]贴向[npc.name]，"
+											+ " 把[npc2.her]的[npc2.moans]声堵在[npc.her]的嘴里，[npc2.she]贪婪地[npc2.verb(thrust)]把[npc2.her]的[npc2.tongue]探过[npc.her]的[npc.lips+]。",
 
-									" [npc2.Moaning] in delight, [npc2.name] desperately [npc2.verb(grind)] [npc2.herself] up against [npc.name],"
-											+ " eagerly pressing [npc2.her] [npc2.lips+] firmly against [npc.hers] as [npc2.she] happily [npc2.verb(push)] [npc2.her] [npc2.tongue] into [npc.her] mouth."));
+									" [npc2.Moaning]出欣喜的呻吟，[npc2.name]绝望地[npc2.verb(grind)]把[npc2.herself]贴向[npc.name]，"
+											+ " 急切地把[npc2.her]的[npc2.lips+]用力贴上[npc.hers]，[npc2.she]开心地[npc2.verb(push)]把[npc2.her]的[npc2.tongue]推入[npc.her]的嘴里。"));
 							break;
 						case SUB_NORMAL:
 							UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-									" [npc2.Name] [npc2.verb(push)] [npc2.her] [npc2.tongue] into [npc.namePos] mouth,"
-											+ " pressing [npc2.her] [npc2.lips+] against [npc.hers] as [npc2.she] eagerly [npc2.verb(return)] [npc.her] display of affection.",
+									" [npc2.Name] [npc2.verb(push)]把[npc2.her]的[npc2.tongue]推入[npc.namePos]的嘴里，"
+											+ " 把[npc2.her]的[npc2.lips+]贴上[npc.hers]，[npc2.she]急切地[npc2.verb(return)]着她的爱意。",
 
-									" With [npc2.a_moan], [npc2.name] [npc2.verb(lean)] into [npc.name],"
-											+ " muffling [npc2.her] [npc2.moans] into [npc.her] mouth as [npc2.she] eagerly [npc2.verb(thrust)] [npc2.her] [npc2.tongue] past [npc.her] [npc.lips+].",
+									" 带着[npc2.a_moan]，[npc2.name] [npc2.verb(lean)]靠向[npc.name]，"
+											+ " 把[npc2.her]的[npc2.moans]声堵在[npc.her]的嘴里，[npc2.she]急切地[npc2.verb(thrust)]把[npc2.her]的[npc2.tongue]探过[npc.her]的[npc.lips+]。",
 
-									" [npc2.Moaning] in delight, [npc2.name] [npc2.verb(lean)] into [npc.name],"
-											+ " pressing [npc2.her] [npc2.lips+] against [npc.hers] as [npc2.she] happily [npc2.verb(slide)] [npc2.her] [npc2.tongue] into [npc.her] mouth."));
+									" [npc2.Moaning]出欣喜的呻吟，[npc2.name] [npc2.verb(lean)]靠向[npc.name]，"
+											+ " 把[npc2.her]的[npc2.lips+]贴上[npc.hers]，[npc2.she]开心地[npc2.verb(slide)]把[npc2.her]的[npc2.tongue]滑入[npc.her]的嘴里。"));
 							break;
 						case SUB_RESISTING:
 							UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-									" [npc2.Name] [npc2.verb(try)] to pull away, [npc2.sobbing] and squirming in discomfort as [npc.name] [npc.verb(force)] [npc.herself] on [npc2.herHim].",
+									" [npc2.Name] [npc2.verb(try)]想要挣脱，[npc2.sobbing]着，不舒服地扭动身体，因为[npc.name] [npc.verb(force)]强行把[npc.herself]压在[npc2.herHim]身上。",
 
-									" [npc2.NamePos] [npc2.sob+] is muffled into [npc.namePos] mouth as [npc2.she] [npc2.verb(try)] to pull away, squirming in discomfort as [npc.name] [npc.verb(force)] [npc.herself] on [npc2.herHim].",
+									" [npc2.NamePos]的[npc2.sob+]声被闷在[npc.namePos]的嘴里，[npc2.she] [npc2.verb(try)]想要挣脱，[npc.name] [npc.verb(force)]强行把[npc.herself]压在[npc2.herHim]身上时，她因不适而扭动。",
 
-									" With [npc2.a_sob+], [npc2.she] [npc2.verb(try)] in vain to pull away from [npc.name],"
-											+ " protesting and squirming in discomfort as [npc.name] [npc.verb(force)] [npc.her] [npc.tongue] past [npc2.her] reluctant [npc2.lips]."));
+									" 伴随着[npc2.a_sob+]，[npc2.she]徒劳地[npc2.verb(try)]想从[npc.name]身边挣脱，"
+											+ " 抗议着并因不适扭动，因为[npc.name] [npc.verb(force)]强行把[npc.her]的[npc.tongue]探过[npc2.her]不情愿的[npc2.lips]。"));
 							break;
 						default:
 							break;
@@ -361,47 +361,47 @@ public class FrenchKiss {
 			switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(action))) {
 				case SUB_EAGER:
 					return(UtilText.returnStringAtRandom(
-							" [npc2.Name] [npc2.verb(let)] out an eager [npc2.moan] in response,"
-									+ " enthusiastically pressing [npc2.herself] against [npc.name] and thrusting [npc2.her] [npc2.tongue] into [npc.her] mouth as [npc2.she] eagerly [npc2.verb(return)] [npc.her] display of affection.",
+							" [npc2.Name] [npc2.verb(let)]发出一声急切的[npc2.moan]作为回应，"
+									+ " 热情地把[npc2.herself]贴上[npc.name]，把[npc2.her]的[npc2.tongue]探入[npc.her]的嘴里，[npc2.she]急切地[npc2.verb(return)]着她的爱意。",
 
-							" With a delighted [npc2.moan], [npc2.name] eagerly [npc2.verb(lean)] into [npc.name], pushing [npc2.her] [npc2.tongue] past [npc.her] [npc.lips] as [npc2.she] desperately pull [npc.herHim] into a frantic kiss.",
+							" 带着欣喜的[npc2.moan]，[npc2.name]急切地[npc2.verb(lean)]靠向[npc.name]，把[npc2.her]的[npc2.tongue]探过[npc.her]的[npc.lips]，[npc2.she]绝望地pull把[npc.herHim]拉入一个疯狂的吻。",
 
-							" Letting out [npc2.a_moan] in delight, [npc2.name] press [npc2.herself] against [npc.name],"
-									+ " enthusiastically returning [npc.her] kiss as [npc2.she] [npc2.verb(grind)] [npc2.her] [npc2.lips+] against [npc.her] mouth and slides [npc2.her] [npc2.tongue] into [npc.her] mouth."));
+							" 欣喜地发出[npc2.a_moan]，[npc2.name]press把[npc2.herself]贴上[npc.name]，"
+									+ " 热情地回应[npc.her]的吻，[npc2.she] [npc2.verb(grind)]把[npc2.her]的[npc2.lips+]碾在[npc.her]的嘴上，同时把[npc2.her]的[npc2.tongue]滑入[npc.her]的嘴里。"));
 				case SUB_RESISTING:
 					return(UtilText.returnStringAtRandom(
-							" [npc2.Name] [npc2.verb(let)] out [npc2.a_sob+] in response, trying [npc2.her] hardest to [npc2.verb(push)] [npc.name] away as [npc2.she] [npc2.verb(writhe)] about in discomfort.",
+							" [npc2.Name] [npc2.verb(let)]发出[npc2.a_sob+]作为回应，使出浑身力气想[npc2.verb(push)]把[npc.name]推开，[npc2.she]因不适而[npc2.verb(writhe)]扭动。",
 
-							" With [npc2.a_sob+], [npc2.name] [npc2.verb(try)] to [npc2.verb(push)] [npc.name] away, struggling in vain as [npc.she] [npc.verb(continue)] to gently worm [npc.her] [npc.tongue+] through [npc2.her] unwilling [npc2.lips].",
+							" 伴随着[npc2.a_sob+]，[npc2.name] [npc2.verb(try)]想[npc2.verb(push)]把[npc.name]推开，徒劳地挣扎，[npc.she] [npc.verb(continue)]继续温柔地把[npc.her]的[npc.tongue+]钻过[npc2.her]不情愿的[npc2.lips]。",
 
-							" [npc2.Name] desperately [npc2.verb(try)] to pull away, struggling and pushing back as [npc.name] [npc.verb(continue)] to molest [npc2.herHim],"
-									+ " drawing a muffled [npc2.sob] from between [npc2.her] [npc2.lips] at the feel of each of [npc.her] unwanted [npc.tongue+] penetration."));
+							" [npc2.Name]绝望地[npc2.verb(try)]想要挣脱，挣扎着用力推拒，因为[npc.name] [npc.verb(continue)]继续侵犯[npc2.herHim]，"
+									+ " 每当[npc.her]不受欢迎的[npc.tongue+]侵入时，都从[npc2.her]的[npc2.lips]之间挤出压抑的[npc2.sob]。"));
 				case DOM_GENTLE:
 					return(UtilText.returnStringAtRandom(
-							" [npc2.Name] [npc2.verb(let)] out a soft [npc2.moan] in response, taking a moment to plant a series of gentle kisses on [npc.namePos] [npc.lips+], before gently sliding [npc2.her] [npc2.tongue] into [npc.her] mouth.",
+							" [npc2.Name] [npc2.verb(let)]发出一声轻柔的[npc2.moan]作为回应，花了一点时间，在[npc.namePos]的[npc.lips+]上落下一连串轻柔的吻，然后轻轻地把[npc2.her]的[npc2.tongue]滑入[npc.her]的嘴里。",
 
-							" With a soft [npc2.moan], [npc2.name] [npc2.verb(lean)] into [npc.name], gently pushing [npc2.her] [npc2.tongue] past [npc.her] [npc.lips+] as [npc2.she] [npc2.verb(return)] [npc.herHis] display of affection.",
+							" 带着轻柔的[npc2.moan]，[npc2.name] [npc2.verb(lean)]靠向[npc.name]，温柔地把[npc2.her]的[npc2.tongue]探过[npc.her]的[npc.lips+]，[npc2.she] [npc2.verb(return)]着他的爱意。",
 
-							" Letting out a gentle [npc2.moan], [npc2.name] [npc2.verb(press)] [npc2.herself] against [npc.name],"
-									+ " muffling [npc2.her] [npc2.moans] against [npc.her] [npc.lips+] as [npc2.she] slowly [npc2.verb(slide)] [npc2.her] [npc2.tongue] into [npc.her] mouth."));
+							" 发出温柔的[npc2.moan]，[npc2.name] [npc2.verb(press)]把[npc2.herself]贴上[npc.name]，"
+									+ " 把[npc2.her]的[npc2.moans]声闷在[npc.her]的[npc.lips+]上，[npc2.she]慢慢地把[npc2.her]的[npc2.tongue]滑入[npc.her]的嘴里。"));
 				case DOM_ROUGH:
 					return(UtilText.returnStringAtRandom(
-							" [npc2.Name] [npc2.verb(let)] out a growl, roughly grinding [npc2.her] [npc2.lips] against [npc.her] mouth as [npc2.she] violently [npc2.verb(thrust)] [npc2.her] tongue deep down [npc.her] throat.",
+							" [npc2.Name] [npc2.verb(let)]发出一声低吼，粗暴地把[npc2.her]的[npc2.lips]碾在[npc.her]的嘴上，[npc2.she]猛烈地[npc2.verb(thrust)]把[npc2.her]的舌头深深探入[npc.her]的喉咙。",
 
-							" With a menacing growl, [npc2.name] violently [npc2.verb(grind)] up against [npc.name],"
-									+ " concerned solely with [npc2.her] own pleasure as [npc2.she] greedily [npc2.verb(thrust)] [npc2.her] [npc2.tongue] deep down [npc.her] throat.",
+							" 带着威胁性的低吼，[npc2.name]猛烈地[npc2.verb(grind)]贴向[npc.name]，"
+									+ " 只一心想着[npc2.her]自己的快感，[npc2.she]贪婪地[npc2.verb(thrust)]把[npc2.her]的[npc2.tongue]深深探入[npc.her]的喉咙。",
 
-							" [npc2.Name] grin in response to [npc.namePos] display of affection, and with a violent growl, [npc2.she] forcefully [npc2.verb(grind)] [npc2.her] [npc2.lips] against [npc.hers],"
-									+ " [npc2.moaning] into [npc.her] mouth as [npc2.she] greedily tongue-[npc2.verb(fuck)] [npc.her] throat."));
+							" [npc2.Name]对着[npc.namePos]的爱意露出得意的笑，随即发出一声狂暴的低吼，[npc2.she]用力地[npc2.verb(grind)]把[npc2.her]的[npc2.lips]碾在[npc.hers]上，"
+									+ " 在[npc.her]的嘴里[npc2.moaning]着，同时贪婪地用舌头[npc2.verb(fuck)]抽插着[npc.her]的喉咙。"));
 				default:
 					return(UtilText.returnStringAtRandom(
-							" [npc2.Name] [npc2.verb(let)] out [npc2.a_moan] in response,"
-									+ " pressing [npc2.herself] against [npc.name] and happily pushing [npc2.her] [npc2.tongue] into [npc.her] mouth as [npc2.she] returns [npc.herHis] display of affection.",
+							" [npc2.Name] [npc2.verb(let)]发出[npc2.a_moan]作为回应，"
+									+ " 把[npc2.herself]贴上[npc.name]，开心地把[npc2.her]的[npc2.tongue]推入[npc.her]的嘴里，[npc2.she]同时回应着他的爱意。",
 
-							" With [npc2.a_moan], [npc2.name] [npc2.verb(lean)] into [npc.name], pushing [npc2.her] [npc2.tongue] past [npc.her] [npc.lips] as [npc2.she] [npc2.verb(pull)] [npc.herHim] into an eager kiss.",
+							" 带着[npc2.a_moan]，[npc2.name] [npc2.verb(lean)]靠向[npc.name]，把[npc2.her]的[npc2.tongue]探过[npc.her]的[npc.lips]，[npc2.she] [npc2.verb(pull)]把[npc.herHim]拉入一个急切的吻。",
 
-							" Letting out [npc2.a_moan], [npc2.name] [npc2.verb(lean)] into [npc.name], returning [npc.her] kiss as [npc2.she] press [npc2.her] [npc2.lips+] against [npc.her] mouth,"
-									+ " [npc2.her] [npc2.tongue] [npc2.verb(wiggle)] its way into [npc.her] mouth."));
+							" 发出[npc2.a_moan]，[npc2.name] [npc2.verb(lean)]靠向[npc.name]，回应[npc.her]的吻，[npc2.she]press把[npc2.her]的[npc2.lips+]贴上[npc.her]的嘴，"
+									+ " [npc2.her]的[npc2.tongue] [npc2.verb(wiggle)]扭动着钻入[npc.her]的嘴里。"));
 			}
 		}
 		return "";
@@ -418,12 +418,12 @@ public class FrenchKiss {
 
 		@Override
 		public String getActionTitle() {
-			return "Gentle french kiss";
+			return "温柔法式舌吻";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Gently french kiss [npc2.name].";
+			return "温柔地与[npc2.name]法式舌吻。";
 		}
 
 		@Override
@@ -433,22 +433,22 @@ public class FrenchKiss {
 			if(Main.sex.getSexPositionSlot(Main.sex.getCharacterTargetedForSexAction(this)).hasTag(SexSlotTag.FACE_TO_WALL)) {
 
 				UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-						"Still leaning into [npc2.namePos] back, [npc.name] gently [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.nameHers], before tenderly parting [npc2.her] [npc2.lips] with [npc.her] [npc.tongue+], [npc.verb(taste)] [npc2.her] saliva.",
+						"[npc2.Name]仍靠在[npc.namePos]背上，[npc.name]温柔地[npc.verb(press)]把[npc.her]的[npc.lips+]贴上[npc2.nameHers]，随即温柔地[npc.verb(taste)]用[npc.her]的[npc.tongue+]分开[npc2.her]的[npc2.lips]，品尝[npc2.her]的唾液。",
 
-						"[npc.Name] gently [npc.verb(lean)] into [npc2.namePos] back, breathing in [npc2.her] [npc2.scent] as [npc.she] [npc.verb(glide)] [npc.her] [npc.tongue+] across [npc2.her] [npc2.lips+],"
-							+ " lubricating them, prior to [npc.verb(ease)] them apart with [npc.her] [npc.tongue+] and gently [npc.verb(slide)] it against the inside of [npc2.her] cheek, causing it to bulge.",
+						"[npc.Name]温柔地[npc.verb(lean)]靠在[npc2.namePos]的背上，呼吸着[npc2.her]的[npc2.scent]，[npc.she] [npc.verb(glide)]把[npc.her]的[npc.tongue+]掠过[npc2.her]的[npc2.lips+]，"
+							+ " 将它们润滑，随后[npc.verb(ease)]用[npc.her]的[npc.tongue+]将它们分开，温柔地[npc.verb(slide)]贴着[npc2.her]的脸颊内侧抚扫，使其鼓胀起来。",
 
-						"[npc.Name] slowly [npc.verb(press)] into [npc2.namePos] back, gently pinning [npc2.herHim] against the wall as [npc.she] [npc.verb(lean)] in over [npc2.her] shoulder to gently french kiss [npc2.her],"
-							+ " carefully guiding [npc.her] [npc.tongue+] to wrap around [npc2.hers], [npc.verb(squeeze)] it affectionately."));
+						"[npc.Name]慢慢地[npc.verb(press)]贴向[npc2.namePos]的背部，[npc.she] [npc.verb(lean)]越过[npc2.her]的肩膀轻柔地与他法式舌吻时，轻轻把[npc2.herHim]按在墙上，"
+							+ " 小心翼翼地把[npc.her]的[npc.tongue+]引去缠绕[npc2.hers]，深情地[npc.verb(squeeze)]紧裹着它。"));
 
 			} else {
 
 				UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-						"Gently pressing [npc.her] [npc.lips+] against [npc2.nameHers], before [npc.name] tenderly part [npc2.her] [npc2.lips] with [npc.her] [npc.tongue+], [npc.verb(taste)] [npc2.her] saliva.",
+						"[npc.name]温柔地把[npc.her]的[npc.lips+]贴上[npc2.nameHers]，随即温柔地[npc.verb(taste)]用[npc.her]的[npc.tongue+]分开[npc2.her]的[npc2.lips]，品尝[npc2.her]的唾液。",
 
-						"[npc.Name] gently [npc.verb(lean)] in against [npc2.name], breathing in [npc2.her] [npc2.scent+] as [npc.she] [npc.verb(suck)] softly on [npc2.her] [npc2.tongue+].",
+						"[npc.Name]温柔地[npc.verb(lean)]靠向[npc2.name]，呼吸着[npc2.her]的[npc2.scent+]，[npc.she] [npc.verb(suck)]轻轻地吮吸着[npc2.her]的[npc2.tongue+]。",
 
-						"[npc.Name] gently [npc.verb(press)] against [npc2.namePos] [npc2.breasts+], before tilting [npc.her] head slightly to one side as [npc.she] softly [npc.verb(push)] [npc.her] [npc.tongue+] past [npc2.her] [npc2.lips+]."));
+						"[npc.Name]温柔地[npc.verb(press)]贴在[npc2.namePos]的[npc2.breasts+]上，[npc.she]轻柔地[npc.verb(push)]把[npc.her]的[npc.tongue+]探过[npc2.her]的[npc2.lips+]时，把[npc.her]的头稍微侧向一边。"));
 
 			}
 
@@ -469,12 +469,12 @@ public class FrenchKiss {
 
 		@Override
 		public String getActionTitle() {
-			return "French kiss [npc2.herHim]";
+			return "与[npc2.herHim]法式舌吻";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Continue french kissing [npc2.name].";
+			return "继续与[npc2.name]法式舌吻。";
 		}
 
 		@Override
@@ -485,22 +485,22 @@ public class FrenchKiss {
 			if(Main.sex.getSexPositionSlot(Main.sex.getCharacterTargetedForSexAction(this)).hasTag(SexSlotTag.FACE_TO_WALL)) {
 
 				UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-						"Still leaning into [npc2.namePos] back, [npc.name] eagerly [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.nameHers], before passionately parting [npc2.her] [npc2.lips] with [npc.her] [npc.tongue+], [npc.verb(taste)] [npc2.her] saliva.",
+						"[npc2.Name]仍靠在[npc.namePos]背上，[npc.name]急切地[npc.verb(press)]把[npc.her]的[npc.lips+]贴上[npc2.nameHers]，随即热烈地[npc.verb(taste)]用[npc.her]的[npc.tongue+]分开[npc2.her]的[npc2.lips]，品尝[npc2.her]的唾液。",
 
-						"[npc.Name] eagerly [npc.verb(lean)] into [npc2.namePos] back, breathing in [npc2.her] [npc2.scent] as [npc.she] [npc.verb(glide)] [npc.her] [npc.tongue+] across [npc2.her] [npc2.lips+],"
-								+ " lubricating them, prior to [npc.verb(ease)] them apart with [npc.her] [npc.tongue+] and eagerly [npc.verb(slide)] it against the inside of [npc2.her] cheek, causing it to bulge.",
+						"[npc.Name]急切地[npc.verb(lean)]靠在[npc2.namePos]的背上，呼吸着[npc2.her]的[npc2.scent]，[npc.she] [npc.verb(glide)]把[npc.her]的[npc.tongue+]掠过[npc2.her]的[npc2.lips+]，"
+								+ " 将它们润滑，随后[npc.verb(ease)]用[npc.her]的[npc.tongue+]将它们分开，急切地[npc.verb(slide)]贴着[npc2.her]的脸颊内侧抚扫，使其鼓胀起来。",
 
-						"[npc.Name] eagerly [npc.verb(press)] into [npc2.namePos] back, pinning [npc2.herHim] against the wall as [npc.she] [npc.verb(lean)] in over [npc2.her] shoulder to passionately french kiss [npc2.her] [npc2.lips+]."
-								+ " eagerly guiding [npc.her] [npc.tongue+] to wrap around [npc2.hers], [npc.verb(squeeze)] it firmly."));
+						"[npc.Name]急切地[npc.verb(press)]贴向[npc2.namePos]的背部，把[npc2.herHim]按在墙上，[npc.she] [npc.verb(lean)]越过[npc2.her]的肩膀热烈地与[npc2.her]的[npc2.lips+]法式舌吻。"
+								+ " 急切地把[npc.her]的[npc.tongue+]引去缠绕[npc2.hers]，用力地[npc.verb(squeeze)]紧裹着它。"));
 
 			} else {
 
 				UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-						"Eagerly pressing [npc.her] [npc.lips+] against [npc2.nameHers], before [npc.name] tenderly part [npc2.her] [npc2.lips] with [npc.her] [npc.tongue+], [npc.verb(taste)] [npc2.her] saliva.",
+						"[npc.name]急切地把[npc.her]的[npc.lips+]贴上[npc2.nameHers]，随即温柔地[npc.verb(taste)]用[npc.her]的[npc.tongue+]分开[npc2.her]的[npc2.lips]，品尝[npc2.her]的唾液。",
 
-						"[npc.Name] eagerly [npc.verb(lean)] in against [npc2.name], breathing in [npc2.her] [npc2.scent+] as [npc.she] [npc.verb(suck)] softly on [npc2.her] [npc2.tongue+].",
+						"[npc.Name]急切地[npc.verb(lean)]靠向[npc2.name]，呼吸着[npc2.her]的[npc2.scent+]，[npc.she] [npc.verb(suck)]轻轻地吮吸着[npc2.her]的[npc2.tongue+]。",
 
-						"[npc.Name] eagerly [npc.verb(press)] against [npc2.namePos] [npc2.breasts+], before tilting [npc.her] head slightly to one side as [npc.she] passionately [npc.verb(push)] [npc.her] [npc.tongue+] past [npc2.her] [npc2.lips+]."));
+						"[npc.Name]急切地[npc.verb(press)]贴在[npc2.namePos]的[npc2.breasts+]上，[npc.she]热烈地[npc.verb(push)]把[npc.her]的[npc.tongue+]探过[npc2.her]的[npc2.lips+]时，把[npc.her]的头稍微侧向一边。"));
 			}
 
 			UtilText.nodeContentSB.append(getTargetedCharacterResponse(this));
@@ -520,12 +520,12 @@ public class FrenchKiss {
 
 		@Override
 		public String getActionTitle() {
-			return "Rough french kiss";
+			return "粗暴法式舌吻";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Roughly french kiss [npc2.name].";
+			return "粗暴地与[npc2.name]法式舌吻。";
 		}
 
 		@Override
@@ -536,21 +536,21 @@ public class FrenchKiss {
 			if(Main.sex.getSexPositionSlot(Main.sex.getCharacterTargetedForSexAction(this)).hasTag(SexSlotTag.FACE_TO_WALL)) {
 
 				UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-						"Violently grinding into [npc2.namePos] back, [npc.name] forcefully [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.nameHers], before greedily thrusting [npc.her] [npc.tongue] deep down [npc2.her] throat.",
+						"粗暴地碾向[npc2.namePos]的背部，[npc.name]用力地[npc.verb(press)]把[npc.her]的[npc.lips+]贴上[npc2.nameHers]，随即贪婪地把[npc.her]的[npc.tongue]深深探入[npc2.her]的喉咙。",
 
-						"[npc.Name] roughly [npc.verb(press)] into [npc2.namePos] back, breathing in [npc2.her] [npc2.scent] as [npc.she] before [npc.verb(shove)] [npc2.her] [npc2.lips] with [npc.her] [npc.tongue+], [npc.verb(taste)] [npc2.her] saliva.",
+						"[npc.Name]粗暴地[npc.verb(press)]贴向[npc2.namePos]的背部，呼吸着[npc2.her]的[npc2.scent]，随即[npc.verb(shove)]用[npc.her]的[npc.tongue+]撑开[npc2.her]的[npc2.lips]，[npc.verb(taste)]品尝[npc2.her]的唾液。",
 
-						"[npc.Name] roughly [npc.verb(press)] into [npc2.namePos] back,"
-								+ " forcefully pinning [npc2.herHim] against the wall as [npc.she] [npc.verb(lean)] in over [npc2.her] shoulder to thrust [npc.her] [npc.tongue+] deep down [npc2.her] throat."));
+						"[npc.Name]粗暴地[npc.verb(press)]贴向[npc2.namePos]的背部，"
+								+ " [npc.she] [npc.verb(lean)]越过[npc2.her]的肩膀把[npc.her]的[npc.tongue+]深深探入[npc2.her]的喉咙时，用力地把[npc2.herHim]按在墙上。"));
 
 			} else {
 
 				UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-						"Forcefully pressing [npc.her] [npc.lips+] against [npc2.nameHers], [npc.name] greedily [npc.verb(thrust)] [npc.her] [npc.tongue] deep down [npc2.her] throat.",
+						"用力地把[npc.her]的[npc.lips+]贴上[npc2.nameHers]，[npc.name]贪婪地[npc.verb(thrust)]把[npc.her]的[npc.tongue]深深探入[npc2.her]的喉咙。",
 
-						"[npc.Name] roughly [npc.verb(grind)] against [npc2.name], breathing in [npc2.her] [npc2.scent+] as [npc.she] greedily tongue-[npc.verb(fuck)] [npc2.her] mouth.",
+						"[npc.Name]粗暴地[npc.verb(grind)]碾向[npc2.name]，呼吸着[npc2.her]的[npc2.scent+]，[npc.she]贪婪地用舌头[npc.verb(fuck)]抽插着[npc2.her]的嘴。",
 
-						"[npc.Name] roughly [npc.verb(press)] against [npc2.namePos] [npc2.breasts+], before thrusting [npc.her] [npc.tongue] deep down [npc2.her] throat."));
+						"[npc.Name]粗暴地[npc.verb(press)]贴在[npc2.namePos]的[npc2.breasts+]上，随即把[npc.her]的[npc.tongue]深深探入[npc2.her]的喉咙。"));
 
 			}
 
@@ -572,12 +572,12 @@ public class FrenchKiss {
 
 		@Override
 		public String getActionTitle() {
-			return "French kiss [npc2.herHim]";
+			return "与[npc2.herHim]法式舌吻";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Continue french kissing [npc2.name].";
+			return "继续与[npc2.name]法式舌吻。";
 		}
 
 		@Override
@@ -587,24 +587,24 @@ public class FrenchKiss {
 			if(Main.sex.getSexPositionSlot(Main.sex.getCharacterTargetedForSexAction(this)).hasTag(SexSlotTag.FACE_TO_WALL)) {
 
 				UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-						"Still leaning into [npc2.namePos] back, [npc.name] [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.nameHers], before parting [npc2.her] [npc2.lips] with [npc.her] [npc.tongue+], [npc.verb(taste)] [npc2.her] saliva.",
+						"[npc2.Name]仍靠在[npc.namePos]背上，[npc.name] [npc.verb(press)]把[npc.her]的[npc.lips+]贴上[npc2.nameHers]，随即[npc.verb(taste)]用[npc.her]的[npc.tongue+]分开[npc2.her]的[npc2.lips]，品尝[npc2.her]的唾液。",
 
-						"[npc.Name] [npc.verb(lean)] into [npc2.namePos] back, breathing in [npc2.her] [npc2.scent] as [npc.she] [npc.verb(plant)] a series of passionate kisses on [npc2.her] [npc2.lips+]."
-								+ " lubricating them, prior to [npc.verb(ease)] them apart with [npc.her] [npc.tongue+] and [npc.verb(slide)] it against the inside of [npc2.her] cheek, causing it to bulge.",
+						"[npc.Name] [npc.verb(lean)]靠在[npc2.namePos]的背上，呼吸着[npc2.her]的[npc2.scent]，[npc.she] [npc.verb(plant)]在[npc2.her]的[npc2.lips+]上落下一连串热烈的吻。"
+								+ " 将它们润滑，随后[npc.verb(ease)]用[npc.her]的[npc.tongue+]将它们分开，[npc.verb(slide)]贴着[npc2.her]的脸颊内侧抚扫，使其鼓胀起来。",
 
 
-						"[npc.Name] [npc.verb(press)] into [npc2.namePos] back, pinning [npc2.herHim] against the wall as [npc.she] [npc.verb(lean)] in over [npc2.her] shoulder to passionately french kiss [npc2.her] [npc2.lips+]."
-								+ " guiding [npc.her] [npc.tongue+] to wrap around [npc2.hers], [npc.verb(squeeze)] it firmly."));
+						"[npc.Name] [npc.verb(press)]贴向[npc2.namePos]的背部，把[npc2.herHim]按在墙上，[npc.she] [npc.verb(lean)]越过[npc2.her]的肩膀热烈地与[npc2.her]的[npc2.lips+]法式舌吻。"
+								+ " 把[npc.her]的[npc.tongue+]引去缠绕[npc2.hers]，[npc.verb(squeeze)]用力地紧裹着它。"));
 
 
 			} else {
 
 				UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-						"Pressing [npc.her] [npc.lips+] against [npc2.nameHers], before [npc.name] part [npc2.her] [npc2.lips] with [npc.her] [npc.tongue+], [npc.verb(taste)] [npc2.her] saliva.",
+						"[npc.name]把[npc.her]的[npc.lips+]贴上[npc2.nameHers]，随即[npc.name]用[npc.her]的[npc.tongue+]分开[npc2.her]的[npc2.lips]，[npc.verb(taste)]品尝[npc2.her]的唾液。",
 
-						"[npc.Name] [npc.verb(lean)] in against [npc2.name], breathing in [npc2.her] [npc2.scent+] as [npc.she] [npc.verb(suck)] softly on [npc2.her] [npc2.tongue+].",
+						"[npc.Name] [npc.verb(lean)]靠向[npc2.name]，呼吸着[npc2.her]的[npc2.scent+]，[npc.she] [npc.verb(suck)]轻轻地吮吸着[npc2.her]的[npc2.tongue+]。",
 
-						"[npc.Name] [npc.verb(press)] against [npc2.namePos] [npc2.breasts+], before tilting [npc.her] head slightly to one side as [npc.she] passionately [npc.verb(push)] [npc.her] [npc.tongue+] past [npc2.her] [npc2.lips+]."));
+						"[npc.Name] [npc.verb(press)]贴在[npc2.namePos]的[npc2.breasts+]上，[npc.she]热烈地[npc.verb(push)]把[npc.her]的[npc.tongue+]探过[npc2.her]的[npc2.lips+]时，把[npc.her]的头稍微侧向一边。"));
 
 			}
 
@@ -625,12 +625,12 @@ public class FrenchKiss {
 
 		@Override
 		public String getActionTitle() {
-			return "Eager french kiss";
+			return "热切法式舌吻";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Eagerly french kiss [npc2.name].";
+			return "热切地与[npc2.name]法式舌吻。";
 		}
 
 		@Override
@@ -640,23 +640,23 @@ public class FrenchKiss {
 			if(Main.sex.getSexPositionSlot(Main.sex.getCharacterTargetedForSexAction(this)).hasTag(SexSlotTag.FACE_TO_WALL)) {
 
 				UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-						"Still leaning into [npc2.namePos] back, [npc.name] eagerly [npc.verb(press)] [npc.her] [npc.lips+] against [npc2.nameHers], before passionately parting [npc2.her] [npc2.lips] with [npc.her] [npc.tongue+], [npc.verb(taste)] [npc2.her] saliva.",
+						"[npc2.Name]仍靠在[npc.namePos]背上，[npc.name]急切地[npc.verb(press)]把[npc.her]的[npc.lips+]贴上[npc2.nameHers]，随即热烈地[npc.verb(taste)]用[npc.her]的[npc.tongue+]分开[npc2.her]的[npc2.lips]，品尝[npc2.her]的唾液。",
 
-						"[npc.Name] eagerly [npc.verb(lean)] into [npc2.namePos] back, breathing in [npc2.her] [npc2.scent] as [npc.she] [npc.verb(plant)] a series of passionate kisses on [npc2.her] [npc2.lips+]."
-								+ " lubricating them, prior to [npc.verb(ease)] them apart with [npc.her] [npc.tongue+] and eagerly [npc.verb(slide)] it against the inside of [npc2.her] cheek, causing it to bulge.",
+						"[npc.Name]急切地[npc.verb(lean)]靠在[npc2.namePos]的背上，呼吸着[npc2.her]的[npc2.scent]，[npc.she] [npc.verb(plant)]在[npc2.her]的[npc2.lips+]上落下一连串热烈的吻。"
+								+ " 将它们润滑，随后[npc.verb(ease)]用[npc.her]的[npc.tongue+]将它们分开，急切地[npc.verb(slide)]贴着[npc2.her]的脸颊内侧抚扫，使其鼓胀起来。",
 
 
-						"[npc.Name] eagerly [npc.verb(press)] into [npc2.namePos] back, pinning [npc2.herHim] against the wall as [npc.she] [npc.verb(lean)] in over [npc2.her] shoulder to passionately french kiss [npc2.her] [npc2.lips+]."
-								+ " eagerly guiding [npc.her] [npc.tongue+] to wrap around [npc2.hers], [npc.verb(squeeze)] it firmly."));
+						"[npc.Name]急切地[npc.verb(press)]贴向[npc2.namePos]的背部，把[npc2.herHim]按在墙上，[npc.she] [npc.verb(lean)]越过[npc2.her]的肩膀热烈地与[npc2.her]的[npc2.lips+]法式舌吻。"
+								+ " 急切地把[npc.her]的[npc.tongue+]引去缠绕[npc2.hers]，[npc.verb(squeeze)]用力地紧裹着它。"));
 
 			} else {
 
 				UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-						"Eagerly pressing [npc.her] [npc.lips+] against [npc2.nameHers], before [npc.name] tenderly part [npc2.her] [npc2.lips] with [npc.her] [npc.tongue+], [npc.verb(taste)] [npc2.her] saliva.",
+						"[npc.name]急切地把[npc.her]的[npc.lips+]贴上[npc2.nameHers]，随即温柔地[npc.verb(taste)]用[npc.her]的[npc.tongue+]分开[npc2.her]的[npc2.lips]，品尝[npc2.her]的唾液。",
 
-						"[npc.Name] eagerly [npc.verb(lean)] in against [npc2.name], breathing in [npc2.her] [npc2.scent+] as [npc.she] [npc.verb(suck)] softly on [npc2.her] [npc2.tongue+].",
+						"[npc.Name]急切地[npc.verb(lean)]靠向[npc2.name]，呼吸着[npc2.her]的[npc2.scent+]，[npc.she] [npc.verb(suck)]轻轻地吮吸着[npc2.her]的[npc2.tongue+]。",
 
-						"[npc.Name] eagerly [npc.verb(press)] against [npc2.namePos] [npc2.breasts+], before tilting [npc.her] head slightly to one side as [npc.she] passionately [npc.verb(push)] [npc.her] [npc.tongue+] past [npc2.her] [npc2.lips+]."));
+						"[npc.Name]急切地[npc.verb(press)]贴在[npc2.namePos]的[npc2.breasts+]上，[npc.she]热烈地[npc.verb(push)]把[npc.her]的[npc.tongue+]探过[npc2.her]的[npc2.lips+]时，把[npc.her]的头稍微侧向一边。"));
 
 			}
 
@@ -677,12 +677,12 @@ public class FrenchKiss {
 
 		@Override
 		public String getActionTitle() {
-			return "Resist french kiss";
+			return "抗拒法式舌吻";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Resist [npc2.namePos] french kiss.";
+			return "抗拒[npc2.namePos]的法式舌吻。";
 		}
 
 		@Override
@@ -690,41 +690,41 @@ public class FrenchKiss {
 			UtilText.nodeContentSB.setLength(0);
 
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Feeling tears welling up in [npc.her] eyes, [npc.name] [npc.verb(let)] out [npc.a_sob+], trying to push back against [npc2.name] in response to [npc2.her] unwanted tongue penetration.",
+					"[npc.name]感到泪水在[npc.her]的眼中涌起，[npc.name] [npc.verb(let)]发出了[npc.a_sob+]，想要推拒[npc2.name]，以回应[npc2.her]不受欢迎的舌头侵入。",
 
-					"With [npc2.namePos] [npc2.scent+] overwhelming [npc.her] senses, [npc.name] [npc.verb(let)] out a muffled [npc.sob],"
-							+ " before desperately trying to push [npc2.herHim] off of [npc.herHim] in a futile attempt to stop [npc2.her] continued assault on [npc.her] mouth.",
+					"面对轮番[npc2.namePos]的[npc2.scent+]淹没[npc.her]的感官，[npc.name] [npc.verb(let)]发出一声压抑的[npc.sob]，"
+							+ " 随即绝望地想把[npc2.herHim]从[npc.herHim]身上推开，徒劳地企图阻止[npc2.her]对她嘴的持续侵犯。",
 
-					"[npc.Name] desperately [npc.verb(try)] to push [npc2.name] away, [npc.sobbing] in distress as [npc2.she] [npc2.verb(continue)] [npc2.verb(shove)] [npc2.her] [npc2.tongue+] into [npc.herHim] mouth."));
+					"[npc.Name]绝望地[npc.verb(try)]想把[npc2.name]推开，[npc.sobbing]着慌张地呻吟，因为[npc2.she] [npc2.verb(continue)]继续[npc2.verb(shove)]把[npc2.her]的[npc2.tongue+]塞进[npc.herHim]的嘴里。"));
 
 			switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
 				case DOM_GENTLE:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" [npc2.Name] [npc2.verb(let)] out a soothing [npc2.moan] in response, ignoring [npc.namePos] protests as [npc2.she] tries to calm [npc.herHim] down by continuing to gently [npc.verb(slide)] [npc.her] [npc.tongue+] past [npc.lips+].",
+							" [npc2.Name] [npc2.verb(let)]发出一声安抚的[npc2.moan]作为回应，无视[npc.namePos]的抗议，[npc2.she]试着通过继续温柔地[npc.verb(slide)]把[npc.her]的[npc.tongue+]滑过[npc.lips+]来安抚[npc.herHim]。",
 
-							" With a soft [npc2.moan], [npc2.name] [npc2.verb(lean)] into [npc.name],"
-									+ " ignoring [npc.her] [npc.sobs] as [npc2.she] gently, but firmly, pushes [npc2.her] [npc2.tongue] past [npc.her] unwilling [npc.lips] and into [npc.her] mouth.",
+							" 带着轻柔的[npc2.moan]，[npc2.name] [npc2.verb(lean)]靠向[npc.name]，"
+									+ " 无视[npc.her]的[npc.sobs]，[npc2.she]温柔但坚定地把[npc2.her]的[npc2.tongue]探过[npc.her]不情愿的[npc.lips]，进入[npc.her]的嘴里。",
 
-							" Letting out a soothing [npc2.moan], [npc2.name] [npc2.verb(press)] [npc2.herself] against [npc.name],"
-									+ " muffling [npc.her] [npc.sobs] against [npc2.her] [npc2.lips+] as [npc2.she] [npc2.verb(continue)] to french kiss [npc.herHim]."));
+							" 发出一声安抚的[npc2.moan]，[npc2.name] [npc2.verb(press)]把[npc2.herself]贴上[npc.name]，"
+									+ " 把[npc.her]的[npc.sobs]声闷在[npc2.her]的[npc2.lips+]上，[npc2.she] [npc2.verb(continue)]继续与他法式舌吻。"));
 					break;
 				case DOM_ROUGH:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" [npc2.Name] [npc2.verb(let)] out an angry growl in response to [npc.her] protests,"
-									+ " roughly grinding [npc2.her] [npc2.lips] against [npc.her] mouth before violently thrusting [npc2.her] tongue deep down [npc.her] throat.",
+							" [npc2.Name] [npc2.verb(let)]对[npc.her]的抗议发出一声愤怒的低吼，"
+									+ " 粗暴地把[npc2.her]的[npc2.lips]碾在[npc.her]的嘴上，随即猛烈地把[npc2.her]的舌头深深探入[npc.her]的喉咙。",
 
-							" With a furious growl, [npc2.name] violently grinds [npc2.herself] up against [npc.name], ignoring [npc.her] [npc.sobs] as [npc2.she] [npc2.verb(thrust)] [npc2.her] [npc2.tongue] deep down [npc.her] throat.",
+							" 带着狂暴的低吼，[npc2.name]猛烈地把[npc2.herself]碾向[npc.name]，无视[npc.her]的[npc.sobs]，[npc2.she] [npc2.verb(thrust)]把[npc2.her]的[npc2.tongue]深深探入[npc.her]的喉咙。",
 
-							" [npc2.Name] ignores [npc.her] protests, and with a rough growl, [npc2.she] [npc2.verb(continue)] violently tongue-fucking [npc.her] reluctant throat."));
+							" [npc2.Name]无视[npc.her]的抗议，伴随着一声粗暴的低吼，[npc2.she] [npc2.verb(continue)]继续狂暴地操着[npc.her]不情愿的喉咙。"));
 					break;
 				default:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							" [npc2.Name] [npc2.verb(let)] out [npc2.a_moan] in response, ignoring [npc.namePos] protests as [npc2.she] [npc2.verb(continue)] to plant passionate kisses on [npc.her] [npc.lips+].",
+							" [npc2.Name] [npc2.verb(let)]发出一声[npc2.a_moan]作为回应，无视[npc.namePos]的抗议，[npc2.she] [npc2.verb(continue)]继续在[npc.her]的[npc.lips+]上落下热烈的吻。",
 
-							" With [npc2.a_moan+], [npc2.name] [npc2.verb(lean)] into [npc.name],"
-									+ " ignoring [npc.her] [npc.sobs] as [npc2.she] firmly pushes [npc2.her] [npc2.tongue] past [npc.her] unwilling [npc.lips] and into [npc.her] mouth.",
+							" 伴随着[npc2.a_moan+]，[npc2.name] [npc2.verb(lean)]靠向[npc.name]，"
+									+ " 无视[npc.her]的[npc.sobs]，[npc2.she]坚定地把[npc2.her]的[npc2.tongue]探过[npc.her]不情愿的[npc.lips]，进入[npc.her]的嘴里。",
 
-							" Letting out [npc2.a_moan+], [npc2.name] [npc2.verb(press)] [npc2.herself] against [npc.name], continuing to passionately kiss [npc.herHim]."));
+							" 发出[npc2.a_moan+]，[npc2.name] [npc2.verb(press)]把[npc2.herself]贴上[npc.name]，继续热烈地亲吻[npc.herHim]。"));
 					break;
 			}
 
@@ -747,12 +747,12 @@ public class FrenchKiss {
 
 		@Override
 		public String getActionTitle() {
-			return "Stop french kissing";
+			return "停止法式舌吻";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Pull away from [npc2.namePos] and stop french kissing [npc2.herHim].";
+			return "从[npc2.namePos]身边退开，停止与[npc2.herHim]法式舌吻。";
 		}
 
 		@Override
@@ -762,19 +762,19 @@ public class FrenchKiss {
 			switch(Main.sex.getSexPace(Main.sex.getCharacterPerformingAction())) {
 				case DOM_ROUGH:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Pulling back, [npc.name] roughly pushes [npc2.name] away from [npc.herHim] as [npc.she] pull out [npc.her] [npc.tongue+] from [npc.her] throat.",
+							"[npc.name]退开，粗鲁地把[npc2.name]从[npc.herHim]身边推开，[npc.she]同时把[npc.her]的[npc.tongue+]从[npc.her]的喉咙里抽出。",
 
-							"[npc.Name] suddenly, and roughly, [npc.verb(push)] [npc2.name] away from [npc.herHim], [npc.verb(yank)] [npc.her] [npc.tongue+] out of [npc2.her] mouth.",
+							"[npc.Name]突然而粗鲁地[npc.verb(push)]把[npc2.name]从[npc.herHim]身边推开，[npc.verb(yank)]猛地从[npc2.her]的嘴里抽出[npc.her]的[npc.tongue+]。",
 
-							"[npc.Name] [npc.verb(pull)] back from [npc2.name], before roughly pushing [npc2.herHim] away from [npc.herHim] and breaking off [npc.her] french kiss."));
+							"[npc.Name] [npc.verb(pull)]从[npc2.name]身边退开，随即粗鲁地把[npc2.herHim]从[npc.herHim]身边推开，结束了[npc.her]的法式舌吻。"));
 					break;
 				default:
 					UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-							"Gazing into [npc2.namePos] [npc2.eyes], [npc.name] [npc.verb(grin)] as [npc.she] [npc.verb(pull)] back, a strand of drool still connecting [npc.her] [npc.tongue+] and [npc2.her] mouth, as you conclude [npc.her] french kiss.",
+							"凝视着[npc2.namePos]的[npc2.eyes]，[npc.name] [npc.verb(grin)]咧嘴一笑，[npc.she] [npc.verb(pull)]退开，一缕口水仍连接着[npc.her]的[npc.tongue+]和[npc2.her]的嘴，你在此时结束[npc.her]的法式舌吻。",
 
-							"[npc.Name] suddenly [npc.verb(pull)] back, bringing an end to [npc.her] french kiss.",
+							"[npc.Name]突然[npc.verb(pull)]退开，结束了[npc.her]的法式舌吻。",
 
-							"[npc.Name] [npc.verb(pull)] back from [npc2.name], reeling [npc.her] [npc.tongue+] out of [npc2.her] mouth as [npc.she] breaks off [npc.her] french kiss."));
+							"[npc.Name] [npc.verb(pull)]从[npc2.name]身边退开，[npc.she]结束[npc.her]的法式舌吻时，把[npc.her]的[npc.tongue+]从[npc2.her]的嘴里缓缓抽出。"));
 					break;
 			}
 
@@ -782,15 +782,15 @@ public class FrenchKiss {
 				switch(Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this))) {
 					case SUB_RESISTING:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" [npc2.Name] [npc2.verb(breathe)] a small sigh of relief, before quickly continuing to [npc2.sob] and struggle against [npc.name] as [npc2.she] [npc2.verb(try)] to break free from [npc.her] grasp.",
+								" [npc2.Name] [npc2.verb(breathe)]松了一口气，随即继续[npc2.sob]着在[npc.name]怀中挣扎，[npc2.she] [npc2.verb(try)]想挣脱[npc.her]的掌握。",
 
-								" With [npc2.a_sob+], [npc2.name] [npc2.verb(try)], in vain, to [npc2.verb(push)] [npc.name] even further away, protesting and squirming in discomfort as [npc.she] [npc.verb(hold)] [npc2.herHim] firmly in place."));
+								" 伴随着[npc2.a_sob+]，[npc2.name]徒劳地[npc2.verb(try)]想[npc2.verb(push)]把[npc.name]推得更远，[npc.she] [npc.verb(hold)]牢牢按住[npc2.herHim]时，她一边抗议一边因不适而扭动。"));
 						break;
 					default:
 						UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-								" [npc2.Name] [npc2.verb(let)] out a little whine as [npc.name] [npc.verb(pull)] back, signalling [npc2.her] desperate need for more attention.",
+								" [npc2.Name] [npc2.verb(let)]在[npc.name] [npc.verb(pull)]退开时发出一声小小的呜咽，显示出[npc2.her]渴望更多关注的迫切需求。",
 
-								" A desperate whine escapes from between [npc2.namePos] [npc2.lips], betraying [npc2.her] desire for more of [npc.namePos] attention."));
+								" 一声绝望的呜咽从[npc2.namePos]的[npc2.lips]之间逸出，暴露了[npc2.her]对[npc.namePos]更多关注的渴望。"));
 						break;
 				}
 			}
@@ -809,12 +809,12 @@ public class FrenchKiss {
 
 		@Override
 		public String getActionTitle() {
-			return "Extreme French Kiss";
+			return "极致法式舌吻";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Push [npc.her] [npc.tongue+] down [npc.her] throat as far as it will go.";
+			return "将[npc.her]的[npc.tongue+]尽可能地推入[npc.her]的喉咙深处。";
 		}
 
 		@Override
@@ -830,12 +830,12 @@ public class FrenchKiss {
 
 			return UtilText.parse(performer, target,
 					UtilText.returnStringAtRandom(
-							"Letting out an eager [npc.moan], [npc.Name] decide to push [npc.her] [npc.tongue+] deeper and deeper into [npc2.her] mouth until [npc.she] reach the back of [npc2.her] throat, with length to spare however,"
-										+ " [npc.she] decided to not stop there and continue maneuvering [npc.her] [npc.tongue+] deeper into [npc2.her] body as drool starts to escape from the edges of [npc2.her] filled mouth."
-										+ " As [npc2.she] starts to struggle from the continuous lack of breath, [npc.she] gently reassure [npc2.herHim] by cupping [npc2.her] head between [npc.her] [npc.hands], holding [npc2.herHim] in place as [npc.her] [npc.tongue+] reaches deeper into [npc2.herHim] still."
-										+ " Savouring this moment as long as possible, [npc.she] continue to squirm [npc.her] [npc.tongueSize] [npc.tongue+] within [npc2.her] throat, causing it to bulge excessively, just to [npc.her] liking."
-										+ " After a few more moments of such an intimate embrace [npc.she] slowly start pulling out [npc.her] [npc.tongueSize] [npc.tongue+], sliding it out of [npc2.her] throat slowly before pulling it entirely out of [npc2.her] mouth and back into [npc.her] own, "
-										+ " Giving [npc2.herHim] a moment to recover as [npc2.she] pants for air, [npc.she] give [npc2.her] lips a playful lick before resuming [npc.her] french kiss."));
+							"[npc.Name]发出一声急切的[npc.moan]，决定把[npc.her]的[npc.tongue+]越来越深地探入[npc2.her]的嘴里，直到[npc.she]抵达[npc2.her]喉咙的深处，但长度还绰绰有余，"
+										+ " [npc.she]决定不停在这里，继续将[npc.her]的[npc.tongue+]向[npc2.her]体内更深之处探去，口水开始从[npc2.her]被填满的嘴边溢出。"
+										+ " 当[npc2.she]因持续的窒息感开始挣扎时，[npc.she]用[npc.her]的[npc.hands]轻轻托住[npc2.her]的头，安抚[npc2.herHim]，将她牢牢按住，[npc.her]的[npc.tongue+]仍继续向[npc2.herHim]体内更深处探去。"
+										+ " 尽可能长久地享受这一刻，[npc.she]继续在[npc2.her]的喉咙里扭动着[npc.her]的[npc.tongueSize] [npc.tongue+]，使其夸张地鼓胀起来，正合[npc.her]的心意。"
+										+ " 在这番亲密深吻又过了片刻后，[npc.she]开始慢慢抽出[npc.her]的[npc.tongueSize] [npc.tongue+]，缓缓从[npc2.her]的喉咙里滑出，随后完全退出[npc2.her]的嘴，收回到[npc.her]自己口中。"
+										+ " 给[npc2.herHim]片刻喘息的机会，[npc2.she]大口喘着气，[npc.she]俏皮地舔了舔[npc2.her]的嘴唇，然后继续[npc.her]的法式舌吻。"));
 
 		}
 	};

@@ -33,12 +33,12 @@ public class GoldenDrink {
 
         @Override
         public String getActionTitle() {
-            return "Get Refreshments";
+            return "获取提神饮品";
         }
 
         @Override
         public String getActionDescription() {
-            return "Quench your thirst from the source of relief.";
+            return "从畅快解压的源头解渴。";
         }
 
         @Override
@@ -87,12 +87,12 @@ public class GoldenDrink {
 
         @Override
         public String getActionTitle() {
-            return "Give Refreshments";
+            return "送出提神饮品";
         }
 
         @Override
         public String getActionDescription() {
-            return Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this)) == SexPace.SUB_RESISTING ? "Try to drown them in your piss." : "Relieve yourself to quench their thirst.";
+            return Main.sex.getSexPace(Main.sex.getCharacterTargetedForSexAction(this)) == SexPace.SUB_RESISTING ? "试着用你的尿液淹死ta。" : "释放你自己，满足ta的口渴。";
         }
 
         @Override

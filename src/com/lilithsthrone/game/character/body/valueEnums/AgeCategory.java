@@ -19,13 +19,13 @@ import static com.lilithsthrone.utils.Util.checkWeightedMap;
 public enum AgeCategory {
 	
 	// Always at least 18, as returned by valueOf()
-	INFANT("infantile", 0, 1, PresetColour.AGE_INFANT, ContentPreferenceValue.ZERO_NONE),
-	TODDLER("toddle-hood", 1, 4, PresetColour.AGE_CHILD, ContentPreferenceValue.ZERO_NONE),
-	CHILD("childhood", 4, 8, PresetColour.AGE_CHILD, ContentPreferenceValue.ONE_MINIMAL),
-	PRETEENS("preteens", 8, 12, PresetColour.AGE_PRETEENS, ContentPreferenceValue.THREE_AVERAGE),
-	TEENS_EARLY("early teens", 12, 14, PresetColour.AGE_PRETEENS, ContentPreferenceValue.FOUR_HIGH),
-	TEENS_MIDDLE("mid-teens", 14, 17, PresetColour.AGE_TEENS, ContentPreferenceValue.FOUR_HIGH),
-	TEENS_LATE("late teens", 17, 20, PresetColour.AGE_LATE_TEENS, ContentPreferenceValue.THREE_AVERAGE),
+	INFANT("婴幼儿", 0, 1, PresetColour.AGE_INFANT, ContentPreferenceValue.ZERO_NONE),
+	TODDLER("学步期", 1, 4, PresetColour.AGE_CHILD, ContentPreferenceValue.ZERO_NONE),
+	CHILD("童年期", 4, 8, PresetColour.AGE_CHILD, ContentPreferenceValue.ONE_MINIMAL),
+	PRETEENS("青春期前", 8, 12, PresetColour.AGE_PRETEENS, ContentPreferenceValue.THREE_AVERAGE),
+	TEENS_EARLY("十四五岁", 12, 14, PresetColour.AGE_PRETEENS, ContentPreferenceValue.FOUR_HIGH),
+	TEENS_MIDDLE("十五六七岁", 14, 17, PresetColour.AGE_TEENS, ContentPreferenceValue.FOUR_HIGH),
+	TEENS_LATE("十七至二十岁", 17, 20, PresetColour.AGE_LATE_TEENS, ContentPreferenceValue.THREE_AVERAGE),
 
 	TWENTIES_EARLY("二十出头", 20, 23, PresetColour.AGE_TWENTIES, ContentPreferenceValue.FIVE_ABUNDANT),
 	

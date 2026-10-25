@@ -40,15 +40,15 @@ import java.util.regex.Pattern;
 public class CharacterCreationExtras {
 // Keldon add global racial selector at the top
 
-    public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_RACE = new DialogueNode("Race", "", true) {
+    public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_RACE = new DialogueNode("种族", "", true) {
 
         @Override
         public String getHeaderContent() {
             UtilText.nodeContentSB.setLength(0);
             UtilText.nodeContentSB.append(
                     "<div class='container-full-width'>"
-                            + "This is a poorly tested feature, I've worked on it for a few hours, no tooltips.<br/>"
-                            + "<b>This might also show in transform menu, in that case mouse over other person's race icon.</b>"
+                            + "这是一个测试不足的功能，我花了几小时开发的，没有提示条。<br/>"
+                            + "<b>这也可能会显示在生理转换菜单中，若遇到这种情况，请将鼠标悬停在对方种族的图标上。</b>"
                             + "</div>");
             UtilText.nodeContentSB.append(getRacePanel());
             UtilText.nodeContentSB.append(getRacialPanel());
@@ -400,7 +400,7 @@ public class CharacterCreationExtras {
 
         sb.append("<div class='container-full-width'>");
 
-        String partName = "All";
+        String partName = "全部";
         sb.append("<div style='display:inline-block; margin-inline:4px auto;width:100%;'>" +
                         "<div style='display:flex; flex-direction: row;  margin:4px auto;'>" +
                         "<div style='width:140px; padding-right: 1px; float:left; text-align:center;'><b style='color:")
@@ -435,7 +435,7 @@ public class CharacterCreationExtras {
         AbstractBodyCoveringType coveringType = partType.getBodyCoveringType(Main.game.getPlayer());
         if (race == null || coveringType == null /*|| race == Race.NONE || partType.isOneOf(VaginaType.NONE,
                 PenisType.NONE, BreastType.NONE, TailType.NONE, HornType.NONE, WingType.NONE, TentacleType.NONE,
-                AntennaType.NONE)*/) return "None";
+                AntennaType.NONE)*/) return "无";
         GameCharacter character = Main.game.getPlayer();
         Covering covering = character.getCovering(coveringType);
         String raceName = race.getName(character.getBody(), false);
@@ -445,7 +445,7 @@ public class CharacterCreationExtras {
                 ? "<span id='RACE_COLOR_" + getPartName(partType) + "' style='color:" + race.getColour().toWebHexString() + ";'>"
                 + Util.capitaliseSentence(raceName)
                 : "<span style='color:" + PresetColour.BASE_PINK_DEEP.toWebHexString() + ";'>"
-                + "Dildo")
+                + "假阳具")
                 + "</span>";
 
         String coveringStr = covering.getColourDescriptor(character, true, true) + " " + Util.capitaliseSentence(coveringName);
@@ -462,14 +462,14 @@ public class CharacterCreationExtras {
         AbstractBodyCoveringType coveringType = partType.getBodyCoveringType(character);
         if (race == null || coveringType == null /*|| partType.isOneOf(VaginaType.NONE,
                 PenisType.NONE, BreastType.NONE, TailType.NONE, HornType.NONE, WingType.NONE, TentacleType.NONE,
-                AntennaType.NONE)*/) return "None";
+                AntennaType.NONE)*/) return "无";
         Covering covering = character.getCovering(coveringType);
 
         return (covering.getType() != BodyCoveringType.DILDO
                 ? "<span id='RACE_COLOR_" + getPartName(partType) + "' style='color:" + race.getColour().toWebHexString() + ";'>"
                 + Util.capitaliseSentence(getRaceTransformName(partType))
                 : "<span style='color:" + PresetColour.BASE_PINK_DEEP.toWebHexString() + ";'>"
-                + (partType == PenisType.DILDO ? "Dildo" : "Onahole"))
+                + (partType == PenisType.DILDO ? "假阳具" : "飞机杯"))
                 + "</span>";
     }
 
@@ -570,13 +570,13 @@ public class CharacterCreationExtras {
     }
 
 
-    public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_GENITALS = new DialogueNode("Genitals Appearance", "", true) {
+    public static final DialogueNode CHOOSE_ADVANCED_APPEARANCE_GENITALS = new DialogueNode("生殖器外观", "", true) {
 
         @Override
         public String getHeaderContent() {
             UtilText.nodeContentSB.setLength(0);
             UtilText.nodeContentSB.append("<div class='container-full-width' style='text-align:center;'>"
-                    + "<i>All of these options can be influenced later on in the game.</i>"
+                    + "<i>所有选项都可以在之后的游戏过程中进行修改。</i>"
                     + "</div>");
             UtilText.nodeContentSB.append(CharCreationMenu.PENIS_SWITCH.getDiv(BodyChanging.getTarget().hasPenis()));
             UtilText.nodeContentSB.append(CharCreationMenu.VAGINA_SWITCH.getDiv(BodyChanging.getTarget().hasVagina()));
@@ -586,8 +586,8 @@ public class CharacterCreationExtras {
                         .append(CharacterModificationUtils.getSelfTransformCumProductionDiv());
             } else {
                 UtilText.nodeContentSB.append("<p>")
-                        .append(BodyChanging.getTarget().isPlayer() ? "You" : "they")
-                        .append(" do not have a penis to customize...</p>");
+                        .append(BodyChanging.getTarget().isPlayer() ? "你" : "ta")
+                        .append("没有可自定义的阴茎...</p>");
             }
             if (BodyChanging.getTarget().hasVagina()) {
                 UtilText.nodeContentSB.append(CharacterModificationUtils.getVaginaCapacityDiv())
@@ -595,8 +595,8 @@ public class CharacterCreationExtras {
                         .append(CharacterModificationUtils.getClitorisSizeDiv());
             } else {
                 UtilText.nodeContentSB.append("<p>")
-                        .append(BodyChanging.getTarget().isPlayer() ? "You" : "they")
-                        .append(" do not have a vagina to customize...</p>");
+                        .append(BodyChanging.getTarget().isPlayer() ? "你" : "ta")
+                        .append("没有可自定义的阴道...</p>");
             }
             return UtilText.nodeContentSB.toString();
         }
@@ -665,7 +665,7 @@ public class CharacterCreationExtras {
 
         // Covering Pattern:
         sb.append("<div class='container-full-width' style='width:100%; padding:0; margin:0; text-align:center; " + border + "'>");
-        sb.append("<p style='padding:0;margin:0;text-align:center;'>Pattern:</p>");
+        sb.append("<p style='padding:0;margin:0;text-align:center;'>花纹：</p>");
         for (CoveringPattern pattern : availablePatterns) {
             sb.append(
                     "<div id='" + getPartName(partType) + "_" + BodyCoveringType.getIdFromBodyCoveringType(coveringType) + "_PATTERN_" + pattern + "' class='cosmetics-button"
@@ -682,7 +682,7 @@ public class CharacterCreationExtras {
 
         // Covering Modifiers:
         sb.append("<div class='container-full-width' style='width:100%; padding:0; margin:0; text-align:center; " + border + "'>");
-        sb.append("<p style='padding:0;margin:0;text-align:center;'>Modifiers:</p>");
+        sb.append("<p style='padding:0;margin:0;text-align:center;'>修饰：</p>");
         if (activeCovering.getType().getNaturalModifiers().size() + activeCovering.getType().getExtraModifiers().size() > 1) {
             for (CoveringModifier mod : activeCovering.getType().getNaturalModifiers()) {
                 if (activeCovering.getModifier() == mod) {
@@ -712,7 +712,7 @@ public class CharacterCreationExtras {
             }
 
         } else {
-            sb.append("<p style='padding:0;margin:0;text-align:center;'>[style.italicsDisabled(None Available)]</p>");
+            sb.append("<p style='padding:0;margin:0;text-align:center;'>[style.italicsDisabled(无可用)]</p>");
         }
         sb.append("</div></div>");
 
@@ -722,7 +722,7 @@ public class CharacterCreationExtras {
         // Primary:
         sb.append("<div class='container-full-width' style='width:100%; padding:0; margin:0; text-align:center; " + border + "'>");
         sb.append("<div class='container-full-width' style='width:100%; padding:0; margin:0; text-align:center; background:transparent;'>");
-        sb.append("Primary Colour");
+        sb.append("主色");
         sb.append(" | <span style='color:" + activeCovering.getPrimaryColour().toWebHexString() + ";"
                 + (activeCovering.isPrimaryGlowing()
                 ? "text-shadow: 0px 0px 4px " + activeCovering.getPrimaryColour().getShades()[4] + ";"
@@ -752,11 +752,11 @@ public class CharacterCreationExtras {
             if (activeCovering.isPrimaryGlowing()) {
                 sb.append(
                         "<div class='normal-button active' id='" + BodyCoveringType.getIdFromBodyCoveringType(coveringType) + "_PRIMARY_GLOW_OFF" + "' style='width:50%; margin:1% 25%; padding:0; text-align:center;'>"
-                                + "[style.boldArcane(Arcane Glow)]</div>");
+                                + "[style.boldArcane(奥术辉光)]</div>");
             } else {
                 sb.append(
                         "<div id='" + BodyCoveringType.getIdFromBodyCoveringType(coveringType) + "_PRIMARY_GLOW_ON" + "_" + "' class='normal-button' style='width:50%; margin:1% 25%; padding:0; text-align:center;'>"
-                                + "<span style='color:" + PresetColour.GENERIC_ARCANE.getShades()[0] + ";'>Arcane Glow</span></div>");
+                                + "<span style='color:" + PresetColour.GENERIC_ARCANE.getShades()[0] + ";'>奥术辉光</span></div>");
             }
         }
         sb.append("</div>");
@@ -764,7 +764,7 @@ public class CharacterCreationExtras {
         // Secondary:
         sb.append("<div class='container-full-width' style='width:100%; padding:0; margin:0; text-align:center; " + border + "'>");
         sb.append("<div class='container-full-width' style='width:100%; padding:0; margin:0; text-align:center; background:transparent;'>");
-        sb.append("Secondary Colour");
+        sb.append("副色");
         if (!secondaryDisabled) {
             sb.append(" | <span style='color:" + activeCovering.getSecondaryColour().toWebHexString() + ";"
                     + (activeCovering.isSecondaryGlowing()
@@ -775,7 +775,7 @@ public class CharacterCreationExtras {
         }
         sb.append("</div>");
         if (secondaryDisabled) {
-            sb.append("<p style='padding:0;margin:0;text-align:center;'>[style.italicsDisabled(None Available)]</p>");
+            sb.append("<p style='padding:0;margin:0;text-align:center;'>[style.italicsDisabled(无可用)]</p>");
 
         } else {
             for (Colour c : availableSecondaryColours) {
@@ -802,11 +802,11 @@ public class CharacterCreationExtras {
             if (activeCovering.isSecondaryGlowing()) {
                 sb.append(
                         "<div class='normal-button active' id='" + getPartName(partType) + "_" + BodyCoveringType.getIdFromBodyCoveringType(coveringType) + "_SECONDARY_GLOW_OFF" + "' style='width:50%; margin:1% 25%; padding:0; text-align:center;'>"
-                                + "[style.boldArcane(Arcane Glow)]</div>");
+                                + "[style.boldArcane(奥术辉光)]</div>");
             } else {
                 sb.append(
                         "<div id='" + getPartName(partType) + "_" + BodyCoveringType.getIdFromBodyCoveringType(coveringType) + "_SECONDARY_GLOW_ON" + "' class='normal-button' style='width:50%; margin:1% 25%; padding:0; text-align:center;'>"
-                                + "<span style='color:" + PresetColour.GENERIC_ARCANE.getShades()[0] + ";'>Arcane Glow</span></div>");
+                                + "<span style='color:" + PresetColour.GENERIC_ARCANE.getShades()[0] + ";'>奥术辉光</span></div>");
             }
         }
         sb.append("</div></div></div>");

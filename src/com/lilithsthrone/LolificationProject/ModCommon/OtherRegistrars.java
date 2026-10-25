@@ -17,22 +17,22 @@ import static com.lilithsthrone.game.character.fetishes.Fetish.*;
 public class OtherRegistrars {
 
     public static final AbstractFetish FETISH_PEE_RECEIVING = new AbstractFetish(60,
-            "pee lover",
-            "being pissed on/in",
+            "喜爱被淋尿",
+            "被人淋尿/撒尿",
             "fetish_pee_receiving",
             FetishExperience.BASE_EXPERIENCE_GAIN,
             PresetColour.GENERIC_EXCELLENT,
             null,
-            Util.newArrayListOfValues("<span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>Unlocks</span> <span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>being pissed on</span>",
-                    "<span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Weak to</span> <span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>being pissed on</span>"),
+            Util.newArrayListOfValues("<span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>解锁</span> <span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>被人淋尿</span>",
+                    "<span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>弱点</span> <span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>被人淋尿</span>"),
             null) {
         @Override
         public String getDescription(GameCharacter owner) {
             if (owner == null)
-                return "This fetish relates to a person's desire for receiving a shower of golden fluids from another.";
+                return "这个癖好与一个人渴望接受他人黄金液体沐浴有关。";
             else if (owner.isPlayer())
-                return "You have an obsession with being pissed on. You love nothing more than to be covered by someone elses urine.";
-            return UtilText.parse(owner, "[npc.Name] has a fetish for being pissed on.");
+                return "你对被淋尿有着执念。你最喜欢的就是被别人用尿液覆盖全身。";
+            return UtilText.parse(owner, "[npc.Name]有被淋尿的癖好。");
         }
 
         @Override
@@ -42,7 +42,7 @@ public class OtherRegistrars {
 
         @Override
         public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-            return getGenericFetishDesireDescription(target, desire, "being pissed on");
+            return getGenericFetishDesireDescription(target, desire, "被淋尿");
         }
 
         @Override
@@ -57,14 +57,14 @@ public class OtherRegistrars {
     };
 
     public static final AbstractFetish FETISH_PEE_GIVING = new AbstractFetish(60,
-            "pee provider",
-            "pissing on others",
+            "喜爱向他人撒尿",
+            "向他人撒尿",
             "fetish_pee_giving",
             FetishExperience.BASE_EXPERIENCE_GAIN,
             PresetColour.GENERIC_EXCELLENT,
             null,
-            Util.newArrayListOfValues("<span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>Unlocks</span> <span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>peeing on others</span>",
-                    "<span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Weak to</span> <span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>bladder relief</span>"),
+            Util.newArrayListOfValues("<span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>解锁</span> <span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>向他人撒尿</span>",
+                    "<span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>弱点</span> <span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>膀胱释放</span>"),
             null) {
 
         @Override
@@ -75,10 +75,10 @@ public class OtherRegistrars {
         @Override
         public String getDescription(GameCharacter owner) {
             if (owner == null)
-                return "This fetish relates to a person's desire for showering another in a stream of golden fluids.";
+                return "这个癖好与一个人渴望用一股黄金液体淋浴他人有关。";
             else if (owner.isPlayer())
-                return "You have an obsession with pissing on others. You love nothing more than to cover someone else in urine.";
-            return UtilText.parse(owner, "[npc.Name] has a fetish for pissing on others.");
+                return "你对向他人撒尿有着执念。你最喜欢的就是用尿液覆盖别人。";
+            return UtilText.parse(owner, "[npc.Name]有向他人撒尿的癖好。");
         }
 
         @Override
@@ -88,7 +88,7 @@ public class OtherRegistrars {
 
         @Override
         public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-            return getGenericFetishDesireDescription(target, desire, "peeing on others");
+            return getGenericFetishDesireDescription(target, desire, "向他人撒尿");
         }
 
         @Override
@@ -98,14 +98,14 @@ public class OtherRegistrars {
     };
 
     public static final AbstractFetish FETISH_AGE_YOUNGER = new AbstractFetish(60,
-            "prefers younger",
-            "younger partners",
+            "偏爱年轻者",
+            "年轻伴侣",
             "fetish_age_younger",
             FetishExperience.BASE_RARE_EXPERIENCE_GAIN,
             PresetColour.GENERIC_ARCANE,
             null,
-            Util.newArrayListOfValues("<span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>Increases</span> <span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>lust damage to people 10+ years younger</span>",
-                    "<span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Increases</span> <span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>lust damage from people 10+ years younger</span>"),
+            Util.newArrayListOfValues("<span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>增加</span> <span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>对比你小10岁以上者造成的淫欲伤害</span>",
+                    "<span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>受到</span> <span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>来自比你小10岁以上者的淫欲伤害</span>"),
             null) {
         @Override
         public AbstractFetish getOpposite() {
@@ -115,10 +115,10 @@ public class OtherRegistrars {
         @Override
         public String getDescription(GameCharacter owner) {
             if (owner == null)
-                return "This fetish relates to a person's desire for younger partners.";
+                return "这个癖好与一个人对年轻伴侣的渴望有关。";
             else if (owner.isPlayer())
-                return "You love flirting and having sex with those much younger than you.";
-            return UtilText.parse(owner, "[npc.Name] has a fetish for significantly younger partners.");
+                return "你喜欢与比你年轻得多的人调情和发生性关系。";
+            return UtilText.parse(owner, "[npc.Name]有与明显年轻许多的伴侣发生关系的癖好。");
         }
 
         @Override
@@ -128,7 +128,7 @@ public class OtherRegistrars {
 
         @Override
         public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-            return getGenericFetishDesireDescription(target, desire, "younger partners");
+            return getGenericFetishDesireDescription(target, desire, "年轻伴侣");
         }
 
         @Override
@@ -138,14 +138,14 @@ public class OtherRegistrars {
     };
 
     public static final AbstractFetish FETISH_AGE_OLDER = new AbstractFetish(60,
-            "prefers older",
-            "older partners",
+            "偏爱年长者",
+            "年长伴侣",
             "fetish_age_older",
             FetishExperience.BASE_RARE_EXPERIENCE_GAIN,
             PresetColour.GENERIC_ARCANE,
             null,
-            Util.newArrayListOfValues("<span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>Increases</span> <span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>lust damage to people 10+ years older</span>",
-                    "<span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>Increases</span> <span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>lust damage from people 10+ years older</span>"),
+            Util.newArrayListOfValues("<span style='color:" + PresetColour.GENERIC_GOOD.toWebHexString() + ";'>增加</span> <span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>对比你大10岁以上者造成的淫欲伤害</span>",
+                    "<span style='color:" + PresetColour.GENERIC_BAD.toWebHexString() + ";'>受到</span> <span style='color:" + PresetColour.GENERIC_SEX.toWebHexString() + ";'>来自比你大10岁以上者的淫欲伤害</span>"),
             null) {
         @Override
         public AbstractFetish getOpposite() {
@@ -155,10 +155,10 @@ public class OtherRegistrars {
         @Override
         public String getDescription(GameCharacter owner) {
             if (owner == null)
-                return "This fetish relates to a person's desire for older partners.";
+                return "这个癖好与一个人对年长伴侣的渴望有关。";
             else if (owner.isPlayer())
-                return "You love flirting and having sex with those much older than you.";
-            return UtilText.parse(owner, "[npc.Name] has a fetish for significantly older partners.");
+                return "你喜欢与比你年长得多的人调情和发生性关系。";
+            return UtilText.parse(owner, "[npc.Name]有与明显年长许多的伴侣发生关系的癖好。");
         }
 
         @Override
@@ -168,7 +168,7 @@ public class OtherRegistrars {
 
         @Override
         public String getFetishDesireDescription(GameCharacter target, FetishDesire desire) {
-            return getGenericFetishDesireDescription(target, desire, "older partners");
+            return getGenericFetishDesireDescription(target, desire, "年长伴侣");
         }
 
         @Override

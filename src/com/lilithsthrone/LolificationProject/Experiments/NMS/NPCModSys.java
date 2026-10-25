@@ -121,6 +121,8 @@ import java.util.Map;
 
 import static com.lilithsthrone.LolificationProject.Experiments.NMS.NMSUI.buildLeftSide;
 
+// 不知道怎么回事，汉化把这个模块搞坏了...
+
 /* Friendly Note : NMS is to be pronounced Nimis */
 public class NPCModSys {
     static Map<String, Integer> heightMap = new HashMap<>();
@@ -163,19 +165,19 @@ public class NPCModSys {
         )));
     }
 
-    public static final DialogueNode NPC_MOD_SYS = new DialogueNode("NPC Mod System", "", true) {
+    public static final DialogueNode NPC_MOD_SYS = new DialogueNode("NPC 修改系统", "", true) {
         @Override
         public String getContent() {
             UtilText.nodeContentSB.setLength(0);
             buildLeftSide();
-            UtilText.nodeContentSB.append("<div id='NPCModSheet' style='width:100%;height:70%;'><p style='color: #3CC;'>NPC Modding options appear here once target is selected.</p></div>");
+            UtilText.nodeContentSB.append("<div id='NPCModSheet' style='width:100%;height:70%;'><p style='color: #3CC;'>选择目标 NPC 后，此处将显示 NPC 修改选项。</p></div>");
             return UtilText.nodeContentSB.toString();
         }
 
         @Override
         public Response getResponse(int responseTab, int index) {
             if (index == 0) {
-                return new Response("Back", "Go back to the options menu.", MenuOverrides.MENU) {
+                return new Response("返回", "返回选项菜单。", MenuOverrides.MENU) {
                     @Override
                     public void effects() {
                         Main.mainController.setAttributePanelContent("");
@@ -184,14 +186,14 @@ public class NPCModSys {
                     }
                 };
             } else if (index == 1) {
-                return new ResponseEffectsOnly("Randomize Height", "Ranomize height for all Unique NPCs</br>Note: Limits are 132cm to 200cm") {
+                return new ResponseEffectsOnly("随机化高度", "随机化所有独特 NPC 的身高</br>注意：范围限制为 132cm 至 200cm") {
                     @Override
                     public void effects() {
                         NMSController.massRandomInteger("height");
                     }
                 };
             } else if (index == 2) {
-                return new ResponseEffectsOnly("Randomize Genitals", "Randomizes genital arrangement") {
+                return new ResponseEffectsOnly("随机化生殖器", "随机化生殖器的排列") {
                     @Override
                     public void effects() {
                         NMSController.massRandomBoolean("hasPenis");
@@ -199,28 +201,28 @@ public class NPCModSys {
                     }
                 };
             } else if (index == 3) {
-                return new ResponseEffectsOnly("Randomize Femininity", "Randomly set all Femininity values</br>CURRENTLY DOES NOTHING") {
+                return new ResponseEffectsOnly("随机化女性化", "随机设置所有女性化数值</br>当前无效") {
                     @Override
                     public void effects() {
 //                        NMSController.massRandomInteger("femininity"); // Commented out because Feminity is not adjustible with NMS yet
                     }
                 };
             } else if (index == 6) {
-                return new ResponseEffectsOnly("Shrimpify", "Make 'em all short") {
+                return new ResponseEffectsOnly("矮化", "让所有人都变矮") {
                     @Override
                     public void effects() {
                         NMSController.massAdjustInteger("height", 0.7f);
                     }
                 };
             } else if (index == 7) {
-                return new ResponseEffectsOnly("QuikGro", "Gotta rename this later...") {
+                return new ResponseEffectsOnly("速长", "这个名字之后得改改……") {
                     @Override
                     public void effects() {
                         NMSController.massAdjustInteger("height", 1.15f);
                     }
                 };
             } else if (index == 11) {
-                return new ResponseEffectsOnly("Venus", "No dicks allowed") {
+                return new ResponseEffectsOnly("维纳斯", "不允许有阴茎") {
                     @Override
                     public void effects() {
                         NMSController.massRandomIntegerWithBounds("femininity", 65, 100);
@@ -230,7 +232,7 @@ public class NPCModSys {
                     }
                 };
             } else if (index == 12) {
-                return new ResponseEffectsOnly("Mars", "Manly men only") {
+                return new ResponseEffectsOnly("战神", "只保留阳刚男性") {
                     @Override
                     public void effects() {
                         NMSController.massRandomIntegerWithBounds("femininity", 0, 35);
@@ -240,7 +242,7 @@ public class NPCModSys {
                     }
                 };
             } else if (index == 13) {
-                return new ResponseEffectsOnly("Trapify", "ALL THE TRAPS") {
+                return new ResponseEffectsOnly("伪娘化", "全都是伪娘") {
                     @Override
                     public void effects() {
                         NMSController.massRandomIntegerWithBounds("femininity", 45, 80);

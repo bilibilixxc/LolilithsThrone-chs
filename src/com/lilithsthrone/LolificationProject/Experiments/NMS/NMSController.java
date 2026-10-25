@@ -45,25 +45,25 @@ public class NMSController {
 
     public static void createToggles() {
         resetToggles();
-        toggles.get(GENERAL).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_oralVirginity", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "Oral Virgin", "", "oralVirginity"));
+        toggles.get(GENERAL).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_oralVirginity", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "口部处女", "", "oralVirginity"));
         if (Main.getProperties().hasValue(PropertyValue.nipplePenContent))
-            toggles.get(GENERAL).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_nippleVirginity", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "Nipple Virgin", "", "nippleVirginity"));
+            toggles.get(GENERAL).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_nippleVirginity", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "乳头处女", "", "nippleVirginity"));
         if (Main.getProperties().hasValue(PropertyValue.analContent)) {
-            toggles.get(GENERAL).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_analVirginity", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "Anal Virgin", "", "analVirginity"));
-            toggles.get(GENERAL).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_anusBleached", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "Bleached Anus", "", "anusBleached"));
+            toggles.get(GENERAL).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_analVirginity", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "肛门处女", "", "analVirginity"));
+            toggles.get(GENERAL).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_anusBleached", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "粉嫩肛门", "", "anusBleached"));
         }
-        toggles.get(GENERAL).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_hasVagina", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "Has Vagina", "", "hasVagina"));
-        toggles.get(GENERAL).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_hasPenis", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "Has Penis", "", "hasPenis"));
-        toggles.get(VAGINA).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_vaginaSquirter", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "Squirter", "", "vaginaSquirter"));
-        toggles.get(VAGINA).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_vaginalVirginity", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "Vaginal Virgin", "", "vaginalVirginity"));
-        toggles.get(PENIS).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_penileVirginity", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "Penile Virgin", "", "penileVirginity"));
+        toggles.get(GENERAL).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_hasVagina", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "拥有阴道", "", "hasVagina"));
+        toggles.get(GENERAL).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_hasPenis", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "拥有阴茎", "", "hasPenis"));
+        toggles.get(VAGINA).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_vaginaSquirter", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "潮吹体质", "", "vaginaSquirter"));
+        toggles.get(VAGINA).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_vaginalVirginity", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "阴道处女", "", "vaginalVirginity"));
+        toggles.get(PENIS).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_penileVirginity", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "阴茎处女", "", "penileVirginity"));
         if (Main.getProperties().hasValue(PropertyValue.urethralContent)) {
-            toggles.get(PENIS).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_penileUrethraVirginity", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "Penis Urethral Virgin", "", "penileUrethraVirginity"));
-            toggles.get(VAGINA).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_vaginalUrethraVirginity", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "Vagina Urethral Virgin", "", "vaginalUrethraVirginity"));
+            toggles.get(PENIS).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_penileUrethraVirginity", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "阴茎尿道处女", "", "penileUrethraVirginity"));
+            toggles.get(VAGINA).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_vaginalUrethraVirginity", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "阴道尿道处女", "", "vaginalUrethraVirginity"));
         }
-        toggles.get(SPINNERET).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_spinneretVirginity", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "Spinneret Virgin", "", "spinneretVirginity"));
+        toggles.get(SPINNERET).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_spinneretVirginity", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "丝囊处女", "", "spinneretVirginity"));
         if (Main.getProperties().hasValue(PropertyValue.udderContent))
-            toggles.get(CROTCH_BREAST).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_crotchNippleVirginity", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "Crotch Nipple Virgin", "", "crotchNippleVirginity"));
+            toggles.get(CROTCH_BREAST).add(new NPCOptionToggle(CURRENTLY_ACTIVE_NPC.getSimpleName() + "_crotchNippleVirginity", CURRENTLY_ACTIVE_NPC, PresetColour.GENERIC_ARCANE, "胯部乳头处女", "", "crotchNippleVirginity"));
     }
 
     public static void addNPCModSysListeners() {
@@ -72,7 +72,7 @@ public class NMSController {
                 String id = npc.getSimpleName() + "_NPCMS";
                 if (MainController.documentAttributes.getElementById(id) != null) {
                     ((EventTarget) MainController.documentAttributes.getElementById(id)).addEventListener("click", e -> {
-                        Main.mainController.getWebEngine().executeScript("document.getElementById('dialogue_title').innerHTML = \"NPC Mod System (" + NMSController.getName(npc) + ")\";");
+                        Main.mainController.getWebEngine().executeScript("document.getElementById('dialogue_title').innerHTML = \"NPC 修改系统 (" + NMSController.getName(npc) + ")\";");
                         save();
                         CURRENTLY_ACTIVE_NPC = npc;
                         buildMiddle();
@@ -139,8 +139,8 @@ public class NMSController {
                 npc.getSimpleName()+"_"+fieldName,
                 npc,
                 PresetColour.GENERIC_ARCANE,
-                npc.getSimpleName() + "'s " + value,
-                "This slider changes the default " + value + " for " + npc.getSimpleName() + "'s newly generated state.",
+                npc.getSimpleName() + "的" + value,
+                "此滑块用于设置 " + npc.getSimpleName() + " 初始生成状态下的默认" + value + "。",
                 display,
                 minVal,
                 minStep,
@@ -281,88 +281,88 @@ public class NMSController {
         Class<? extends NPC> npc = CURRENTLY_ACTIVE_NPC;
         {
             resetSliders();
-            sliders.get(GENERAL).add(getSliderForNPC(npc, "Age", "%VALUE", MINIMUM_AGE, 1, MAXIMUM_AGE, 1, "age"));
-            sliders.get(GENERAL).add(getSliderForNPC(npc, "Apparent Age", "%VALUE", MINIMUM_AGE, 1, MAXIMUM_AGE, 1, "apparentAge"));
-            sliders.get(GENERAL).add(getSliderForNPC(npc, "Height", "%UNIT_SIZE", Height.NEGATIVE_THREE_MINIMUM.getMinimumValue(), 1, Height.SEVEN_COLOSSAL.getMaximumValue(), 1, "height"));
+            sliders.get(GENERAL).add(getSliderForNPC(npc, "年龄", "%VALUE", MINIMUM_AGE, 1, MAXIMUM_AGE, 1, "age"));
+            sliders.get(GENERAL).add(getSliderForNPC(npc, "外貌年龄", "%VALUE", MINIMUM_AGE, 1, MAXIMUM_AGE, 1, "apparentAge"));
+            sliders.get(GENERAL).add(getSliderForNPC(npc, "身高", "%UNIT_SIZE", Height.NEGATIVE_THREE_MINIMUM.getMinimumValue(), 1, Height.SEVEN_COLOSSAL.getMaximumValue(), 1, "height"));
         }
         for (SettingType setting : SettingType.values()) {
             if (setting == GENERAL) continue;
             String orifice = setting.getSettingName(), valueName = setting.getDisplayName();
             NPCOptionSlider slider;
             if (setting == BREAST) {
-                slider = getSliderForNPC(npc, "Breast Cup Size", "%CUP_SIZE", CupSize.FLAT.getMeasurement(), 0, CupSize.N.getMeasurement(), 1, "cupsize");
+                slider = getSliderForNPC(npc, "罩杯大小", "%CUP_SIZE", CupSize.FLAT.getMeasurement(), 0, CupSize.N.getMeasurement(), 1, "cupsize");
                 sliders.get(setting).add(slider);
-                slider = getSliderForNPC(npc, "Nipple Size", "!NippleSize", NippleSize.ZERO_TINY.getValue(), 0, NippleSize.FOUR_MASSIVE.getValue(), 1, "nippleSize");
+                slider = getSliderForNPC(npc, "乳头大小", "!NippleSize", NippleSize.ZERO_TINY.getValue(), 0, NippleSize.FOUR_MASSIVE.getValue(), 1, "nippleSize");
                 sliders.get(setting).add(slider);
-                slider = getSliderForNPC(npc, "Areolae Size", "!AreolaeSize", AreolaeSize.ZERO_TINY.getValue(), 0, AreolaeSize.FOUR_MASSIVE.getValue(), 1, "areolaSize");
+                slider = getSliderForNPC(npc, "乳晕大小", "!AreolaeSize", AreolaeSize.ZERO_TINY.getValue(), 0, AreolaeSize.FOUR_MASSIVE.getValue(), 1, "areolaSize");
                 sliders.get(setting).add(slider);
-                slider = getSliderForNPC(npc, "Milk Storage", "%UNIT_VOLUME", Lactation.ZERO_NONE.getMinimumValue(), 0, Lactation.SEVEN_MONSTROUS_AMOUNT_POURING.getMaximumValue(), 10, "nippleMilkStorage");
+                slider = getSliderForNPC(npc, "储乳量", "%UNIT_VOLUME", Lactation.ZERO_NONE.getMinimumValue(), 0, Lactation.SEVEN_MONSTROUS_AMOUNT_POURING.getMaximumValue(), 10, "nippleMilkStorage");
                 sliders.get(setting).add(slider);
-                slider = getSliderForNPC(npc, "Milk Regen", "%UNIT_VOLUME", FluidRegeneration.ZERO_SLOW.getMinimumRegenerationValuePerDay(), 0, FluidRegeneration.FOUR_VERY_RAPID.getMaximumRegenerationValuePerDay(), 100, "nippleMilkRegen");
+                slider = getSliderForNPC(npc, "泌乳再生", "%UNIT_VOLUME", FluidRegeneration.ZERO_SLOW.getMinimumRegenerationValuePerDay(), 0, FluidRegeneration.FOUR_VERY_RAPID.getMaximumRegenerationValuePerDay(), 100, "nippleMilkRegen");
                 sliders.get(setting).add(slider);
             }
             if (setting == CROTCH_BREAST) {
-                slider = getSliderForNPC(npc, "Crotch Breast Cup Size", "%CUP_SIZE", CupSize.FLAT.getMeasurement(), 0, CupSize.N.getMeasurement(), 1, "crotchNippleCupsize");
+                slider = getSliderForNPC(npc, "胯部乳房罩杯大小", "%CUP_SIZE", CupSize.FLAT.getMeasurement(), 0, CupSize.N.getMeasurement(), 1, "crotchNippleCupsize");
                 sliders.get(setting).add(slider);
-                slider = getSliderForNPC(npc, "Crotch Nipple Size", "!NippleSize", NippleSize.ZERO_TINY.getValue(), 0, NippleSize.FOUR_MASSIVE.getValue(), 1, "crotchNippleSize");
+                slider = getSliderForNPC(npc, "胯部乳头大小", "!NippleSize", NippleSize.ZERO_TINY.getValue(), 0, NippleSize.FOUR_MASSIVE.getValue(), 1, "crotchNippleSize");
                 sliders.get(setting).add(slider);
-                slider = getSliderForNPC(npc, "Crotch Areolae Size", "!AreolaeSize", AreolaeSize.ZERO_TINY.getValue(), 0, AreolaeSize.FOUR_MASSIVE.getValue(), 1, "crotchNippleAreolaSize");
+                slider = getSliderForNPC(npc, "胯部乳晕大小", "!AreolaeSize", AreolaeSize.ZERO_TINY.getValue(), 0, AreolaeSize.FOUR_MASSIVE.getValue(), 1, "crotchNippleAreolaSize");
                 sliders.get(setting).add(slider);
-                slider = getSliderForNPC(npc, "Crotch Milk Storage", "%UNIT_VOLUME", Lactation.ZERO_NONE.getMinimumValue(), 0, Lactation.SEVEN_MONSTROUS_AMOUNT_POURING.getMaximumValue(), 10, "crotchNippleMilkStorage");
+                slider = getSliderForNPC(npc, "胯部储乳量", "%UNIT_VOLUME", Lactation.ZERO_NONE.getMinimumValue(), 0, Lactation.SEVEN_MONSTROUS_AMOUNT_POURING.getMaximumValue(), 10, "crotchNippleMilkStorage");
                 sliders.get(setting).add(slider);
-                slider = getSliderForNPC(npc, "Crotch Milk Regen", "%UNIT_VOLUME", FluidRegeneration.ZERO_SLOW.getMinimumRegenerationValuePerDay(), 0, FluidRegeneration.FOUR_VERY_RAPID.getMaximumRegenerationValuePerDay(), 100, "crotchNippleMilkRegen");
+                slider = getSliderForNPC(npc, "胯部泌乳再生", "%UNIT_VOLUME", FluidRegeneration.ZERO_SLOW.getMinimumRegenerationValuePerDay(), 0, FluidRegeneration.FOUR_VERY_RAPID.getMaximumRegenerationValuePerDay(), 100, "crotchNippleMilkRegen");
                 sliders.get(setting).add(slider);
             }
             if (setting == FACE) {
-                slider = getSliderForNPC(npc, "Lip Size", "!LipSize", LipSize.ZERO_THIN.getValue(), 0, LipSize.SEVEN_ABSURD.getValue(), 1, "lipSize");
+                slider = getSliderForNPC(npc, "嘴唇大小", "!LipSize", LipSize.ZERO_THIN.getValue(), 0, LipSize.SEVEN_ABSURD.getValue(), 1, "lipSize");
                 sliders.get(setting).add(slider);
-                slider = getSliderForNPC(npc, "Tongue Length", "%UNIT_SIZE", TongueLength.ZERO_NORMAL.getMinimumValue(), 1, TongueLength.FOUR_ABSURDLY_LONG.getMaximumValue(), 1, "tongueLength");
+                slider = getSliderForNPC(npc, "舌头长度", "%UNIT_SIZE", TongueLength.ZERO_NORMAL.getMinimumValue(), 1, TongueLength.FOUR_ABSURDLY_LONG.getMaximumValue(), 1, "tongueLength");
                 sliders.get(setting).add(slider);
             }
             if (setting == VAGINA) {
-                slider = getSliderForNPC(npc, "Clitoral Girth", "!PenetrationGirth(%UNIT_SIZE)", PenetrationGirth.ZERO_THIN.getValue(), 0, PenetrationGirth.SEVEN_FAT.getValue(), 1, "clitorisGirth");
+                slider = getSliderForNPC(npc, "阴蒂周长", "!PenetrationGirth(%UNIT_SIZE)", PenetrationGirth.ZERO_THIN.getValue(), 0, PenetrationGirth.SEVEN_FAT.getValue(), 1, "clitorisGirth");
                 sliders.get(setting).add(slider);
-                slider = getSliderForNPC(npc, "Clitoris Size", "!ClitorisSize(%UNIT_SIZE)", ClitorisSize.ZERO_AVERAGE.getMinimumValue(), 0, ClitorisSize.SEVEN_STALLION.getMaximumValue(), 1, "clitorisSize");
+                slider = getSliderForNPC(npc, "阴蒂大小", "!ClitorisSize(%UNIT_SIZE)", ClitorisSize.ZERO_AVERAGE.getMinimumValue(), 0, ClitorisSize.SEVEN_STALLION.getMaximumValue(), 1, "clitorisSize");
                 sliders.get(setting).add(slider);
-                slider = getSliderForNPC(npc, "Labia Size", "!LabiaSize", LabiaSize.ZERO_TINY.getValue(), 0, LabiaSize.FOUR_MASSIVE.getValue(), 1, "labiaSize");
+                slider = getSliderForNPC(npc, "阴唇大小", "!LabiaSize", LabiaSize.ZERO_TINY.getValue(), 0, LabiaSize.FOUR_MASSIVE.getValue(), 1, "labiaSize");
                 sliders.get(setting).add(slider);
             }
             if (setting == ASS) {
-                slider = getSliderForNPC(npc, "Ass Size", "!AssSize", AssSize.ZERO_FLAT.getValue(), 0, AssSize.SEVEN_GIGANTIC.getValue(), 1, "assSize");
+                slider = getSliderForNPC(npc, "臀部大小", "!AssSize", AssSize.ZERO_FLAT.getValue(), 0, AssSize.SEVEN_GIGANTIC.getValue(), 1, "assSize");
                 sliders.get(setting).add(slider);
-                slider = getSliderForNPC(npc, "Hip Size", "!HipSize", HipSize.ZERO_NO_HIPS.getValue(), 0, HipSize.SEVEN_ABSURDLY_WIDE.getValue(), 1, "hipSize");
+                slider = getSliderForNPC(npc, "髋部大小", "!HipSize", HipSize.ZERO_NO_HIPS.getValue(), 0, HipSize.SEVEN_ABSURDLY_WIDE.getValue(), 1, "hipSize");
                 sliders.get(setting).add(slider);
             }
             if (setting == PENIS) {
-                slider = getSliderForNPC(npc, "Penile Girth", "!PenetrationGirth(%UNIT_SIZE)", PenetrationGirth.ZERO_THIN.getValue(), 0, PenetrationGirth.SEVEN_FAT.getValue(), 1, "penileGirth");
+                slider = getSliderForNPC(npc, "阴茎周长", "!PenetrationGirth(%UNIT_SIZE)", PenetrationGirth.ZERO_THIN.getValue(), 0, PenetrationGirth.SEVEN_FAT.getValue(), 1, "penileGirth");
                 sliders.get(setting).add(slider);
-                slider = getSliderForNPC(npc, "Cum Storage", "%UNIT_VOLUME", CumProduction.ZERO_NONE.getMinimumValue(), 0, CumProduction.SEVEN_MONSTROUS.getMaximumValue(), 1, "cumStorage");
+                slider = getSliderForNPC(npc, "精液存量", "%UNIT_VOLUME", CumProduction.ZERO_NONE.getMinimumValue(), 0, CumProduction.SEVEN_MONSTROUS.getMaximumValue(), 1, "cumStorage");
                 sliders.get(setting).add(slider);
-                slider = getSliderForNPC(npc, "Cum Expulsion", "%UNIT_VOLUME", FluidExpulsion.ZERO_NONE.getMinimumValue(), 0, FluidExpulsion.FOUR_HUGE.getMaximumValue(), 1, "cumExpulsion");
+                slider = getSliderForNPC(npc, "排精量", "%UNIT_VOLUME", FluidExpulsion.ZERO_NONE.getMinimumValue(), 0, FluidExpulsion.FOUR_HUGE.getMaximumValue(), 1, "cumExpulsion");
                 sliders.get(setting).add(slider);
-                slider = getSliderForNPC(npc, "Testicle Size", "!TesticleSize", TesticleSize.ZERO_VESTIGIAL.getValue(), 0, TesticleSize.SEVEN_ABSURD.getValue(), 1, "testicleSize");
+                slider = getSliderForNPC(npc, "睾丸大小", "!TesticleSize", TesticleSize.ZERO_VESTIGIAL.getValue(), 0, TesticleSize.SEVEN_ABSURD.getValue(), 1, "testicleSize");
                 sliders.get(setting).add(slider);
             }
             if (setting != PENIS && (setting != BREAST || Main.getProperties().hasValue(PropertyValue.nipplePenContent))) {
-                slider = getSliderForNPC(npc, valueName + " Elasticity", "!Elasticity", OrificeElasticity.ZERO_UNYIELDING.getValue(), 0, OrificeElasticity.SEVEN_ELASTIC.getValue(), 1, orifice + "Elasticity");
+                slider = getSliderForNPC(npc, valueName + "弹性", "!Elasticity", OrificeElasticity.ZERO_UNYIELDING.getValue(), 0, OrificeElasticity.SEVEN_ELASTIC.getValue(), 1, orifice + "Elasticity");
                 sliders.get(setting).add(slider);
                 if (setting != PENILE_URETHRA && setting != VAGINAL_URETHRA) {
-                    slider = getSliderForNPC(npc, valueName + " Wetness", "!Wetness", Wetness.ZERO_DRY.getValue(), 0, Wetness.SEVEN_DROOLING.getValue(), 1, orifice + "Wetness");
+                    slider = getSliderForNPC(npc, valueName + "湿润度", "!Wetness", Wetness.ZERO_DRY.getValue(), 0, Wetness.SEVEN_DROOLING.getValue(), 1, orifice + "Wetness");
                     sliders.get(setting).add(slider);
                 }
-                slider = getSliderForNPC(npc, valueName + " Plasticity", "!Plasticity", OrificePlasticity.ZERO_RUBBERY.getValue(), 0, OrificePlasticity.SEVEN_MOULDABLE.getValue(), 1, orifice + "Plasticity");
+                slider = getSliderForNPC(npc, valueName + "可塑性", "!Plasticity", OrificePlasticity.ZERO_RUBBERY.getValue(), 0, OrificePlasticity.SEVEN_MOULDABLE.getValue(), 1, orifice + "Plasticity");
                 sliders.get(setting).add(slider);
-                slider = getSliderForNPC(npc, valueName + " Depth", "!Depth(%UNIT_SIZE)", OrificeDepth.ZERO_EXTREMELY_SHALLOW.getValue(), 0, OrificeDepth.SEVEN_FATHOMLESS.getValue(), 1, orifice + "Depth");
+                slider = getSliderForNPC(npc, valueName + "深度", "!Depth(%UNIT_SIZE)", OrificeDepth.ZERO_EXTREMELY_SHALLOW.getValue(), 0, OrificeDepth.SEVEN_FATHOMLESS.getValue(), 1, orifice + "Depth");
                 sliders.get(setting).add(slider);
-                slider = getSliderForNPC(npc, valueName + " Capacity", "!Capacity÷(%UNIT_SIZE)", (int) Capacity.ZERO_IMPENETRABLE.getMinimumValue(), 0, (int) Capacity.SEVEN_GAPING.getMaximumValue(true) * 10, 1, orifice + "Capacity");
+                slider = getSliderForNPC(npc, valueName + "容量", "!Capacity÷(%UNIT_SIZE)", (int) Capacity.ZERO_IMPENETRABLE.getMinimumValue(), 0, (int) Capacity.SEVEN_GAPING.getMaximumValue(true) * 10, 1, orifice + "Capacity");
                 sliders.get(setting).add(slider);
             }
             if (orifice.equals("penile")) {
-                slider = getSliderForNPC(npc, valueName + " Length", "!PenisLength(%UNIT_SIZE)", PenisLength.ZERO_MICROSCOPIC.getMinimumValue(), 0, PenisLength.SEVEN_STALLION.getMaximumValue(), 1, orifice + "Length");
+                slider = getSliderForNPC(npc, valueName + "长度", "!PenisLength(%UNIT_SIZE)", PenisLength.ZERO_MICROSCOPIC.getMinimumValue(), 0, PenisLength.SEVEN_STALLION.getMaximumValue(), 1, orifice + "Length");
                 sliders.get(setting).add(slider);
             }
             if (orifice.equals("oral")) {
-                slider = getSliderForNPC(npc, "Tongue Length", "!TongueLength(%UNIT_SIZE)", TongueLength.ZERO_NORMAL.getMinimumValue(), 0, TongueLength.FOUR_ABSURDLY_LONG.getMaximumValue(), 1, "tongueLength");
+                slider = getSliderForNPC(npc, "舌头长度", "!TongueLength(%UNIT_SIZE)", TongueLength.ZERO_NORMAL.getMinimumValue(), 0, TongueLength.FOUR_ABSURDLY_LONG.getMaximumValue(), 1, "tongueLength");
                 sliders.get(setting).add(slider);
             }
         }

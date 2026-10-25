@@ -63,7 +63,7 @@ public class Cecilia extends NPC {
 
 	public Cecilia(boolean isImported) {
 		super(isImported, new NameTriplet("Cecilia"), null,
-				"[npc.fullName] is a vigorous manticore-girl, who you first met prowling the fields.",
+				"[npc.fullName] 是一头精力充沛的蝎狮女孩，你第一次见到她时，她正徘徊在旷野中。",
 				21, Month.AUGUST, 28,
 				38,
 				Gender.F_V_B_FEMALE,
@@ -85,7 +85,7 @@ public class Cecilia extends NPC {
 			} else {
 				this.setPlayerKnowsName(false);
 			}
-			this.setGenericName("purple striped manticore");
+			this.setGenericName("紫条纹蝎狮");
 			initHealthAndManaToMax();
 		}
 	}
@@ -399,15 +399,15 @@ public class Cecilia extends NPC {
 	public Response endCombat(boolean applyEffects, boolean playerVictory) {
 		if(playerVictory) {
 			if(Main.game.getDialogueFlags().hasFlag(Lexicon.ceciliaMet)) {
-				return new Response("Victory", "Cecilia acknowledges your strength!", CeciliaDialogue.COMBAT_PLAYER_WIN_REPEAT);
+				return new Response("胜利", "塞西莉亚认可了你的实力！", CeciliaDialogue.COMBAT_PLAYER_WIN_REPEAT);
 			} else {
-				return new Response("Victory", "You beat the manticore-girl!", CeciliaDialogue.COMBAT_PLAYER_WIN);
+				return new Response("胜利", "你打败了这只蝎狮女孩！", CeciliaDialogue.COMBAT_PLAYER_WIN);
 			}
 		} else {
 			if(Main.game.getDialogueFlags().hasFlag(Lexicon.ceciliaMet)) {
-				return new Response("Defeated", "Cecilia encourages you to train more!", CeciliaDialogue.COMBAT_PLAYER_LOSS_REPEAT);
+				return new Response("败北", "塞西莉亚鼓励你多加训练！", CeciliaDialogue.COMBAT_PLAYER_LOSS_REPEAT);
 			} else {
-				return new Response("Defeated", "The manticore-girl utterly bests you!", CeciliaDialogue.COMBAT_PLAYER_LOSS);
+				return new Response("败北", "这只蝎狮女孩彻底打败了你！", CeciliaDialogue.COMBAT_PLAYER_LOSS);
 			}
 		}
 	};

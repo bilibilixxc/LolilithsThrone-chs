@@ -16,7 +16,7 @@ import java.util.List;
 
 public class LexiStatusEffect {
     public static AbstractStatusEffect TUSSY_STATUS = new AbstractStatusEffect(95,
-            "Tussy status",
+            "尾穴状态",
             null,
             PresetColour.GENERIC_SEX,
             false,
@@ -61,68 +61,68 @@ public class LexiStatusEffect {
                     switch(pen) {
                         case FINGER:
                             if(selfAction) {
-                                descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fingering)] [npc.her] own [npc.tussy]!"));
+                                descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(正在用手指抽插)] [npc.her] 自己的 [npc.tussy]！"));
                             } else {
                                 descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-                                        +" [style.boldSex(fingering)] [npc.namePos] [npc.tussy]!"));
+                                        +" [style.boldSex(正在用手指抽插)] [npc.namePos] 的 [npc.tussy]！"));
                             }
                             break;
                         case PENIS:
                             if(selfAction) {
-                                descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc.her] own [npc.tussy]!"));
+                                descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(正在干)] [npc.her] 自己的 [npc.tussy]！"));
                             } else {
                                 descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-                                        +" [style.boldSex(fucking)] [npc.namePos] [npc.tussy]!"));
+                                        +" [style.boldSex(正在干)] [npc.namePos] 的 [npc.tussy]！"));
                             }
                             break;
                         case TAIL:
                             if(selfAction) {
-                                descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tail-fucking)] [npc.her] own [npc.tussy]!"));
+                                descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(正在用尾巴干)] [npc.her] 自己的 [npc.tussy]！"));
                             } else {
                                 descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-                                        +" [style.boldSex(tail-fucking)] [npc.namePos] [npc.tussy]!"));
+                                        +" [style.boldSex(正在用尾巴干)] [npc.namePos] 的 [npc.tussy]！"));
                             }
                             break;
                         case TENTACLE:
                             if(selfAction) {
-                                descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tentacle-fucking)] [npc.her] own [npc.tussy]!"));
+                                descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(正在用触手干)] [npc.her] 自己的 [npc.tussy]！"));
                             } else {
                                 descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-                                        +" [style.boldSex(tentacle-fucking)] [npc.namePos] [npc.tussy]!"));
+                                        +" [style.boldSex(正在用触手干)] [npc.namePos] 的 [npc.tussy]！"));
                             }
                             break;
                         case TONGUE:
                             if(selfAction) {
-                                descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex(cunnilingus)] [npc.her] own [npc.tussy]!"));
+                                descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(正在舔弄)] [npc.her] 自己的 [npc.tussy]！"));
                             } else {
                                 descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-                                        +" performing [style.boldSex(cunnilingus)] on [npc.name]!"));
+                                        +" [style.boldSex(正在舔弄)] [npc.name] 的 [npc2.tussy]！"));
                             }
                             break;
                         case CLIT:
                             if(selfAction) {
                                 if(main.isClitorisPseudoPenis()) {
-                                    descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(clit-fucking)] [npc.her] own [npc.tussy]!"));
+                                    descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(正在用阴蒂干)] [npc.her] 自己的 [npc.tussy]！"));
                                 } else {
-                                    descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tribbing)] [npc.her] own [npc.tussy]!"));
+                                    descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(正在磨蹭)] [npc.her] 自己的 [npc.tussy]！"));
                                 }
                             } else {
                                 if(main.isClitorisPseudoPenis()) {
                                     descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-                                            +" [style.boldSex(clit-fucking)] [npc.namePos] [npc.tussy]!"));
+                                            +" [style.boldSex(正在用阴蒂干)] [npc.namePos] 的 [npc.tussy]！"));
                                 } else {
                                     descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-                                            +" [style.boldSex(tribbing)] with [npc2.name]!"));
+                                            +" [style.boldSex(正在与)] [npc2.name] [style.boldSex(磨蹭)]！"));
                                 }
                             }
                             break;
                         case FOOT:
                             if(selfAction) {
-                                descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(pushing [npc.her] [npc.toes])] into [npc.her] own [npc.tussy]!"));
+                                descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(正将 [npc.her] 的 [npc.toes])] 塞入 [npc.her] 自己的 [npc.tussy]！"));
                             } else {
                                 descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))
-                                        +(names.size()==1?UtilText.parse(main, " [npc.is] [style.boldSex(pushing [npc.her] [npc.toes])]"):" are [style.boldSex(pushing their toes)]")
-                                        +"  into [npc.namePos] [npc.tussy]!"));
+                                        +(names.size()==1?UtilText.parse(main, " [npc.is] [style.boldSex(正将 [npc.her] 的 [npc.toes])]"):" are [style.boldSex(正将她们的脚趾)]")
+                                        +" 塞入 [npc.namePos] 的 [npc.tussy]！"));
                             }
                             break;
                     }
@@ -156,38 +156,38 @@ public class LexiStatusEffect {
                             break;
                         case MOUTH:
                             if(selfAction) {
-                                descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] performing [style.boldSex(cunnilingus)] on [npc.herself]!"));
+                                descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(正在舔弄)] [npc.herself]！"));
                             } else {
                                 descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-                                        +" performing [style.boldSex(cunnilingus)] on [npc2.name]!"));
+                                        +" [style.boldSex(正在舔弄)] [npc2.name]！"));
                             }
                             break;
                         case THIGHS:
                             break;
                         case URETHRA_PENIS:
                             if(selfAction) {
-                                descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(fucking)] [npc.her] own [npc.tussy]!"));
+                                descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(正在干)] [npc.her] 自己的 [npc.tussy]！"));
                             } else {
                                 descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-                                        +" [style.boldSex(fucking)] [npc.namePos] [npc.tussy]!"));
+                                        +" [style.boldSex(正在干)] [npc.namePos] 的 [npc.tussy]！"));
                             }
                             break;
                         case URETHRA_VAGINA:
                             break;
                         case TUSSY:
                             if(selfAction) {
-                                descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tribbing)] [npc.her] own [npc.tussy]!")); //???
+                                descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(正在磨蹭)] [npc.her] 自己的 [npc.tussy]！")); //???
                             } else {
                                 descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-                                        +" [style.boldSex(tribbing)] with [npc2.name]!"));
+                                        +" [style.boldSex(正在与)] [npc2.name] [style.boldSex(磨蹭)]！"));
                             }
                             break;
                         case VAGINA:
                             if(selfAction) {
-                                descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(tribbing)] [npc.her] own [npc.tussy]!")); //???
+                                descriptionSB.append(UtilText.parse(target, "[npc.NameIsFull] [style.boldSex(正在磨蹭)] [npc.her] 自己的 [npc.tussy]！")); //???
                             } else {
                                 descriptionSB.append(UtilText.parse(target, Util.capitaliseSentence(Util.stringsToStringList(names, false))+(names.size()==1?UtilText.parse(main, " [npc.is]"):" are")
-                                        +" [style.boldSex(tribbing)] with [npc2.name]!"));
+                                        +" [style.boldSex(正在与)] [npc2.name] [style.boldSex(磨蹭)]！"));
                             }
                             break;
                         case SPINNERET:
@@ -197,10 +197,10 @@ public class LexiStatusEffect {
             }
 
             if(!descriptionAdded) {
-                descriptionSB.append("[style.boldDisabled(No ongoing actions.)]");
+                descriptionSB.append("[style.boldDisabled(当前没有进行中的动作。)]");
             }
 
-            appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her] tussy"), descriptionSB);
+            appendOrificeAdditionGenericDescriptions(target, type, UtilText.parse(target, "[npc.Her] 尾穴"), descriptionSB);
 
             descriptionSB.append("</p>");
 

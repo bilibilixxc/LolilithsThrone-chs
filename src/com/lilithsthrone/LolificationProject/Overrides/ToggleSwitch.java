@@ -55,9 +55,9 @@ public class ToggleSwitch {
         contentSB.append("<div class='container-full-width' style='padding:0; margin:2px 0;'><div class='container-half-width' style='width:calc(55% - 16px);'><b style='text-align:center; color:").append(colour.toWebHexString()).append(";'>").append(title).append("</b><b>:</b> ").append(description).append("</div>").append("<div class='container-half-width' style='width:calc(45% - 16px);'>");
 
         if (enabled)
-            contentSB.append("<div id='").append(id).append("_ON' class='normal-button selected' style='width:25%; margin-right:4%; text-align:center; float:right;'>").append("[style.boldGood(YES)]").append("</div>").append("<div id='").append(id).append("_OFF' class='normal-button' style='width:25%; margin-right:4%; text-align:center; float:right;'>").append("[style.colourDisabled(NO)]").append("</div>");
+            contentSB.append("<div id='").append(id).append("_ON' class='normal-button selected' style='width:25%; margin-right:4%; text-align:center; float:right;'>").append("[style.boldGood(是)]").append("</div>").append("<div id='").append(id).append("_OFF' class='normal-button' style='width:25%; margin-right:4%; text-align:center; float:right;'>").append("[style.colourDisabled(否)]").append("</div>");
         else
-            contentSB.append("<div id='").append(id).append("_ON' class='normal-button' style='width:25%; margin-right:4%; text-align:center; float:right;'>").append("[style.colourDisabled(YES)]").append("</div>").append("<div id='").append(id).append("_OFF' class='normal-button selected' style='width:25%; margin-right:4%; text-align:center; float:right;'>").append("[style.boldBad(NO)]").append("</div>");
+            contentSB.append("<div id='").append(id).append("_ON' class='normal-button' style='width:25%; margin-right:4%; text-align:center; float:right;'>").append("[style.colourDisabled(是)]").append("</div>").append("<div id='").append(id).append("_OFF' class='normal-button selected' style='width:25%; margin-right:4%; text-align:center; float:right;'>").append("[style.boldBad(否)]").append("</div>");
 
         contentSB.append("</div></div>");
         return contentSB.toString();

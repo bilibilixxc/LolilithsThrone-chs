@@ -27,12 +27,12 @@ public class PenisTussy {
         }
         @Override
         public String getActionTitle() {
-            return "Tease tussy";
+            return "挑逗尾穴";
         }
 
         @Override
         public String getActionDescription() {
-            return "Tease [npc2.name] by sliding the [npc.cockHead] of your [npc.cock] over [npc2.her] [npc2.tussy+].";
+            return "将你的[npc.cock]的[npc.cockHead]贴着[npc2.her]的[npc2.tussy+]滑动，挑逗[npc2.name]。";
         }
 
         @Override
@@ -65,12 +65,12 @@ public class PenisTussy {
         }
         @Override
         public String getActionTitle() {
-            return "Tease penis";
+            return "挑逗阴茎";
         }
 
         @Override
         public String getActionDescription() {
-            return "Tease [npc2.name] by sliding the entrance of [npc.her] [npc.tussy+] over [npc2.her] [npc2.cockHead+].";
+            return "将[npc.her]的[npc.tussy+]的入口贴着[npc2.her]的[npc2.cockHead+]滑动，挑逗[npc2.name]。";
         }
 
         @Override
@@ -98,11 +98,11 @@ public class PenisTussy {
             SexParticipantType.NORMAL) {
         @Override
         public String getActionTitle() {
-            return "Tussy Control";
+            return "尾穴控制";
         }
         @Override
         public String getActionDescription() {
-            return "Squeeze your internally-muscled tussy down around [npc2.namePos] [npc2.cock].";
+            return "用你内部肌肉发达的尾穴勒紧[npc2.namePos]的[npc2.cock]。";
         }
         @Override
         public String getDescription() {
@@ -123,12 +123,12 @@ public class PenisTussy {
             SexParticipantType.NORMAL) {
         @Override
         public String getActionTitle() {
-            return "Fuck [npc2.herHim] tussy";
+            return "干[npc2.herHim]的尾穴";
         }
 
         @Override
         public String getActionDescription() {
-            return "Sink your [npc.cock+] into [npc2.namePos] [npc2.tussy+] and start fucking [npc2.herHim].";
+            return "将你的[npc.cock+]沉入[npc2.namePos]的[npc2.tussy+]内，开始干[npc2.herHim]。";
         }
         @Override
         public String getDescription() {
@@ -152,12 +152,12 @@ public class PenisTussy {
 
         @Override
         public String getActionTitle() {
-            return "Gentle tussy fucking";
+            return "温柔干尾穴";
         }
 
         @Override
         public String getActionDescription() {
-            return "Gently slide your [npc.cock] in and out of [npc2.namePos] [npc2.tussy+].";
+            return "温柔地让[npc.cock]在[npc2.namePos]的[npc2.tussy+]中进出。";
         }
         @Override
         public String getDescription() {
@@ -180,12 +180,12 @@ public class PenisTussy {
             SexPace.DOM_NORMAL) {
         @Override
         public String getActionTitle() {
-            return "Fuck [npc2.herHim] tussy";
+            return "干[npc2.herHim]的尾穴";
         }
 
         @Override
         public String getActionDescription() {
-            return "Continue thrusting your [npc.cock+] in and out of [npc2.namePos] [npc2.tussy+].";
+            return "继续让[npc.cock+]在[npc2.namePos]的[npc2.tussy+]中进出。";
         }
         @Override
         public String getDescription() {
@@ -210,12 +210,12 @@ public class PenisTussy {
 
         @Override
         public String getActionTitle() {
-            return "Rough tussy fucking";
+            return "粗暴干尾穴";
         }
 
         @Override
         public String getActionDescription() {
-            return "Roughly thrust your [npc.cock+] in and out of [npc2.namePos] [npc2.tussy+].";
+            return "粗暴地让[npc.cock+]在[npc2.namePos]的[npc2.tussy+]中进出。";
         }
 
         @Override
@@ -242,12 +242,12 @@ public class PenisTussy {
 
         @Override
         public String getActionTitle() {
-            return "Fuck [npc2.herHim] tussy";
+            return "干[npc2.herHim]的尾穴";
         }
 
         @Override
         public String getActionDescription() {
-            return "Continue fucking [npc2.namePos] [npc2.tussy+].";
+            return "继续干[npc2.namePos]的[npc2.tussy+]。";
         }
 
         @Override
@@ -273,12 +273,12 @@ public class PenisTussy {
 
         @Override
         public String getActionTitle() {
-            return "Eager tussy fucking";
+            return "热切干尾穴";
         }
 
         @Override
         public String getActionDescription() {
-            return "Eagerly pump your [npc.cock+] in and out of [npc2.namePos] [npc2.tussy+].";
+            return "热切地用[npc.cock+]抽插[npc2.namePos]的[npc2.tussy+]。";
         }
 
         @Override
@@ -304,12 +304,12 @@ public class PenisTussy {
 
         @Override
         public String getActionTitle() {
-            return "Resist tussy fucking";
+            return "抗拒干尾穴";
         }
 
         @Override
         public String getActionDescription() {
-            return "Try to pull your [npc.cock] out of [npc2.namePos] [npc2.tussy+].";
+            return "试图将你的[npc.cock]从[npc2.namePos]的[npc2.tussy+]中抽出。";
         }
 
         @Override
@@ -335,12 +335,12 @@ public class PenisTussy {
 
         @Override
         public String getActionTitle() {
-            return "Stop tussy fucking";
+            return "停止干尾穴";
         }
 
         @Override
         public String getActionDescription() {
-            return "Pull your [npc.cock+] out of [npc2.namePos] [npc2.tussy+] and stop fucking [npc2.herHim].";
+            return "将你的[npc.cock+]从[npc2.namePos]的[npc2.tussy+]中抽出，停止干[npc2.herHim]。";
         }
         @Override
         public String getDescription() {
@@ -365,18 +365,18 @@ public class PenisTussy {
         public String getActionTitle() {
 
             if(Main.sex.getSexPace(actor)==SexPace.DOM_NORMAL || Main.sex.getSexPace(actor)==SexPace.DOM_ROUGH ||  Main.sex.getSexPace(actor)==SexPace.DOM_ROUGH ) {
-                return "Milk penis";
+                return "榨精阴茎";
             } else {
-                return "Get tussy fucked";
+                return "被干尾穴";
             }
         }
 
         @Override
         public String getActionDescription() {
             if(Main.sex.getSexPace(actor)==SexPace.DOM_NORMAL || Main.sex.getSexPace(actor)==SexPace.DOM_ROUGH ||  Main.sex.getSexPace(actor)==SexPace.DOM_ROUGH ) {
-                return "Slide [npc2.namePos] [npc2.cock+] into your [npc.tussy+] and start milking.";
+                return "将[npc2.namePos]的[npc2.cock+]滑入你的[npc.tussy+]内，开始榨精。";
             } else {
-                return "Slide [npc2.namePos] [npc2.cock+] into your [npc.tussy+] and get fucked.";
+                return "将[npc2.namePos]的[npc2.cock+]滑入你的[npc.tussy+]内，被干。";
             }
         }
         @Override
@@ -401,12 +401,12 @@ public class PenisTussy {
 
         @Override
         public String getActionTitle() {
-            return "Gently tussy milking";
+            return "温柔尾穴榨精";
         }
 
         @Override
         public String getActionDescription() {
-            return "Gently milk [npc2.her] [npc2.cock+] with your [npc.tussy+].";
+            return "用你的[npc.tussy+]温柔地榨取[npc2.her]的[npc2.cock+]。";
         }
         @Override
         public String getDescription() {
@@ -429,12 +429,12 @@ public class PenisTussy {
             SexPace.DOM_NORMAL) {
         @Override
         public String getActionTitle() {
-            return "Tussy milking";
+            return "尾穴榨精";
         }
 
         @Override
         public String getActionDescription() {
-            return "Eagerly milk [npc2.her] [npc2.cock+] with your [npc.tussy+].";
+            return "用你的[npc.tussy+]热切地榨取[npc2.her]的[npc2.cock+]。";
         }
         @Override
         public String getDescription() {
@@ -459,12 +459,12 @@ public class PenisTussy {
 
         @Override
         public String getActionTitle() {
-            return "Rough tussy milking";
+            return "粗暴尾穴榨精";
         }
 
         @Override
         public String getActionDescription() {
-            return "Roughly milk [npc2.her] [npc2.cock+] with your [npc.tussy+].";
+            return "用你的[npc.tussy+]粗暴地榨取[npc2.her]的[npc2.cock+]。";
         }
 
         @Override
@@ -491,12 +491,12 @@ public class PenisTussy {
 
         @Override
         public String getActionTitle() {
-            return "Tussy fucked";
+            return "被干尾穴";
         }
 
         @Override
         public String getActionDescription() {
-            return "Fuck your [npc.tussy+] on [npc2.namePos] [npc2.cock+].";
+            return "用你的[npc.tussy+]套在[npc2.namePos]的[npc2.cock+]上套弄。";
         }
 
         @Override
@@ -522,12 +522,12 @@ public class PenisTussy {
 
         @Override
         public String getActionTitle() {
-            return "Eagerly tussy fucked";
+            return "热切被干尾穴";
         }
 
         @Override
         public String getActionDescription() {
-            return "Eagerly fuck your [npc.tussy+] on [npc2.namePos] [npc2.cock+].";
+            return "热切地用你的[npc.tussy+]套在[npc2.namePos]的[npc2.cock+]上套弄。";
         }
 
 
@@ -554,12 +554,12 @@ public class PenisTussy {
 
         @Override
         public String getActionTitle() {
-            return "Resist being tussy fucked";
+            return "抗拒被干尾穴";
         }
 
         @Override
         public String getActionDescription() {
-            return "Try and pull your [npc.tussy+] away from [npc2.namePos] [npc2.cock+].";
+            return "试着将你的[npc.tussy+]从[npc2.namePos]的[npc2.cock+]移开。";
         }
 
         @Override
@@ -585,12 +585,12 @@ public class PenisTussy {
 
         @Override
         public String getActionTitle() {
-            return "Stop being tussy fucked";
+            return "停止被干尾穴";
         }
 
         @Override
         public String getActionDescription() {
-            return "Get [npc2.name] to pull [npc2.her] [npc2.cock] out of your [npc.tussy+].";
+            return "让[npc2.name]把[npc2.her]的[npc2.cock]从你的[npc.tussy+]中抽出来。";
         }
         @Override
         public String getDescription() {

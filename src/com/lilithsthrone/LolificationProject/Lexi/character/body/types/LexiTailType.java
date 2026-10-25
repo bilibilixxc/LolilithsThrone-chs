@@ -15,39 +15,39 @@ public class LexiTailType {
             Race.MANTICORE,
             PenetrationGirth.FOUR_GIRTHY,
             0.75f,
-            "manticore",
+            "甲壳质蝎狮尾",
             "",
             "",
-            "tail",
-            "tails",
-            Util.newArrayListOfValues("chitinous", "manticore", "unique", "lewd"),
-            Util.newArrayListOfValues("chitinous", "manticore", "unique", "lewd"),
-            "tussy",
-            "tail pussies",
+            "尾巴",
+            "尾巴",
+            Util.newArrayListOfValues("甲壳质的", "蝎狮", "独特的", "淫荡的"),
+            Util.newArrayListOfValues("甲壳质的", "蝎狮", "独特的", "淫荡的"),
+            "尾穴",
+            "尾巴穴",
             Util.newArrayListOfValues(""),
             Util.newArrayListOfValues(""),
             "#IF(npc.getTailCount()==1)"
-                    + " A chitinous, tapered tail sprouts from just above [npc.her] ass, rapidly growing in size until it's about [npc.tailLength] long."
-                    + " The end swells out into a bulbous, flared bulge, before a slit forms across its tip."
-                    + " Letting out [npc.a_moan], [npc.name] instinctively [npc.verb(feel)] that this new tail of [npc.hers] can be used as an additional fuckable orifice."
-                    + " Turning it this way and that, [npc.she] quickly [npc.verb(discover)] that [npc.she] [npc.has] complete control over where it goes, allowing [npc.herHim] to use it like a third limb."
+                    + " 一根甲壳质、渐渐变细的尾巴从[npc.her]臀部正上方冒出，迅速生长，直到长约[npc.tailLength]。"
+                    + " 末端肿胀成一个球状、外张的隆起，随后在尖端裂开一条缝。"
+                    + " 发出一声[npc.a_moan]，[npc.name] 本能地[npc.verb(feel)]到自己这根新尾巴可以用来作为额外的可插入穴口。"
+                    + " 来回摆动一下，[npc.she]很快就[npc.verb(discover)]自己对它的去向拥有完全的控制，能像第三条肢体一样使用它。"
                     + "<br/>"
-                    + "[npc.Name] now [npc.has] an [style.boldPanther(chitinous, manticore tail)], [npc.materialDescriptor] [npc.tailFullDescription(true)]."
+                    + "[npc.Name] 现在[npc.has]一条[style.boldPanther(甲壳质蝎狮尾巴)]，[npc.materialDescriptor][npc.tailFullDescription(true)]。"
                     + "#ELSE"
-                    + " [npc.TailCount] chitinous, tapered tails sprout from just above [npc.her] ass, rapidly growing in size until they're each about [npc.tailLength] long."
-                    + " The ends of each one swell out a into bulbous, flared bulges, before, slits form across their tips."
-                    + " Letting out [npc.a_moan], [npc.name] instinctively [npc.verb(feel)] that these new tails of [npc.hers] can be used as additional fuckable orifices."
-                    + " Turning them this way and that, [npc.she] quickly [npc.verb(discover)] that [npc.she] [npc.has] complete control over where they go, allowing [npc.herHim] to use them like extra limbs."
+                    + " [npc.TailCount]根甲壳质、渐渐变细的尾巴从[npc.her]臀部正上方冒出，迅速生长，直到每根都长约[npc.tailLength]。"
+                    + " 每根的末端都肿胀成球状、外张的隆起，随后在尖端裂开一条条缝。"
+                    + " 发出一声[npc.a_moan]，[npc.name] 本能地[npc.verb(feel)]到自己这些新尾巴可以用来作为额外的可插入穴口。"
+                    + " 来回摆动它们，[npc.she]很快就[npc.verb(discover)]自己对它们的去向拥有完全的控制，能像额外的肢体一样使用它们。"
                     + "<br/>"
-                    + "[npc.Name] now [npc.has] [npc.tailCount] [style.boldPanther(chitinous, manticore tails)], [npc.materialDescriptor] [npc.tailFullDescription(true)]."
+                    + "[npc.Name] 现在[npc.has][npc.tailCount]条[style.boldPanther(甲壳质蝎狮尾巴)]，[npc.materialDescriptor][npc.tailFullDescription(true)]。"
                     + "#ENDIF",
-            "Growing out from just above [npc.her] ass, [npc.sheHasFull]"
+            "从[npc.her]臀部正上方长出来，[npc.sheHasFull]"
                     + "#IF(npc.getTailCount()==1)"
-                    + " a tapered, [npc.tailColour(true)] chitinous tail, over which [npc.sheHasFull] complete control, allowing [npc.herHim] to use it to grip and hold objects."
-                    + "  The end has swollen out into a bulbous, flared bulge, while a slit has formed across its tip, allowing [npc.herHim] to use it as an additional fuckable orifice."
+                    + " 一条渐渐变细的[npc.tailColour(true)]甲壳质尾巴，对它[npc.sheHasFull]完全的控制，能用来抓握、持有物品。"
+                    + "  末端肿胀成一个球状、外张的隆起，尖端则形成了一条缝，能用来作为额外的可插入穴口。"
                     + "#ELSE"
-                    + " [npc.tailCount] tapered, [npc.tailColour(true)] chitinous tails, over which [npc.sheHasFull] complete control, allowing [npc.herHim] to use them to grip and hold objects."
-                    + "  The ends of each one have swollen out a little into bulbous, flared bulges, while slits have formed across their tips, allowing [npc.herHim] to use them as additional fuckable orifices."
+                    + " [npc.tailCount]条渐渐变细的[npc.tailColour(true)]甲壳质尾巴，对它们[npc.sheHasFull]完全的控制，能用来抓握、持有物品。"
+                    + "  每根的末端都微微肿胀成球状、外张的隆起，尖端则形成了一条条缝，能用来作为额外的可插入穴口。"
                     + "#ENDIF",
             Util.newArrayListOfValues(
                     BodyPartTag.TAIL_PREHENSILE,
@@ -64,39 +64,39 @@ public class LexiTailType {
             Race.DEMON,
             PenetrationGirth.THREE_AVERAGE,
             0.75f,
-            "demonic slitted",
+            "恶魔裂开尾",
             "",
             "",
-            "tail",
-            "tails",
-            Util.newArrayListOfValues("slitted", "demonic"),
-            Util.newArrayListOfValues("slitted", "demonic"),
-            "tussy",
-            "tail pussies",
+            "尾巴",
+            "尾巴",
+            Util.newArrayListOfValues("裂开的", "恶魔"),
+            Util.newArrayListOfValues("裂开的", "恶魔"),
+            "尾穴",
+            "尾巴穴",
             Util.newArrayListOfValues(""),
             Util.newArrayListOfValues(""),
             "#IF(npc.getTailCount()==1)"
-                    + " A demonic, tapered tail sprouts from just above [npc.her] ass, rapidly growing in size until it's about [npc.tailLength] long."
-                    + " The end swells out into a bulbous, tapered bulge, before a slit forms across its tip."
-                    + " Letting out [npc.a_moan], [npc.name] instinctively [npc.verb(feel)] that this new tail of [npc.hers] can be used as an additional fuckable orifice."
-                    + " Turning it this way and that, [npc.she] quickly [npc.verb(discover)] that [npc.she] [npc.has] complete control over where it goes, allowing [npc.herHim] to use it like a third limb."
+                    + " 一根恶魔般、渐渐变细的尾巴从[npc.her]臀部正上方冒出，迅速生长，直到长约[npc.tailLength]。"
+                    + " 末端肿胀成一个球状、外张的隆起，随后在尖端裂开一条缝。"
+                    + " 发出一声[npc.a_moan]，[npc.name] 本能地[npc.verb(feel)]到自己这根新尾巴可以用来作为额外的可插入穴口。"
+                    + " 来回摆动一下，[npc.she]很快就[npc.verb(discover)]自己对它的去向拥有完全的控制，能像第三条肢体一样使用它。"
                     + "<br/>"
-                    + "[npc.Name] now [npc.has] an [style.boldDemon(demonic, slitted tail)], [npc.materialDescriptor] [npc.tailFullDescription(true)]."
+                    + "[npc.Name] 现在[npc.has]一条[style.boldDemon(恶魔般裂开的尾巴)]，[npc.materialDescriptor][npc.tailFullDescription(true)]。"
                     + "#ELSE"
-                    + " [npc.TailCount] demonic, tapered tails sprout from just above [npc.her] ass, rapidly growing in size until they're each about [npc.tailLength] long."
-                    + " The ends of each one swell out a into bulbous, tapered bulges, before, slits form across their tips."
-                    + " Letting out [npc.a_moan], [npc.name] instinctively [npc.verb(feel)] that these new tails of [npc.hers] can be used as additional fuckable orifices."
-                    + " Turning them this way and that, [npc.she] quickly [npc.verb(discover)] that [npc.she] [npc.has] complete control over where they go, allowing [npc.herHim] to use them like extra limbs."
+                    + " [npc.TailCount]根恶魔般、渐渐变细的尾巴从[npc.her]臀部正上方冒出，迅速生长，直到每根都长约[npc.tailLength]。"
+                    + " 每根的末端都肿胀成球状、外张的隆起，随后在尖端裂开一条条缝。"
+                    + " 发出一声[npc.a_moan]，[npc.name] 本能地[npc.verb(feel)]到自己这些新尾巴可以用来作为额外的可插入穴口。"
+                    + " 来回摆动它们，[npc.she]很快就[npc.verb(discover)]自己对它们的去向拥有完全的控制，能像额外的肢体一样使用它们。"
                     + "<br/>"
-                    + "[npc.Name] now [npc.has] [npc.tailCount] [style.boldDemon(demonic, slitted tails)], [npc.materialDescriptor] [npc.tailFullDescription(true)]."
+                    + "[npc.Name] 现在[npc.has][npc.tailCount]条[style.boldDemon(恶魔般裂开的尾巴)]，[npc.materialDescriptor][npc.tailFullDescription(true)]。"
                     + "#ENDIF",
-            "Growing out from just above [npc.her] ass, [npc.sheHasFull]"
+            "从[npc.her]臀部正上方长出来，[npc.sheHasFull]"
                     + "#IF(npc.getTailCount()==1)"
-                    + " a tapered, [npc.tailColour(true)] demonic tail, over which [npc.sheHasFull] complete control, allowing [npc.herHim] to use it to grip and hold objects."
-                    + "  The end has swollen out into a bulbous, tapered bulge, while a slit has formed across its tip, allowing [npc.herHim] to use it as an additional fuckable orifice."
+                    + " 一条渐渐变细的[npc.tailColour(true)]恶魔尾巴，对它[npc.sheHasFull]完全的控制，能用来抓握、持有物品。"
+                    + "  末端已经肿胀成球状、外张的隆起，尖端则形成了一条缝，能用来作为额外的可插入穴口。"
                     + "#ELSE"
-                    + " [npc.tailCount] tapered, [npc.tailColour(true)] demonic tails, over which [npc.sheHasFull] complete control, allowing [npc.herHim] to use them to grip and hold objects."
-                    + "  The ends of each one have swollen out a little into bulbous, tapered bulges, while slits have formed across their tips, allowing [npc.herHim] to use them as additional fuckable orifices."
+                    + " [npc.tailCount]条渐渐变细的[npc.tailColour(true)]恶魔尾巴，对它们[npc.sheHasFull]完全的控制，能用来抓握、持有物品。"
+                    + "  每根的末端都微微肿胀成球状、外张的隆起，尖端则形成了一条条缝，能用来作为额外的可插入穴口。"
                     + "#ENDIF",
             Util.newArrayListOfValues(
                     BodyPartTag.TAIL_PREHENSILE,

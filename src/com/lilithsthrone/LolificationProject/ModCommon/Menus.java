@@ -12,7 +12,7 @@ import static com.lilithsthrone.game.dialogue.utils.BodyChanging.*;
 
 public class Menus {
 
-    public static final DialogueNode BODY_CHANGING_TUSSY = new DialogueNode("Tussy", "", true) {
+    public static final DialogueNode BODY_CHANGING_TUSSY = new DialogueNode("尾穴", "", true) {
 
         @Override
         public String getHeaderContent() {
@@ -39,8 +39,8 @@ public class Menus {
                             + CharacterModificationUtils.getKatesDivCoveringsNew(false,
                             BodyChanging.getTarget().getTailRace(),
                             BodyChanging.getTarget().getCovering(BodyCoveringType.VAGINA).getType(),
-                            "Tussy Colour",
-                            UtilText.parse(BodyChanging.getTarget(), "Change the colour of [npc.namePos] tussy."),
+                            "尾穴颜色",
+                            UtilText.parse(BodyChanging.getTarget(), "改变[npc.namePos]尾穴的颜色。"),
                             true, true));
 
             return UtilText.nodeContentSB.toString();

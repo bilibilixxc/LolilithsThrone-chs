@@ -36,12 +36,12 @@ public class GoldenShower {
 
         @Override
         public String getActionTitle() {
-            return "Golden Shower";
+            return "黄金沐浴";
         }
 
         @Override
         public String getActionDescription() {
-            return Main.getProperties().hasValue(PropertyValue.sillyMode) ? "Make it rain!" : "Cover them in your stream.";
+            return Main.getProperties().hasValue(PropertyValue.sillyMode) ? "下黄金雨喽！" : "用你的水流浇透ta。";
         }
 
         @Override
@@ -80,12 +80,12 @@ public class GoldenShower {
 
         @Override
         public String getActionTitle() {
-            return "Get a Shower";
+            return "沐浴一番";
         }
 
         @Override
         public String getActionDescription() {
-            return Main.getProperties().hasValue(PropertyValue.sillyMode) ? "Request a warm stream of golden glory." : "Request them to cover you in urine.";
+            return Main.getProperties().hasValue(PropertyValue.sillyMode) ? "请求一股温暖的黄金荣耀之流。" : "请求ta用尿液浇满你全身。";
         }
 
         @Override

@@ -133,7 +133,7 @@ public class MiscStuff {
     private static void reset() {
         AbstractClothing cloth = Main.game.getItemGen().generateClothing(ClothingType.getClothingTypeFromId("innoxia_bdsm_choker"), false);
         cloth.addEffect(new ItemEffect(ItemEffectType.CLOTHING, TFModifier.CLOTHING_SPECIAL, TFModifier.CLOTHING_ENSLAVEMENT, TFPotency.MINOR_BOOST, 0));
-        cloth.setName("Enslavement Choker");
+        cloth.setName("奴役项圈");
         cloth.removeBadEnchantments(); // Innoxia is Smort
         Main.game.getPlayer().addClothing(cloth, 10, false, false);
         Main.game.getPlayer().unequipAllClothingIntoHoldingInventory(Main.game.getPlayer(), false, true);
@@ -144,7 +144,7 @@ public class MiscStuff {
             w.addEffect(e);
             w.addEffect(e2);
         }
-        w.setName("Fallen Scythe"); // "May all the Fallen bear this scythe as proof of their sins, past and future." - Drake
+        w.setName("堕落者之镰"); // "May all the Fallen bear this scythe as proof of their sins, past and future." - Drake
         Main.game.getPlayer().equipMainWeaponFromNowhere(w);
     }
 
@@ -222,11 +222,11 @@ public class MiscStuff {
 
     public static void degenMode() {
 
-        Alert a = new Alert(Alert.AlertType.WARNING, "You've attempted to load a save with underaged characters, without DEGEN_MODE enabled" +
-                "\n To enable more people to see the project without upsetting them, I've default disabled Loli content" +
-                "\n If you want the old ways (lolisho enabled) press yes and the game will enable the old settings," +
-                "\n If you do not want lolisho content press no and it'll continue with new settings." +
-                "\n You can change this any time in '%userprofile%/Lilith's Throne'"
+        Alert a = new Alert(Alert.AlertType.WARNING, "你尝试加载一个包含未成年角色的存档，但没有启用DEGEN_MODE（堕落模式）。" +
+                "\n 为了让更多人能够看到这个项目而不反感，我已默认禁用了萝莉内容。" +
+                "\n 如果你想要旧的方式（萝莉/正太启用），请点击“是”，游戏将启用旧设置。" +
+                "\n 如果你不想要萝莉/正太内容，请点击“否”，将沿用新设置。" +
+                "\n 你可以在任何时间到 '%userprofile%/Lilith's Throne' 更改此设置。"
                 , ButtonType.YES, ButtonType.NO);
         a.showAndWait().ifPresent(response -> {
             if(response == ButtonType.NO) {

@@ -18,19 +18,19 @@ import static com.lilithsthrone.game.dialogue.utils.UtilText.parseCapitalise;
 
 public class Lexicon {
     // Gentle
-    public static final String[] PUSHING_SYNONYMS_GENTLE = new String[]{"gently pushing", "Gently shoving"};
+    public static final String[] PUSHING_SYNONYMS_GENTLE = new String[]{"轻轻推", "轻轻推挤"};
 
     // Normal
-    public static final String[] PUSHING_SYNONYMS_NORMAL = new String[]{"pushing", "shoving"};
+    public static final String[] PUSHING_SYNONYMS_NORMAL = new String[]{"推", "推挤"};
 
     // Rough
-    public static final String[] PUSHING_SYNONYMS_ROUGH = new String[]{"roughly pushing", "shoving", "Forcefully shoving"};
+    public static final String[] PUSHING_SYNONYMS_ROUGH = new String[]{"粗暴地推", "推挤", "用力推挤"};
 
     // Eager
-    public static final String[] PUSHING_SYNONYMS_EAGER = new String[]{"eagerly pushing", "shoving", "enthusiastically shoving"};
+    public static final String[] PUSHING_SYNONYMS_EAGER = new String[]{"急切地推", "推挤", "热情地推挤"};
 
     // Resisting
-    public static final String[] PUSHING_SYNONYMS_RESISTING = new String[]{"Roughly pushing", "shoving", "Forcefully shoving"};
+    public static final String[] PUSHING_SYNONYMS_RESISTING = new String[]{"粗暴地推", "推挤", "用力推挤"};
 
 
     // Very incomplete array, just an example
@@ -58,11 +58,11 @@ public class Lexicon {
                 true,
                 true,
                 "",
-                "Returns the name of this character's tussy. (Always returns 'tussy'...)",
+                "返回此角色的尾穴名称。（始终返回'尾穴'……）",
                 BodyPartType.TAIL){
             @Override
             public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-                return "tussy";
+                return "尾穴";
             }
         });
 
@@ -73,11 +73,11 @@ public class Lexicon {
                 true,
                 true,
                 "",
-                "Returns the name + descriptor of this character's tussy. (Returns a descriptor + ' tussy')",
+                "返回此角色的尾穴名称+描述符。（返回一个描述符+'尾穴'）",
                 BodyPartType.TAIL){
             @Override
             public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
-                return character.getTussyDescriptor() + " tussy";
+                return character.getTussyDescriptor() + " 尾穴";
             }
         });
 
@@ -87,7 +87,7 @@ public class Lexicon {
                 true,
                 true,
                 "",
-                "Returns a descriptor of this character's tussy capacity.",
+                "返回此角色尾穴容量的描述符。",
                 BodyPartType.TAIL){
             @Override
             public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -101,7 +101,7 @@ public class Lexicon {
                 true,
                 true,
                 "",
-                "Returns a descriptor of this character's tussy depth.",
+                "返回此角色尾穴深度的描述符。",
                 BodyPartType.TAIL){
             @Override
             public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -115,7 +115,7 @@ public class Lexicon {
                 true,
                 true,
                 "",
-                "Returns a descriptor of this character's tussy elasticity.",
+                "返回此角色尾穴弹性的描述符。",
                 BodyPartType.TAIL){
             @Override
             public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -129,7 +129,7 @@ public class Lexicon {
                 true,
                 true,
                 "",
-                "Returns a descriptor of this character's tussy plasticity.",
+                "返回此角色尾穴可塑性的描述符。",
                 BodyPartType.TAIL){
             @Override
             public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -143,7 +143,7 @@ public class Lexicon {
                 true,
                 true,
                 "",
-                "Returns a descriptor of this character's tussy wetness.",
+                "返回此角色尾穴湿润度的描述符。",
                 BodyPartType.TAIL){
             @Override
             public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -156,8 +156,8 @@ public class Lexicon {
                         "tussyFullDescription"),
                 true,
                 true,
-                "true If you want this colour's name to be coloured.",
-                "Returns the Covering.getFullDescription() method for BodyCoveringType.TAIL.",
+                "true 如果你希望这个颜色名称带有颜色。",
+                "返回BodyCoveringType.TAIL的Covering.getFullDescription()方法结果。",
                 BodyPartType.TAIL) {
             @Override
             public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -172,8 +172,8 @@ public class Lexicon {
                         "tussyColour"),
                 true,
                 true,
-                "true If you want this colour's name to be coloured.",
-                "Returns the Covering.getColourDescriptor() method for BodyCoveringType.TUSSY.",
+                "true 如果你希望这个颜色名称带有颜色。",
+                "返回BodyCoveringType.TUSSY的Covering.getColourDescriptor()方法结果。",
                 BodyPartType.TAIL){
             @Override
             public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -190,8 +190,8 @@ public class Lexicon {
                         "tussyPrimaryColor"),
                 true,
                 true,
-                "true If you want this colour's name to be coloured.",
-                "Returns the Covering.getPrimaryColourDescriptor() method for BodyCoveringType.TUSSY.",
+                "true 如果你希望这个颜色名称带有颜色。",
+                "返回BodyCoveringType.TUSSY的Covering.getPrimaryColourDescriptor()方法结果。",
                 BodyPartType.TAIL){
             @Override
             public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {
@@ -208,8 +208,8 @@ public class Lexicon {
                         "tussySecondaryColor"),
                 true,
                 true,
-                "true If you want this colour's name to be coloured.",
-                "Returns the Covering.getSecondaryColourDescriptor() method for BodyCoveringType.TUSSY.",
+                "true 如果你希望这个颜色名称带有颜色。",
+                "返回BodyCoveringType.TUSSY的Covering.getSecondaryColourDescriptor()方法结果。",
                 BodyPartType.TAIL){
             @Override
             public String parse(List<GameCharacter> specialNPCs, String command, String arguments, String target, GameCharacter character) {

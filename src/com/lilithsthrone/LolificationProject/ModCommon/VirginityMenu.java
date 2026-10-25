@@ -29,7 +29,7 @@ public class VirginityMenu {
     static SliderOption vaginaVirginSlider = new SliderOption(
                 "vaginaVirgin_slider",
                 PresetColour.BASE_GREY,
-                "Vagina Virginity Rate",
+                "阴道处女率",
                 "",
                 "%VALUE%",
                 0,
@@ -40,7 +40,7 @@ public class VirginityMenu {
     static SliderOption penisVirginSlider = new SliderOption(
                 "penisVirgin_slider",
                 PresetColour.BASE_GREY,
-                "Penis Virginity Rate",
+                "阴茎处女率",
                 "",
                 "%VALUE%",
                 0,
@@ -51,7 +51,7 @@ public class VirginityMenu {
     static SliderOption analVirginSlider = new SliderOption(
                 "analVirgin_slider",
                 PresetColour.BASE_GREY,
-                "Anal Virginity Rate",
+                "肛门处女率",
                 "",
                 "%VALUE%",
                 0,
@@ -62,7 +62,7 @@ public class VirginityMenu {
     static SliderOption faceVirginSlider = new SliderOption(
                 "faceVirgin_slider",
                 PresetColour.BASE_GREY,
-                "Face Virginity Rate",
+                "口部处女率",
                 "",
                 "%VALUE%",
                 0,
@@ -73,7 +73,7 @@ public class VirginityMenu {
     static SliderOption assVirginSlider = new SliderOption(
                 "assVirgin_slider",
                 PresetColour.BASE_GREY,
-                "Ass Virginity Rate",
+                "臀部处女率",
                 "",
                 "%VALUE%",
                 0,
@@ -84,7 +84,7 @@ public class VirginityMenu {
     static SliderOption spinneretVirginSlider = new SliderOption(
                 "spinneretVirgin_slider",
                 PresetColour.BASE_GREY,
-                "Spinneret Virginity Rate",
+                "丝囊处女率",
                 "",
                 "%VALUE%",
                 0,
@@ -95,7 +95,7 @@ public class VirginityMenu {
     static SliderOption nippleVirginSlider = new SliderOption(
                 "nippleVirgin_slider",
                 PresetColour.BASE_GREY,
-                "Nipple Virginity Rate",
+                "乳头处女率",
                 "",
                 "%VALUE%",
                 0,
@@ -106,7 +106,7 @@ public class VirginityMenu {
     static SliderOption nippleCrotchVirginSlider = new SliderOption(
                 "nippleCrotchVirgin_slider",
                 PresetColour.BASE_GREY,
-                "Crotch Nipple Virginity Rate",
+                "阴部乳头处女率",
                 "",
                 "%VALUE%",
                 0,
@@ -117,7 +117,7 @@ public class VirginityMenu {
     static SliderOption urethraVirginSlider = new SliderOption(
                 "urethraVirgin_slider",
                 PresetColour.BASE_GREY,
-                "Penile Urethra Virginity Rate",
+                "阴茎尿道处女率",
                 "",
                 "%VALUE%",
                 0,
@@ -128,7 +128,7 @@ public class VirginityMenu {
     static SliderOption vaginaUrethraVirginSlider = new SliderOption(
                 "vaginaUrethraVirgin_slider",
                 PresetColour.BASE_GREY,
-                "Vagina Urethra Virginity Rate",
+                "阴道尿道处女率",
                 "",
                 "%VALUE%",
                 0,
@@ -136,16 +136,16 @@ public class VirginityMenu {
                 1,
                 "$vaginaUrethraVirgin"
             );
-    public static final DialogueNode VIRGIN_RATES_MENU = new DialogueNode("Virginity", "Allows you to change virginity spawn rates", true) {
+    public static final DialogueNode VIRGIN_RATES_MENU = new DialogueNode("处女率", "允许你更改处女生成率", true) {
 
         @Override
         public String getHeaderContent() {
             UtilText.nodeContentSB.setLength(0);
 
-            UtilText.nodeContentSB.append("<h1>Base Rates for certain parts</h1><h2>These are multiplied by age category rates</h2>");
-            UtilText.nodeContentSB.append("<p>Example Penile Rate 70% and Vaginal 110%, Age Category Mid Thirties 28% <br>" +
-                    "Means that the Penile Rate is 70% * 28% = 19.6%, and Vaginal Rate is 30.8%<br>" +
-                    "These settings save in %userprofile%/Lilith's Throne so changing versions will retain them</p>");
+            UtilText.nodeContentSB.append("<h1>特定部位的基础概率</h1><h2>这些概率会乘以年龄阶段系数</h2>");
+            UtilText.nodeContentSB.append("<p>例如：阴茎率70%和阴道率110%，年龄阶段为三十多岁中期28%<br>" +
+                    "意味着阴茎率是 70% * 28% = 19.6%，而阴道率是 30.8%<br>" +
+                    "这些设置保存在 %userprofile%/Lilith's Throne 中，因此更改版本时会被保留</p>");
             UtilText.nodeContentSB.append(vaginaVirginSlider.getDiv());
             UtilText.nodeContentSB.append(penisVirginSlider.getDiv());
             UtilText.nodeContentSB.append(analVirginSlider.getDiv());
@@ -212,7 +212,7 @@ public class VirginityMenu {
                 SliderOption sliderOption = new SliderOption(
                         femininity.toString() + "_" + ageCategory.toString() + "_VR",
                         ageCategory.getColour(),
-                        Util.capitaliseSentence(ageCategory.getName()) + " Virginity Rate",
+                        Util.capitaliseSentence(ageCategory.getName()) + "处率",
                         "",
                         "%VALUE%",
                         0,

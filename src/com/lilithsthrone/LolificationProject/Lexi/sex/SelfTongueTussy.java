@@ -34,11 +34,11 @@ public class SelfTongueTussy {
 		}
 		@Override
 		public String getActionTitle() {
-			return "Start Tussy Autocunnilingus";
+			return "开始尾穴自动口交";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Slide your [npc.tongue] into your [npc.tail+] and start performing cunnilingus on yourself.";
+			return "将你的[npc.tongue]滑入你的[npc.tail+]内，开始对自己进行口交。";
 		}
 		@Override
 		public String getDescription() {
@@ -60,11 +60,11 @@ public class SelfTongueTussy {
 			SexPace.DOM_GENTLE) {
 		@Override
 		public String getActionTitle() {
-			return "Gentle Tail Pussy Autocunnilingus";
+			return "温柔尾穴自动口交";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Gently lick your own [npc.tail+]'s pussy.";
+			return "温柔地舔舐你自己[npc.tail+]的尾穴。";
 		}
 		@Override
 		public String getDescription() {
@@ -86,11 +86,11 @@ public class SelfTongueTussy {
 			SexPace.DOM_NORMAL) {
 		@Override
 		public String getActionTitle() {
-			return "Tail Pussy Autocunnilingus";
+			return "尾穴自动口交";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Continue thrusting your [npc.tongue] into your [npc.tail+]'s pussy.";
+			return "继续将你的[npc.tongue]插入你自己的[npc.tail+]的尾穴。";
 		}
 		@Override
 		public String getDescription() {
@@ -111,11 +111,11 @@ public class SelfTongueTussy {
 			SexParticipantType.SELF) {
 		@Override
 		public String getActionTitle() {
-			return "Stop Tail Pussy Autocunnilingus";
+			return "停止尾穴自动口交";
 		}
 		@Override
 		public String getActionDescription() {
-			return "Pull your [npc.tongue] out of your [npc.tail+]'s pussy and stop performing auto tail cunnilingus.";
+			return "将你的[npc.tongue]从你的[npc.tail+]的尾穴中抽出，停止自动尾穴口交。";
 		}
 		@Override
 		public String getDescription() {

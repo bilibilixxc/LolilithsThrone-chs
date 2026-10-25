@@ -20,7 +20,7 @@ import java.util.List;
 
 public class NPCSummoner {
 
-    public static final DialogueNode SUMMON_NPC = new DialogueNode("Summon NPC", "Teleports an NPC to you.", true) {
+    public static final DialogueNode SUMMON_NPC = new DialogueNode("召唤NPC", "将指定NPC传送至你身边。", true) {
 
         @Override
         public String getContent() {
@@ -33,10 +33,10 @@ public class NPCSummoner {
                         + PhoneDialogue.getContactEntry(npc)
                         + "<div id='SUMMON_NPC_" + Main.game.getUniqueNPCId(npc.getClass()).replace("-1,", "") + "' class='cosmetics-button'><span style='color:"
                         + PresetColour.BASE_PURPLE_LIGHT.toWebHexString()
-                        + ";'>Summon " + npc.getNameIgnoresPlayerKnowledge() + "</span>" + "</div>"
+                        + ";'>召唤 " + npc.getNameIgnoresPlayerKnowledge() + "</span>" + "</div>"
                         + "<div id='RETURN_NPC_" + Main.game.getUniqueNPCId(npc.getClass()).replace("-1,", "") + "' class='cosmetics-button'><span style='color:"
                         + PresetColour.BASE_PURPLE_LIGHT.toWebHexString()
-                        + ";'>Send " + npc.getNameIgnoresPlayerKnowledge() + " Home</span>" + "</div>"
+                        + ";'>送 " + npc.getNameIgnoresPlayerKnowledge() + " 回家</span>" + "</div>"
 
                 + "</p>");
             }
@@ -50,7 +50,7 @@ public class NPCSummoner {
             List<NPC> uniqueNpcs = Main.game.getAllNPCs();
             uniqueNpcs.removeIf(n -> !n.isUnique());
             if (index == 0) {
-                return new Response("Back", "Return to the phone's main menu.", PhoneDialogue.MENU);
+                return new Response("返回", "返回手机的主菜单。", PhoneDialogue.MENU);
             } else {
                 return null;
             }
@@ -91,16 +91,16 @@ public class NPCSummoner {
 
         return UtilText.parse(contact, "<b style='color:" + contact.getFemininity().getColour().toWebHexString() + ";'>[npc.Name]</b>" + (isOffspring
                 ? (contact.isFeminine()
-                ? ", your [style.colourFeminine(daughter)]"
-                : ", your [style.colourMasculine(son)]")
+                ? ", 你的[style.colourFeminine(女儿)]"
+                : ", 你的[style.colourMasculine(儿子)]")
                 : "")
-                + ". [npc.She] is "
+                + "。[npc.She]是"
                 + (contact.getRaceStage() == RaceStage.HUMAN || contact.isRaceConcealed()
                 ? "[npc.a_race(true)]"
                 : "[npc.a_raceStage(true)] [npc.race(true)]")
-                + ", whose current location is: "
+                + "，其当前所在位置为："
                 + (contact.getWorldLocation() == WorldType.EMPTY
-                ? "[style.italicsDisabled(The Void!)]"
-                : "<i>" + contact.getWorldLocation().getName() + ", " + contact.getLocationPlace().getPlaceType().getName() + "</i>."));
+                ? "[style.italicsDisabled(虚空!)]"
+                : "<i>" + contact.getWorldLocation().getName() + "，" + contact.getLocationPlace().getPlaceType().getName() + "</i>。"));
     }
 }

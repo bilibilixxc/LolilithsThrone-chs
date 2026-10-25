@@ -22,12 +22,12 @@ public class PussyClean {
         }
         @Override
         public String getActionTitle() {
-            return "Clean pussy";
+            return "清理爱穴";
         }
 
         @Override
         public String getActionDescription() {
-            return "Clean [npc2.name]'s [npc2.pussy] using your [npc.tongue].";
+            return "用你的[npc.tongue]清理[npc2.name]的[npc2.pussy]。";
         }
 
         @Override

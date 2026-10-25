@@ -41,12 +41,12 @@ public class SelfClitMouth {
 
 		@Override
 		public String getActionTitle() {
-			return "Start sucking own clit";
+			return "开始吸吮自己的阴蒂";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Bend down and start going down on [npc.herself], taking [npc.her] [npc.clit+] into [npc.her] own mouth.";
+			return "弯下身，开始取悦[npc.herself]，将[npc.her][npc.clit+]含入自己的嘴里。";
 		}
 
 		@Override
@@ -54,9 +54,9 @@ public class SelfClitMouth {
 			UtilText.nodeContentSB.setLength(0);
 
 			UtilText.nodeContentSB.append(UtilText.returnStringAtRandom(
-					"Bending down in an impressive display of flexibility, [npc.name] [npc.verb(guide)] the [npc.clitTip+] of [npc.her] [npc.clit+] and [npc.verb(press)] [npc.her] [npc.lips+] against it, before slowly taking it into [npc.her] mouth.",
-					"[npc.Name] [npc.verb(bend)] over in a display of impressive flexibility, [npc.moaning] in delight as [npc.she] [npc.verb(press)] [npc.her] [npc.lips+] against the tip of [npc.her] [npc.clit+], [npc.verb(slide)] it deep inside [npc.her] mouth, and [npc.verb(start)] to go down on [npc.herself].",
-					"Putting [npc.her] flexibility to the test, [npc.name] [npc.verb(bend)] and [npc.verb(guide)] [npc.her] throbbing [npc.clit+] between [npc.her] [npc.lips+], letting out [npc.a_moan+] as [npc.she] [npc.verb(start)] sucking it."));
+					"[npc.Name]展现出惊人的柔韧性弯下腰，将[npc.her][npc.clit+]的[npc.clitTip+]对准自己的嘴巴并[npc.verb(press)]，然后慢慢地将其含入嘴里。",
+					"[npc.Name][npc.verb(bend)]下身体，展现出惊人的柔韧性，带着愉悦发出一声[npc.moaning]，将[npc.her][npc.lips+]贴在[npc.her][npc.clit+]顶端，[npc.verb(slide)]入嘴中深处，然后[npc.verb(start)]为[npc.herself]服务。",
+					"[npc.Name]考验着自己的柔韧性，弯下身将[npc.her]悸动的[npc.clit+]引导进[npc.her][npc.lips+]之间，随着[npc.she]开始吸吮而发出一声[npc.a_moan+]。"));
 
 			return UtilText.nodeContentSB.toString();
 		}
@@ -73,20 +73,20 @@ public class SelfClitMouth {
 
 		@Override
 		public String getActionTitle() {
-			return "Gentle clit autofellatio";
+			return "温柔地自口淫";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Gently go down on [npc.herself].";
+			return "温柔地为[npc.herself]服务。";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"Gently bobbing up and down on [npc.her] [npc.clit+], [npc.name] [npc.verb(suck)] at [npc.her] own [npc.clitTip+] and [npc.verb(let)] out a muffled [npc.moan].",
-					"Slowly taking [npc.her] [npc.clit+] in and out of [npc.her] mouth, [npc.name] [npc.verb(start)] letting out a series of delighted, muffled [npc.moans] as [npc.she] gently sucks on [npc.her] own [npc.clitTip+].",
-					"Leaning down to softly worship [npc.herself], [npc.name] [npc.verb(swirl)] [npc.her] tongue around the [npc.clitTip+] before taking it deep into [npc.her] mouth once more.");
+					"[npc.Name]温柔地在[npc.her][npc.clit+]上起伏摆动，吸吮着[npc.her]自己的[npc.clitTip+]，发出一声含糊的[npc.moan]。",
+					"[npc.Name]慢慢地将[npc.her][npc.clit+]在嘴里进进出出，随着[npc.she]温柔地吸吮自己[npc.clitTip+]而发出一连串愉悦的、含糊的[npc.moans]。",
+					"[npc.Name]俯下身轻轻取悦[npc.herself]，用舌头绕着[npc.clitTip+]打转，然后再次将其深深含入嘴里。");
 		}
 	};
 
@@ -101,20 +101,20 @@ public class SelfClitMouth {
 
 		@Override
 		public String getActionTitle() {
-			return "Clit autofellatio";
+			return "自口淫";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Continue going down on [npc.herself].";
+			return "继续为[npc.herself]服务。";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"Eagerly bobbing up and down on [npc.her] [npc.clit+], [npc.name] [npc.verb(suck)] at [npc.her] own [npc.clitTip+] and [npc.verb(let)] out a muffled [npc.moan].",
-					"Taking [npc.her] [npc.clit+] in and out of [npc.her] mouth, [npc.name] [npc.verb(start)] letting out a series of delighted, muffled [npc.moans] as [npc.she] sucks on [npc.her] own [npc.clitTip+].",
-					"Leaning down to worship [npc.herself], [npc.name] [npc.verb(swirl)] [npc.her] tongue around the [npc.clitTip+] before taking it deep into [npc.her] mouth once more.");
+					"[npc.Name]急切地在[npc.her][npc.clit+]上起伏摆动，吸吮着[npc.her]自己的[npc.clitTip+]，发出一声含糊的[npc.moan]。",
+					"[npc.Name]将[npc.her][npc.clit+]在嘴里进进出出，随着[npc.she]吸吮自己[npc.clitTip+]而发出一连串愉悦的、含糊的[npc.moans]。",
+					"[npc.Name]俯下身取悦[npc.herself]，用舌头绕着[npc.clitTip+]打转，然后再次将其深深含入嘴里。");
 		}
 	};
 
@@ -129,20 +129,20 @@ public class SelfClitMouth {
 
 		@Override
 		public String getActionTitle() {
-			return "Rough clit autofellatio";
+			return "粗暴地自口淫";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Roughly go down on [npc.herself].";
+			return "粗暴地为[npc.herself]服务。";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"Roughly bobbing up and down on [npc.her] [npc.clit+], [npc.name] [npc.verb(suck)] at [npc.her] own [npc.clitTip+] and [npc.verb(let)] out a muffled [npc.moan].",
-					"Violently taking [npc.her] [npc.clit+] in and out of [npc.her] mouth, [npc.name] [npc.verb(start)] letting out a series of desperate, muffled [npc.moans] as [npc.she] greedily sucks on [npc.her] own [npc.clitTip+].",
-					"Slamming [npc.herself] down onto [npc.her] [npc.clit+], [npc.name] [npc.verb(swirl)] [npc.her] tongue around the [npc.clitTip+] before forcefully taking it deep into [npc.her] throat.");
+					"[npc.Name]粗暴地在[npc.her][npc.clit+]上起伏摆动，吸吮着[npc.her]自己的[npc.clitTip+]，发出一声含糊的[npc.moan]。",
+					"[npc.Name]猛烈地将[npc.her][npc.clit+]在嘴里进进出出，随着[npc.she]贪婪地吸吮自己[npc.clitTip+]而发出一连串绝望的、含糊的[npc.moans]。",
+					"[npc.Name]猛地将[npc.herself]扑向[npc.her][npc.clit+]，用舌头绕着[npc.clitTip+]打转，然后用力将其深深捅入喉咙。");
 		}
 	};
 
@@ -157,20 +157,20 @@ public class SelfClitMouth {
 
 		@Override
 		public String getActionTitle() {
-			return "Clit autofellatio";
+			return "自口淫";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Continue going down on [npc.herself].";
+			return "继续为[npc.herself]服务。";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"Bobbing up and down on [npc.her] [npc.clit+], [npc.name] [npc.verb(suck)] at [npc.her] own [npc.clitTip+] and [npc.verb(let)] out a muffled [npc.moan].",
-					"Taking [npc.her] [npc.clit+] in and out of [npc.her] mouth, [npc.name] [npc.verb(start)] letting out a series of delighted, muffled [npc.moans] as [npc.she] sucks on [npc.her] own [npc.clitTip+].",
-					"Leaning down to worship [npc.herself], [npc.name] [npc.verb(swirl)] [npc.her] tongue around the [npc.clitTip+] before taking it deep into [npc.her] mouth once more.");
+					"[npc.Name]在[npc.her][npc.clit+]上起伏摆动，吸吮着[npc.her]自己的[npc.clitTip+]，发出一声含糊的[npc.moan]。",
+					"[npc.Name]将[npc.her][npc.clit+]在嘴里进进出出，随着[npc.she]吸吮自己[npc.clitTip+]而发出一连串愉悦的、含糊的[npc.moans]。",
+					"[npc.Name]俯下身取悦[npc.herself]，用舌头绕着[npc.clitTip+]打转，然后再次将其深深含入嘴里。");
 		}
 	};
 
@@ -185,20 +185,20 @@ public class SelfClitMouth {
 
 		@Override
 		public String getActionTitle() {
-			return "Eager clit autofellatio";
+			return "渴望地自口淫";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Eagerly go down on [npc.herself].";
+			return "渴望地为[npc.herself]服务。";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"Eagerly bobbing up and down on [npc.her] [npc.clit+], [npc.name] [npc.verb(suck)] at [npc.her] own [npc.clitTip+] and [npc.verb(let)] out a desperate, muffled [npc.moan].",
-					"Desperately taking [npc.her] [npc.clit+] in and out of [npc.her] mouth, [npc.name] [npc.verb(start)] letting out a series of delighted, muffled [npc.moans] as [npc.she] greedily sucks on [npc.her] own [npc.clitTip+].",
-					"Thrusting [npc.herself] down onto [npc.her] [npc.clit+], [npc.name] [npc.verb(swirl)] [npc.her] tongue around the [npc.clitTip+] before desperately taking it deep into [npc.her] throat.");
+					"[npc.Name]急切地在[npc.her][npc.clit+]上起伏摆动，吸吮着[npc.her]自己的[npc.clitTip+]，发出一声绝望的、含糊的[npc.moan]。",
+					"[npc.Name]不顾一切地将[npc.her][npc.clit+]在嘴里进进出出，随着[npc.she]贪婪地吸吮自己[npc.clitTip+]而发出一连串愉悦的、含糊的[npc.moans]。",
+					"[npc.Name]将[npc.herself]向[npc.her][npc.clit+]顶去，用舌头绕着[npc.clitTip+]打转，然后拼命将其深深捅入喉咙。");
 		}
 	};
 
@@ -212,19 +212,19 @@ public class SelfClitMouth {
 
 		@Override
 		public String getActionTitle() {
-			return "Stop clit autofellatio";
+			return "停止自口淫";
 		}
 
 		@Override
 		public String getActionDescription() {
-			return "Pull [npc.her] [npc.clit+] out of [npc.her] mouth and stop going down on [npc.herself].";
+			return "把[npc.her][npc.clit+]从嘴里抽出，停止为[npc.herself]服务。";
 		}
 
 		@Override
 		public String getDescription() {
 			return UtilText.returnStringAtRandom(
-					"With one last lick, [npc.name] [npc.verb(pull)] [npc.her] [npc.face] away from [npc.her] [npc.clit+], letting out [npc.a_moan+] as [npc.she] [npc.verb(release)] [npc.her] [npc.clit+] from [npc.her] mouth.",
-					"Giving [npc.her] [npc.clitTip+] a final, wet kiss, [npc.name] [npc.verb(pull)] [npc.her] [npc.face] away from [npc.her] [npc.clit+].");
+					"[npc.Name]最后舔了一下，便把[npc.her][npc.face]从[npc.her][npc.clit+]旁移开，在将[npc.her][npc.clit+]从嘴里抽出的同时发出一声[npc.a_moan+]。",
+					"[npc.Name]给[npc.her][npc.clitTip+]最后一记湿润的亲吻，然后把脸从[npc.her][npc.clit+]旁移开。");
 		}
 	};
 }

@@ -22,8 +22,8 @@ import static com.lilithsthrone.LolificationProject.Overrides.CharacterCreationE
 import static com.lilithsthrone.game.dialogue.story.CharacterCreation.*;
 
 public class CharCreationMenu {
-    public static final ToggleSwitch PENIS_SWITCH = new ToggleSwitch("Has Penis", "Whether or not there is a penis", CharCreationMenu::togglePenis);
-    public static final ToggleSwitch VAGINA_SWITCH = new ToggleSwitch("Has Vagina", "Whether or not there is a vagina", CharCreationMenu::toggleVagina);
+    public static final ToggleSwitch PENIS_SWITCH = new ToggleSwitch("拥有阴茎", "是否有阴茎", CharCreationMenu::togglePenis);
+    public static final ToggleSwitch VAGINA_SWITCH = new ToggleSwitch("拥有阴道", "是否有阴道", CharCreationMenu::toggleVagina);
 
     public static void addListeners() {
         PENIS_SWITCH.addListener();
@@ -44,52 +44,52 @@ public class CharCreationMenu {
     public static Response getBodyOptions(int index) {
         return switch (index) {
             case (1) -> Main.game.getCurrentDialogueNode() == CHOOSE_ADVANCED_APPEARANCE_CORE
-                    ? new Response("Core", "You are already in the customisation menu for all of your body's core aspects.", null)
-                    : new Response("Core", "Enter the customisation menu for all of your body's core aspects.", CHOOSE_ADVANCED_APPEARANCE_CORE);
+                    ? new Response("核心", "你已经处于所有身体核心方面的自定义菜单中。", null)
+                    : new Response("核心", "进入自定义你身体所有核心方面的菜单。", CHOOSE_ADVANCED_APPEARANCE_CORE);
 
             case (2) -> Main.game.getCurrentDialogueNode() == CHOOSE_ADVANCED_APPEARANCE_FACE
-                    ? new Response("Face", "You are already in the customisation menu for aspects related to your face.", null)
-                    : new Response("Face", "Enter the customisation menu for aspects related to your face.", CHOOSE_ADVANCED_APPEARANCE_FACE);
+                    ? new Response("脸部", "你已经处于与脸部相关方面的自定义菜单中。", null)
+                    : new Response("脸部", "进入自定义脸部相关方面的菜单。", CHOOSE_ADVANCED_APPEARANCE_FACE);
 
             case (3) -> Main.game.getCurrentDialogueNode() == CHOOSE_ADVANCED_APPEARANCE_COSMETICS
-                    ? new Response("Makeup", "You are already in the customisation menu for makeup.", null)
-                    : new Response("Makeup", "Enter the customisation menu for makeup.", CHOOSE_ADVANCED_APPEARANCE_COSMETICS);
+                    ? new Response("妆容", "你已经处于妆容的自定义菜单中。", null)
+                    : new Response("妆容", "进入自定义妆容的菜单。", CHOOSE_ADVANCED_APPEARANCE_COSMETICS);
 
             case (4) -> Main.game.getCurrentDialogueNode() == CHOOSE_ADVANCED_APPEARANCE_HAIR
-                    ? new Response("Hair", "You are already in the customisation menu for your hair.", null)
-                    : new Response("Hair", "Enter the customisation menu for your hair.", CHOOSE_ADVANCED_APPEARANCE_HAIR);
+                    ? new Response("头发", "你已经处于头发的自定义菜单中。", null)
+                    : new Response("头发", "进入自定义头发的菜单。", CHOOSE_ADVANCED_APPEARANCE_HAIR);
 
             case (5) -> Main.game.getCurrentDialogueNode() == CHOOSE_ADVANCED_APPEARANCE_RACE
-                    ? new Response("Race", "You are already in the customisation menu for your racial aspects.", null)
-                    : new Response("Race", "Enter the customisation menu for your racial aspects.", CHOOSE_ADVANCED_APPEARANCE_RACE);
+                    ? new Response("种族", "你已经处于种族方面的自定义菜单中。", null)
+                    : new Response("种族", "进入自定义种族方面的菜单。", CHOOSE_ADVANCED_APPEARANCE_RACE);
 
             case (6) -> Main.game.getCurrentDialogueNode() == CHOOSE_ADVANCED_APPEARANCE_BREASTS
-                    ? new Response("Breasts", "You are already in the customisation menu for your breasts.", null)
-                    : new Response("Breasts", "Enter the customisation menu for your breasts.", CHOOSE_ADVANCED_APPEARANCE_BREASTS);
+                    ? new Response("胸部", "你已经处于胸部的自定义菜单中。", null)
+                    : new Response("胸部", "进入自定义胸部的菜单。", CHOOSE_ADVANCED_APPEARANCE_BREASTS);
 
             case (7) -> Main.game.getCurrentDialogueNode() == CHOOSE_ADVANCED_APPEARANCE_ASS
-                    ? new Response("Ass & Hips", "You are already in the customisation menu for aspects related to your ass, hips, and anus.", null)
-                    : new Response("Ass & Hips", "Enter the customisation menu for aspects related to your ass, hips, and anus.", CHOOSE_ADVANCED_APPEARANCE_ASS);
+                    ? new Response("臀部与胯部", "你已经处于与臀部、胯部和肛门相关方面的自定义菜单中。", null)
+                    : new Response("臀部与胯部", "进入自定义臀部、胯部和肛门相关方面的菜单。", CHOOSE_ADVANCED_APPEARANCE_ASS);
 
             case (8) -> Main.game.getCurrentDialogueNode() == CharacterCreationExtras.CHOOSE_ADVANCED_APPEARANCE_GENITALS
-                    ? new Response("Genitals", "You are already in the customisation menu for aspects related to your genitals.", null)
-                    : new Response("Genitals", "Enter the customisation menu for aspects related to your genitals.", CharacterCreationExtras.CHOOSE_ADVANCED_APPEARANCE_GENITALS);
+                    ? new Response("生殖器", "你已经处于生殖器相关方面的自定义菜单中。", null)
+                    : new Response("生殖器", "进入自定义生殖器相关方面的菜单。", CharacterCreationExtras.CHOOSE_ADVANCED_APPEARANCE_GENITALS);
 
             case (11) -> Main.game.getCurrentDialogueNode() == CHOOSE_ADVANCED_APPEARANCE_PIERCINGS
-                    ? new Response("Piercings", "You are already in the customisation menu for body piercings.", null)
-                    : new Response("Piercings", "Enter the customisation menu for body piercings.", CHOOSE_ADVANCED_APPEARANCE_PIERCINGS);
+                    ? new Response("穿孔", "你已经处于身体穿孔的自定义菜单中。", null)
+                    : new Response("穿孔", "进入自定义身体穿孔的菜单。", CHOOSE_ADVANCED_APPEARANCE_PIERCINGS);
 
             case (12) -> Main.game.getCurrentDialogueNode() == CHOOSE_ADVANCED_APPEARANCE_TATTOOS
-                    ? new Response("Tattoos", "You are already in the customisation menu for tattoos.", null)
-                    : new Response("Tattoos", "Enter the customisation menu for tattoos.", CHOOSE_ADVANCED_APPEARANCE_TATTOOS);
+                    ? new Response("纹身", "你已经处于纹身的自定义菜单中。", null)
+                    : new Response("纹身", "进入自定义纹身的菜单。", CHOOSE_ADVANCED_APPEARANCE_TATTOOS);
 
             case (13) -> Main.game.getCurrentDialogueNode() == CHOOSE_ADVANCED_APPEARANCE_BODY_HAIR
-                    ? new Response("Extra hair", "You are already in the customisation menu for facial, pubic, and body hair.", null)
-                    : new Response("Extra hair", "Enter the customisation menu for facial, pubic, and body hair.", CHOOSE_ADVANCED_APPEARANCE_BODY_HAIR);
+                    ? new Response("额外毛发", "你已经处于面部、阴部和身体毛发的自定义菜单中。", null)
+                    : new Response("额外毛发", "进入自定义面部、阴部和身体毛发的菜单。", CHOOSE_ADVANCED_APPEARANCE_BODY_HAIR);
 
             case (14) ->
                     Main.game.getPlayer().getSurname().equalsIgnoreCase("Fallen")
-                            ? new Response("To the stage", "You're ready to approach the stage now.", CharacterCreation.CHOOSE_BACKGROUND) {
+                            ? new Response("登上舞台", "你已准备好登上舞台了。", CharacterCreation.CHOOSE_BACKGROUND) {
                                 @Override
                                 public int getSecondsPassed() {
                                     return CharacterCreation.TIME_TO_BACKGROUND;
@@ -106,7 +106,7 @@ public class CharCreationMenu {
                                     }
                                 }
                             }
-                            : new Response("Finished", "Your clothes are a little messy after rushing here. Tidy yourself up before proceeding to the main stage.", InventoryDialogue.INVENTORY_MENU) {
+                            : new Response("完成", "匆匆赶到此地后，你的衣服有些凌乱。在前往主舞台之前，先整理一下自己。", InventoryDialogue.INVENTORY_MENU) {
                                 @Override
                                 public int getSecondsPassed() {
                                     return TIME_TO_CLOTHING;
@@ -126,7 +126,7 @@ public class CharCreationMenu {
                                     InventoryDialogue.setNPCInventoryInteraction(InventoryInteraction.CHARACTER_CREATION);
                                 }
                             };
-            case (0) -> new Response("Back", "Confirm your choices and return to the content preferences menu.", CHOOSE_NAME) {
+            case (0) -> new Response("返回", "确认你的选择并返回内容偏好菜单。", CHOOSE_NAME) {
                     @Override
                     public int getSecondsPassed() {
                         return -TIME_TO_APPEARANCE;

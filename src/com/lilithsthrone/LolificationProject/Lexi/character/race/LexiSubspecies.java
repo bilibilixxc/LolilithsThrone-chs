@@ -36,19 +36,19 @@ public class LexiSubspecies {
 			"innoxia_race_panther_panthers_delight",
 			"race/innoxia/panther/subspecies/icon_lion",
 			"race/innoxia/panther/subspecies/background_leopard",
-			"true manticore",
-			"true manticore",
-			"true manticore boy",
-			"true manticore girl",
-			"true manticore boys",
-			"true manticore girls",
+			"真蝎狮",
+			"真蝎狮",
+			"真蝎狮雄性",
+			"真蝎狮雌性",
+			"真蝎狮雄性们",
+			"真蝎狮雌性们",
 			new FeralAttributes(
-					"true-manticore",
-					"true-manticores",
-					"true-manticore",
-					"true-manticore",
-					"true-manticores",
-					"true-manticores",
+					"真蝎狮",
+					"真蝎狮群",
+					"真蝎狮",
+					"真蝎狮",
+					"真蝎狮群",
+					"真蝎狮群",
 					LegConfiguration.QUADRUPEDAL,
 					80,
 					0,
@@ -56,7 +56,7 @@ public class LexiSubspecies {
 					4,
 					1, false),
 			Nocturnality.CREPUSCULAR,
-			"[npc.NameIsFull] extremely ferocious, and is able to take flight with [npc.her] powerful wings. [npc.NameIsFull] nigh unmatched in a contest of strength and tougness. ",
+			"[npc.NameIsFull] 极其凶猛，能用 [npc.her] 强壮的翅膀腾空而起。[npc.NameIsFull] 在力量与韧性的较量中几乎无人能敌。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 40f),
 					new Value<>(Attribute.DAMAGE_PHYSICAL, 20f),
@@ -65,8 +65,8 @@ public class LexiSubspecies {
 					new Value<>(Attribute.RESISTANCE_PHYSICAL, 25f),
 					new Value<>(Attribute.RESISTANCE_LUST, -15f)),
 			null,
-			"Big Cats",
-			"Big Cats",
+			"大猫",
+			"大猫",
 			"PANTHER_BASIC",
 			"PANTHER_ADVANCED",
 			Race.getRaceFromId("innoxia_panther"),
@@ -80,8 +80,8 @@ public class LexiSubspecies {
 					new Value<>(PerkCategory.ARCANE, 3)),
 			PresetColour.COVERING_AMBER,
 			SubspeciesPreference.TWO_AVERAGE,
-			"A true manticore, known as a 'manticore' when bipedal, and a 'mantitaur' when the lower body is that of a typically-oversized feral panther."
-					+ " To be identified as a true manticore, a character must be a panther-morph that has a manticore tail, leathery wings and not identified as other panther morphs.",
+			"真蝎狮，以两足行走时被称为'蝎狮'，而当其下半身为一只通常体格庞大的野生豹时则被称为'蝎尾人马兽'。"
+					+ " 要被认定为一头真蝎狮，角色必须是一只拥有蝎狮尾巴、皮革质翅膀且未被识别为其他豹类兽人的豹类兽化人。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.ONE)),
 			Util.newHashMapOfValues(
@@ -159,19 +159,19 @@ public class LexiSubspecies {
 			"innoxia_race_cat_kittys_reward",
 			"statusEffects/race/raceCatMorph",
 			"statusEffects/race/raceBackgroundCheetah",
-			"manticore-morph",
-			"manticore-morphs",
-			"manticore-boy",
-			"manticore-girl",
-			"manticore-boys",
-			"manticore-girls",
+			"蝎狮兽化人",
+			"蝎狮兽化人",
+			"蝎狮雄性",
+			"蝎狮雌性",
+			"蝎狮雄性们",
+			"蝎狮雌性们",
 			new FeralAttributes(
-					"manticore",
-					"manticores",
-					"manticore",
-					"manticore",
-					"manticores",
-					"manticores",
+					"蝎狮",
+					"蝎狮群",
+					"蝎狮",
+					"蝎狮",
+					"蝎狮群",
+					"蝎狮群",
 					LegConfiguration.QUADRUPEDAL,
 					80,
 					0,
@@ -179,14 +179,14 @@ public class LexiSubspecies {
 					4,
 					1, false),
 			Nocturnality.CREPUSCULAR,
-			"[npc.NameIsFull] formidable, and physically stronger than most other races.",
+			"[npc.NameIsFull] 实力超群，在体格上比大多数其他种族都要强壮。",
 			Util.newHashMapOfValues(
 					new Value<>(Attribute.MAJOR_PHYSIQUE, 18f),
 					new Value<>(Attribute.CRITICAL_DAMAGE, 15f),
 					new Value<>(Attribute.DAMAGE_PHYSICAL, 12f)),
 			null,
-			"Curious Kitties",
-			"Curious Kitties",
+			"好奇的小猫",
+			"好奇的小猫",
 			"CAT_MORPH_BASIC",
 			"CAT_MORPH_ADVANCED",
 			Race.CAT_MORPH,
@@ -200,8 +200,8 @@ public class LexiSubspecies {
 					new Value<>(PerkCategory.ARCANE, 3)),
 			PresetColour.RACE_CAT_MORPH_LION,
 			SubspeciesPreference.TWO_AVERAGE,
-			"A manticore, known as a 'manticore' when bipedal, and a 'mantitaur' when the lower body is that of a typically-oversized feral feline."
-					+ " To be identified as a manticore, a character must be a cat-morph that has a manticore tail and not identified as other feline morphs.",
+			"蝎狮，以两足行走时被称为'蝎狮'，而当其下半身为一只通常体格庞大的野生猫科动物时则被称为'蝎尾人马兽'。"
+					+ " 要被认定为一头蝎狮，角色必须是一只拥有蝎狮尾巴且未被识别为其他猫科兽化人的猫科兽化人。",
 			Util.newHashMapOfValues(
 					new Value<>(WorldRegion.FIELDS, SubspeciesSpawnRarity.FIVE)),
 			Util.newHashMapOfValues(
@@ -259,8 +259,3 @@ public class LexiSubspecies {
 	};
 
 }
-
-
-
-
-

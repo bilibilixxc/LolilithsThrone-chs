@@ -34,9 +34,9 @@ public class TussyDisplay {
             }
         }
 
-        return CharacterModificationUtils.applyWrapper("Tussy Modifiers",
-                UtilText.parse(BodyChanging.getTarget(), "Change the modifiers for [npc.namePos] tussy."
-                        + "<br/><i>Orifice modifiers affect descriptions and some actions in sex. The modifiers which have more than just descriptive effects are marked by an asterisk.</i>"),
+        return CharacterModificationUtils.applyWrapper("尾穴修饰",
+                UtilText.parse(BodyChanging.getTarget(), "改变 [npc.namePos] 尾穴的修饰。"
+                        + "<br/><i>穴口修饰会影响性行为中的描述与某些动作；除描述性效果外还有额外效果的修饰会用星号标记。</i>"),
                 "TUSSY_MODS",
                 contentSB.toString(),
                 true);
@@ -60,9 +60,9 @@ public class TussyDisplay {
             }
         }
 
-        return CharacterModificationUtils.applyWrapper("Tussy Capacity",
-                UtilText.parse(BodyChanging.getTarget(), "Change the capacity of [npc.namePos] tussy."
-                        + "<br/><i>This affects the size of penetrative objects that [npc.namePos] tussy can take. If capacity is too small or too large for a penetrative object, arousal gains are affected.</i>"),
+        return CharacterModificationUtils.applyWrapper("尾穴容量",
+                UtilText.parse(BodyChanging.getTarget(), "改变 [npc.namePos] 尾穴的容量。"
+                        + "<br/><i>这会影响 [npc.namePos] 尾穴所能容纳的插入物大小。若容量相对插入物过小或过大，都会影响兴奋度增长。</i>"),
                 "TUSSY_CAPACITY",
                 contentSB.toString(),
                 true);
@@ -96,11 +96,11 @@ public class TussyDisplay {
             }
         }
 
-        return CharacterModificationUtils.applyWrapper("Tussy Wetness",
-                UtilText.parse(BodyChanging.getTarget(), "Change the wetness of [npc.namePos] tussy."
-                        + "<br/><i>This affects pleasure in sex, as non-lubricated orifices negatively affect arousal gains.</i>"
+        return CharacterModificationUtils.applyWrapper("尾穴湿润度",
+                UtilText.parse(BodyChanging.getTarget(), "改变 [npc.namePos] 尾穴的湿润度。"
+                        + "<br/><i>这会影响到性行为中的快感，因为缺乏润滑的穴口会对兴奋度增长产生负面影响。</i>"
                         + (BodyChanging.getTarget().getBodyMaterial().isOrificesAlwaysMaximumWetness()
-                        ? "<br/>[style.italicsWetness8(As [npc.namePos] body is made out of [npc.bodyMaterial], [npc.her] orifices can never be less than '" + Util.capitaliseSentence(Wetness.SEVEN_DROOLING.getDescriptor()) + "'!)]"
+                        ? "<br/>[style.italicsWetness8(由于 [npc.namePos] 的身体由 [npc.bodyMaterial] 构成，[npc.her] 的穴口绝不会低于 '" + Util.capitaliseSentence(Wetness.SEVEN_DROOLING.getDescriptor()) + "'！)]"
                         : "")),
                 "TUSSY_WETNESS",
                 contentSB.toString(),
@@ -135,11 +135,11 @@ public class TussyDisplay {
             }
         }
 
-        return CharacterModificationUtils.applyWrapper("Tussy Depth",
-                UtilText.parse(BodyChanging.getTarget(), "Change the depth of [npc.namePos] tussy."
-                        + "<br/><i>Depth of an orifice determines the length of a penetrating object that it can comfortably accommodate.</i>"
+        return CharacterModificationUtils.applyWrapper("尾穴深度",
+                UtilText.parse(BodyChanging.getTarget(), "改变 [npc.namePos] 尾穴的深度。"
+                        + "<br/><i>穴口的深度决定了它能舒适容纳的插入物长度。</i>"
                         + (!BodyChanging.getTarget().getBodyMaterial().isOrificesLimitedDepth()
-                        ? "<br/>[style.italicsSize8(As [npc.namePos] body is made out of [npc.bodyMaterial], [npc.her] orifices can never be less than '" + Util.capitaliseSentence(OrificeDepth.SEVEN_FATHOMLESS.getDescriptor()) + "'!)]"
+                        ? "<br/>[style.italicsSize8(由于 [npc.namePos] 的身体由 [npc.bodyMaterial] 构成，[npc.her] 的穴口绝不会低于 '" + Util.capitaliseSentence(OrificeDepth.SEVEN_FATHOMLESS.getDescriptor()) + "'！)]"
                         : "")),
                 "TUSSY_DEPTH",
                 contentSB.toString(),
@@ -170,10 +170,10 @@ public class TussyDisplay {
             }
         }
 
-        return CharacterModificationUtils.applyWrapper("Tussy Elasticity",
-                UtilText.parse(BodyChanging.getTarget(), "Change the elasticity of [npc.namePos] tussy."
-                        + "<br/><i>This determines how quickly [npc.namePos] tussy will stretch out if a penetrating object is too thick for it."
-                        + (Main.game.isPenetrationLimitationsEnabled() && Main.game.isElasticityAffectDepthEnabled() ? " Values marked with an asterisk increase the maximum uncomfortable depth of [npc.her] tussy." : ""))
+        return CharacterModificationUtils.applyWrapper("尾穴弹性",
+                UtilText.parse(BodyChanging.getTarget(), "改变 [npc.namePos] 尾穴的弹性。"
+                        + "<br/><i>这决定了当插入物对 [npc.namePos] 的尾穴过于粗壮时，它会以多快的速度被撑开。"
+                        + (Main.game.isPenetrationLimitationsEnabled() && Main.game.isElasticityAffectDepthEnabled() ? " 标有星号的数值会增加 [npc.her] 尾穴的最大不适深度。" : ""))
                         + "</i>",
                 "TUSSY_ELASTICITY",
                 contentSB.toString(),
@@ -198,9 +198,9 @@ public class TussyDisplay {
             }
         }
 
-        return CharacterModificationUtils.applyWrapper("Tussy Plasticity",
-                UtilText.parse(BodyChanging.getTarget(), "Change the plasticity of [npc.namePos] tussy."
-                        + "<br/><i>Plasticity of an orifice determines how quickly, and by how much, it regains its original tightness after being stretched out.</i>"),
+        return CharacterModificationUtils.applyWrapper("尾穴可塑性",
+                UtilText.parse(BodyChanging.getTarget(), "改变 [npc.namePos] 尾穴的可塑性。"
+                        + "<br/><i>穴口的可塑性决定了它在被撑开后，能以多快的速度恢复、以及在多大程度上恢复到原本的紧致度。</i>"),
                 "TUSSY_PLASTICITY",
                 contentSB.toString(),
                 true);

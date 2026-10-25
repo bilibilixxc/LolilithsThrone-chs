@@ -21,34 +21,34 @@ public class ModOptions {
     public static Response getModOptionsResponses(int index) {
         return switch (index) {
             case 1 -> Main.game.getCurrentDialogueNode() == MOD_CONTENT_PREFERENCE
-                    ? new Response("General", "You are already viewing these options", null)
-                    : new Response("General", "Go to the general mod options menu.", MOD_CONTENT_PREFERENCE);
+                    ? new Response("常规", "你已经在查看这些选项了", null)
+                    : new Response("常规", "进入常规模组选项菜单。", MOD_CONTENT_PREFERENCE);
             case 2 -> Main.game.getCurrentDialogueNode() == MOD_BALANCE_PREFERENCES
-                    ? new Response("Game Balance", "You are already viewing these options", null)
-                    : new Response("Game Balance", "Go to the balance mod options menu.", MOD_BALANCE_PREFERENCES);
+                    ? new Response("游戏平衡", "你已经在查看这些选项了", null)
+                    : new Response("游戏平衡", "进入平衡模组选项菜单。", MOD_BALANCE_PREFERENCES);
             case 3 -> Main.game.getCurrentDialogueNode() == MOD_BODY_PREFERENCES
-                    ? new Response("Body Modding", "You are already viewing these options", null)
-                    : new Response("Body Modding", "Go to the body mod options menu.", MOD_BODY_PREFERENCES);
+                    ? new Response("身体修改", "你已经在查看这些选项了", null)
+                    : new Response("身体修改", "进入身体模组选项菜单。", MOD_BODY_PREFERENCES);
             case 5 -> Main.game.getCurrentDialogueNode() == MOD_CHALLENGE_PREFERENCES
-                    ? new Response("Challenge Settings", "You are already viewing these options", null)
-                    : new Response("Challenge Settings", "Go to the challenge options menu.", MOD_CHALLENGE_PREFERENCES);
+                    ? new Response("挑战设置", "你已经在查看这些选项了", null)
+                    : new Response("挑战设置", "进入挑战选项菜单。", MOD_CHALLENGE_PREFERENCES);
             case 6 -> Main.game.getCurrentDialogueNode() == ADVANCED_OPTIONS
-                    ? new Response("Advanced Settings", "You are already viewing these options", null)
-                    : new Response("Advanced Settings", "Go to the advanced options menu.", ADVANCED_OPTIONS);
+                    ? new Response("高级设置", "你已经在查看这些选项了", null)
+                    : new Response("高级设置", "进入高级选项菜单。", ADVANCED_OPTIONS);
             case 7 -> Main.game.getCurrentDialogueNode() == VirginityMenu.VIRGIN_RATES_MENU
-                    ? new Response("Virginity Rates", "You are already viewing these options", null)
-                    : new Response("Virginity Rates", "Go to the Virginity Rates menu.", VirginityMenu.VIRGIN_RATES_MENU);
+                    ? new Response("处女率", "你已经在查看这些选项了", null)
+                    : new Response("处女率", "进入处女率菜单。", VirginityMenu.VIRGIN_RATES_MENU);
             case 12 -> Main.game.getCurrentDialogueNode() == OptionsDialogue.OPTIONS
-                    ? new Response("Options", "You are already viewing these options", null)
-                    : new Response("Options", "Open the options page.", OptionsDialogue.OPTIONS){
+                    ? new Response("选项", "你已经在查看这些选项了", null)
+                    : new Response("选项", "打开选项页面。", OptionsDialogue.OPTIONS){
                 @Override
                 public void effects() {
                     Main.saveProperties();
                 }
             };
             case 13 -> Main.game.getCurrentDialogueNode() == OptionsDialogue.MISCELLANEOUS
-                    ? new Response("Content Options", "You are already viewing these options", null)
-                    : new Response("Content Options", "Set your preferred content settings.", OptionsDialogue.MISCELLANEOUS){
+                    ? new Response("内容选项", "你已经在查看这些选项了", null)
+                    : new Response("内容选项", "设置你偏好的内容设置。", OptionsDialogue.MISCELLANEOUS){
                 @Override
                 public void effects() {
                     Main.saveProperties();
@@ -56,9 +56,9 @@ public class ModOptions {
             };
             case 14 ->
                     Main.game.getCurrentDialogueNode() == MOD_CONTENT_PREFERENCE || Main.game.getCurrentDialogueNode() == MOD_BALANCE_PREFERENCES || Main.game.getCurrentDialogueNode() == MOD_BODY_PREFERENCES
-                            ? new Response("Mod Options", "You are already viewing these options", null)
-                            : new Response("Mod Options", "Set your preferred Mod settings.", ModOptions.MOD_CONTENT_PREFERENCE);
-            case 0 -> new Response("Back", "Go back to the main menu.", MenuOverrides.MENU){
+                            ? new Response("模组选项", "你已经在查看这些选项了", null)
+                            : new Response("模组选项", "设置你偏好的模组设置。", ModOptions.MOD_CONTENT_PREFERENCE);
+            case 0 -> new Response("返回", "返回主菜单。", MenuOverrides.MENU){
                 @Override
                 public void effects() {
                     Main.saveProperties();
@@ -68,7 +68,7 @@ public class ModOptions {
         };
     }
 
-    public static final DialogueNode MOD_CONTENT_PREFERENCE = new DialogueNode("Mod Options", "", true) {
+    public static final DialogueNode MOD_CONTENT_PREFERENCE = new DialogueNode("模组选项", "", true) {
         @Override
         public String getHeaderContent() {
             UtilText.nodeContentSB.setLength(0);
@@ -137,7 +137,7 @@ public class ModOptions {
         }
     };
 
-    public static final DialogueNode MOD_BALANCE_PREFERENCES = new DialogueNode("Game Balance", "", true) {
+    public static final DialogueNode MOD_BALANCE_PREFERENCES = new DialogueNode("游戏平衡", "", true) {
         @Override
         public String getHeaderContent() {
             UtilText.nodeContentSB.setLength(0);
@@ -195,7 +195,7 @@ public class ModOptions {
         }
     };
 
-    public static final DialogueNode MOD_BODY_PREFERENCES = new DialogueNode("Body Mod Options", "", true) {
+    public static final DialogueNode MOD_BODY_PREFERENCES = new DialogueNode("身体模组选项", "", true) {
         @Override
         public String getHeaderContent() {
             UtilText.nodeContentSB.setLength(0);
@@ -266,12 +266,12 @@ public class ModOptions {
         }
     };
 
-    public static final DialogueNode MOD_CHALLENGE_PREFERENCES = new DialogueNode("Challenge Settings", "", true) {
+    public static final DialogueNode MOD_CHALLENGE_PREFERENCES = new DialogueNode("挑战设置", "", true) {
         @Override
         public String getHeaderContent() {
             if (EXPERIMENTAL) {
                 UtilText.nodeContentSB.setLength(0);
-                UtilText.nodeContentSB.append("NOTE: Those marked with an asterisk* require a game restart or load/new game for changes to take effect!");
+                UtilText.nodeContentSB.append("注意：带有星号*标记的选项需要重启游戏或重新读档/新开游戏才能生效！");
                 UtilText.nodeContentSB.append(NewModOptions.INVENTORY_TABS.getDiv());
                 UtilText.nodeContentSB.append(NewModOptions.INVENTORY_ROWS.getDiv());
 
@@ -279,8 +279,8 @@ public class ModOptions {
                 return UtilText.nodeContentSB.toString();
 
             }
-            return "This page can only be accessed by enabling EXPERIMENTAL settings via the debug menu at this time."
-                    + "</br></br>In the future, you will be able to adjust various settings here to increase difficulty or encourage alternative playstyles.";
+            return "此页面目前只能通过调试菜单启用EXPERIMENTAL（实验性）设置后才能访问。"
+                    + "</br></br>将来，你将能够在这里调整各种设置，以增加难度或鼓励不同的游戏风格。";
         }
         @Override
         public String getContent() {
@@ -293,11 +293,11 @@ public class ModOptions {
         }
     };
 
-    public static final DialogueNode ADVANCED_OPTIONS = new DialogueNode("Advanced Settings", "", true) {
+    public static final DialogueNode ADVANCED_OPTIONS = new DialogueNode("高级设置", "", true) {
         @Override
         public String getHeaderContent() {
             UtilText.nodeContentSB.setLength(0);
-            UtilText.nodeContentSB.append(paragraphWrap("Note that some of these settings only apply after restarting game!", "#F77"));
+            UtilText.nodeContentSB.append(paragraphWrap("请注意，其中一些设置只有在重启游戏后才会生效！", "#F77"));
             UtilText.nodeContentSB.append(AdvancedModOptions.EXPERIMENTAL.getDiv());
             UtilText.nodeContentSB.append(AdvancedModOptions.REPAIR_MODS.getDiv());
             UtilText.nodeContentSB.append(AdvancedModOptions.LOG_UNPARSED_LINES.getDiv());

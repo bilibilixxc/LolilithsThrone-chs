@@ -136,11 +136,11 @@ public class Conversions {
 
             if(npc.isPlayer()) {
                 EventLogEntry eve =
-                        new EventLogEntry("<span style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>Core Attributes</span>",
-                                "<span>Your Virility is now <span style='color:"+ PresetColour.GENERIC_NEUTRAL.toWebHexString()+";'>"+npc.getAttributeValue(Attribute.VIRILITY) +
-                                        "</span> due to your age.</span>" + "<br>" +
-                                        "<span>Your Fertility is now <span style='color:"+ PresetColour.GENERIC_NEUTRAL.toWebHexString()+";'>"+npc.getAttributeValue(Attribute.FERTILITY) +
-                                        "</span> due to your age.</span>");
+                        new EventLogEntry("<span style='color:"+PresetColour.GENERIC_ARCANE.toWebHexString()+";'>核心属性</span>",
+                                "<span>由于你的年龄，你的生殖力现在是 <span style='color:"+ PresetColour.GENERIC_NEUTRAL.toWebHexString()+";'>"+npc.getAttributeValue(Attribute.VIRILITY) +
+                                        "</span>。</span>" + "<br>" +
+                                        "<span>由于你的年龄，你的生育力现在是 <span style='color:"+ PresetColour.GENERIC_NEUTRAL.toWebHexString()+";'>"+npc.getAttributeValue(Attribute.FERTILITY) +
+                                        "</span>。</span>");
                 Main.game.addEvent(eve, true);
             }
         }
@@ -544,12 +544,12 @@ public class Conversions {
         int apparentAgeValue = npc.getAppearsAsAgeValue();
         AgeCategory realAge = npc.getAge();
         int realAgeValue = npc.getAgeValue();
-        return " [npc.She] [npc.verb(appear)] to be <span style='color:" + apparentAge.getColour().toWebHexString() + ";'>" //Color from age appearance
-                + (!ModProps.isShowAgeEnabled() ? apparentAge.getName() + "</span>" : apparentAgeValue + " years old</span>" //Show age category if show age disabled
+        return " [npc.She] [npc.verb(appear)]来看起来<span style='color:" + apparentAge.getColour().toWebHexString() + ";'>" //Color from age appearance
+                + (!ModProps.isShowAgeEnabled() ? apparentAge.getName() + "</span>" : apparentAgeValue + " 岁</span>" //Show age category if show age disabled
                 + (Main.game.getPlayer().hasTrait(Perk.OBSERVANT, true) && ModProps.isShowTrueAgeEnabled() ? realAgeValue == apparentAgeValue //If show true age and observant with will pass the check to is equal
-                ? " and, thanks to your observant perk, you can confirm that [npc.she] looks true to [npc.her] age."
-                : " but, thanks to your observant perk, you can tell that [npc.sheIs] really <span style='color:"
-                + realAge.getColour().toWebHexString() + ";'>" + (ModProps.isShowAgeEnabled() ? realAgeValue : realAge.getName()) + "</span>." : "."));
+                ? "，而且凭借你的洞察天赋，你可以确认[npc.she]的外表与其真实年龄相符。"
+                : "，但凭借你的洞察天赋，你可以看出[npc.sheIs]实际上是<span style='color:"
+                + realAge.getColour().toWebHexString() + ";'>" + (ModProps.isShowAgeEnabled() ? realAgeValue : realAge.getName()) + "</span>岁。" : "。"));
     }
 
     private static boolean shouldCockBeLarger(GameCharacter character) {
@@ -558,18 +558,18 @@ public class Conversions {
 
     public static String getAdditionalDeterminer(GameCharacter gameCharacter, String nameText) {
         if (Main.game.isSillyMode() && gameCharacter.getHeightValue() >= 213 && (gameCharacter.getBodyShape().getRelatedMuscle() == Muscle.THREE_MUSCULAR || gameCharacter.getBodyShape().getRelatedMuscle() == Muscle.FOUR_RIPPED))
-            return "7ft Wall of Muscle " + nameText;
+            return "7英尺肌肉之墙 " + nameText;
         if (!ModProps.isShowEnhancedDescriptionEnabled()) return nameText;
         if (gameCharacter.getAppearsAsAgeValue() >= ModProps.oldLabelAge) {
-            return "old " + nameText;
+            return "年长的 " + nameText;
         } else if (gameCharacter.getAppearsAsAgeValue() <= ModProps.youngLabelAge) {
             if ((gameCharacter.getGender().isFeminine() && gameCharacter.getFemininity().isFeminine()) && gameCharacter.getAppearsAsAgeValue() <= ModProps.loliLabelAge)
-                return nameText.trim().equalsIgnoreCase("woman") ? "Loli" : "loli " + nameText;
+                return nameText.trim().equalsIgnoreCase("woman") ? "萝莉" : "萝莉 " + nameText;
             if ((!gameCharacter.getGender().isFeminine() && gameCharacter.getFemininity() != Femininity.ANDROGYNOUS && !gameCharacter.getFemininity().isFeminine()) && gameCharacter.getAppearsAsAgeValue() <= ModProps.shotaLabelAge)
-                return nameText.trim().equalsIgnoreCase("man") ? "Shota" : "shota " + nameText;
-            return "young " + nameText;
+                return nameText.trim().equalsIgnoreCase("man") ? "正太" : "正太 " + nameText;
+            return "年轻的 " + nameText;
         }
-        return "adult " + nameText;
+        return "成年的 " + nameText;
     }
 
 

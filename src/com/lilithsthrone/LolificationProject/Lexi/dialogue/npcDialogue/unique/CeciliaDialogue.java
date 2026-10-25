@@ -26,7 +26,7 @@ import com.lilithsthrone.world.places.PlaceType;
  */
 public class CeciliaDialogue {
 	
-	public static final DialogueNode CECILIA_APPEARS = new DialogueNode("Grassland Wilderness", "", true) {
+	public static final DialogueNode CECILIA_APPEARS = new DialogueNode("野草旷野", "", true) {
 		
 		@Override
 		public String getAuthor() {
@@ -42,13 +42,13 @@ public class CeciliaDialogue {
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
 				if(Main.game.getDialogueFlags().hasFlag(Lexicon.ceciliaMet)) {
-					return new Response("Wait", "Wait for Cecilias imminent arrival.", CECILIA_APPEARS_REPEAT_ENCOUNTER);
+					return new Response("等待", "等待塞西莉亚的来临。", CECILIA_APPEARS_REPEAT_ENCOUNTER);
 				} else {
-					return new Response("Look around", "Take a look around.", CECILIA_LOOK);
+					return new Response("环顾四周", "环顾一下周围。", CECILIA_LOOK);
 				}
 				
 			} else if (index == 2) {
-				return new ResponseEffectsOnly("Nope", "Quickly backtrack.") {
+				return new ResponseEffectsOnly("算了吧", "迅速原路返回。") {
 					@Override
 					public void effects() {
 						Main.game.getTextStartStringBuilder().append(UtilText.parseFromXMLFile("Lexi/characters/fields/cecilia", "CECILIA_AVOID"));
@@ -64,7 +64,7 @@ public class CeciliaDialogue {
 		}
 	};
 
-	public static final DialogueNode CECILIA_LOOK = new DialogueNode("Grassland Wilderness", "", true, true) {
+	public static final DialogueNode CECILIA_LOOK = new DialogueNode("野草旷野", "", true, true) {
 
 		@Override
 		public String getAuthor() {
@@ -79,7 +79,7 @@ public class CeciliaDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("A branch?", "Inspect the weird branch.", CECILIA_BRANCH) {
+				return new Response("一根树枝？", "检查那根奇怪的树枝。", CECILIA_BRANCH) {
 				};
 
 			} else {
@@ -88,7 +88,7 @@ public class CeciliaDialogue {
 		}
 	};
 
-	public static final DialogueNode CECILIA_BRANCH = new DialogueNode("Grassland Wilderness", "", true, true) {
+	public static final DialogueNode CECILIA_BRANCH = new DialogueNode("野草旷野", "", true, true) {
 
 		@Override
 		public String getAuthor() {
@@ -103,7 +103,7 @@ public class CeciliaDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Ambush??", "DODGE.", CECILIA_AMBUSH) {
+				return new Response("伏击？？", "躲开！", CECILIA_AMBUSH) {
 				};
 
 			} else {
@@ -112,7 +112,7 @@ public class CeciliaDialogue {
 		}
 	};
 
-	public static final DialogueNode CECILIA_AMBUSH = new DialogueNode("Grassland Wilderness", "", true, true) {
+	public static final DialogueNode CECILIA_AMBUSH = new DialogueNode("野草旷野", "", true, true) {
 
 		@Override
 		public String getAuthor() {
@@ -127,7 +127,7 @@ public class CeciliaDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Get Up!", "Recover from the tackle!", CECILIA_RECOVER) {
+				return new Response("站起来！", "从扑击中恢复过来！", CECILIA_RECOVER) {
 				};
 
 			} else {
@@ -136,7 +136,7 @@ public class CeciliaDialogue {
 		}
 	};
 
-	public static final DialogueNode CECILIA_RECOVER = new DialogueNode("Grassland Wilderness", "", true, true) {
+	public static final DialogueNode CECILIA_RECOVER = new DialogueNode("野草旷野", "", true, true) {
 
 		@Override
 		public String getAuthor() {
@@ -151,8 +151,8 @@ public class CeciliaDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseCombat("Fight",
-						"You're not going to let this manticore knock you around!",
+				return new ResponseCombat("战斗",
+						"你可不会让这只蝎狮把你打倒！",
 						Main.game.getNpc(Cecilia.class),
 						Util.newHashMapOfValues(
 								new Value<>(Main.game.getPlayer(), UtilText.parseFromXMLFile("Lexi/characters/fields/cecilia", "CECILIA_COMBAT_PC_OPENING")),
@@ -160,14 +160,14 @@ public class CeciliaDialogue {
 				};
 
 			} else if (index == 2) {
-				return new Response("Talk", "Decide to try talking to her. Maybe there was a misunderstanding?", CECILIA_AMBUSH_TALK);
+				return new Response("搭话", "试着和她谈谈，也许这只是一场误会？", CECILIA_AMBUSH_TALK);
 			} else {
 				return null;
 			}
 		}
 	};
 
-	public static final DialogueNode CECILIA_AMBUSH_TALK = new DialogueNode("Grassland Wilderness", "", true, true) {
+	public static final DialogueNode CECILIA_AMBUSH_TALK = new DialogueNode("野草旷野", "", true, true) {
 
 		@Override
 		public String getAuthor() {
@@ -182,7 +182,7 @@ public class CeciliaDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Continue", "Continue on your way.", null) {
+				return new Response("继续", "继续上路。", null) {
 					@Override
 					public DialogueNode getNextDialogue() {
 						return Main.game.getDefaultDialogue(false);
@@ -200,7 +200,7 @@ public class CeciliaDialogue {
 	};
 
 
-	public static final DialogueNode CECILIA_APPEARS_REPEAT_ENCOUNTER = new DialogueNode("Grassland Wilderness", "", true, true) {
+	public static final DialogueNode CECILIA_APPEARS_REPEAT_ENCOUNTER = new DialogueNode("野草旷野", "", true, true) {
 
 		@Override
 		public String getAuthor() {
@@ -214,8 +214,8 @@ public class CeciliaDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new ResponseCombat("Fight!",
-						"Mock brawl against Cecilia!",
+				return new ResponseCombat("战斗！",
+						"与塞西莉亚来一场切磋扭打！",
 						Main.game.getNpc(Cecilia.class),
 						Util.newHashMapOfValues(
 								new Value<>(Main.game.getPlayer(), UtilText.parseFromXMLFile("Lexi/characters/fields/cecilia", "CECILIA_COMBAT_PC_OPENING_REPEAT")),
@@ -241,7 +241,7 @@ public class CeciliaDialogue {
 
 
 	
-	public static final DialogueNode COMBAT_PLAYER_LOSS = new DialogueNode("Grassland Wilderness", "", true) {
+	public static final DialogueNode COMBAT_PLAYER_LOSS = new DialogueNode("野草旷野", "", true) {
 
 		@Override
 		public String getAuthor() {
@@ -256,7 +256,7 @@ public class CeciliaDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Continue", "Carry on your way...", null){
+				return new Response("继续", "继续上路。", null){
 					@Override
 					public DialogueNode getNextDialogue() {
 						return Main.game.getDefaultDialogue(false);
@@ -275,7 +275,7 @@ public class CeciliaDialogue {
 		}
 	};
 
-	public static final DialogueNode COMBAT_PLAYER_LOSS_REPEAT = new DialogueNode("Grassland Wilderness", "", true) {
+	public static final DialogueNode COMBAT_PLAYER_LOSS_REPEAT = new DialogueNode("野草旷野", "", true) {
 
 		@Override
 		public String getAuthor() {
@@ -290,7 +290,7 @@ public class CeciliaDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Continue", "Carry on your way...", null){
+				return new Response("继续", "继续上路。", null){
 					@Override
 					public DialogueNode getNextDialogue() {
 						return Main.game.getDefaultDialogue(false);
@@ -307,7 +307,7 @@ public class CeciliaDialogue {
 		}
 	};
 	
-	public static final DialogueNode COMBAT_PLAYER_WIN = new DialogueNode("Grassland Wilderness", "", true) {
+	public static final DialogueNode COMBAT_PLAYER_WIN = new DialogueNode("野草旷野", "", true) {
 
 		@Override
 		public String getAuthor() {
@@ -322,7 +322,7 @@ public class CeciliaDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if (index == 1) {
-				return new Response("Explanation", "Demand an explanation from this strange manticore-girl.", COMBAT_PLAYER_WIN_EXPLANATION) {
+				return new Response("解释", "向这个奇怪的蝎狮女孩索要解释。", COMBAT_PLAYER_WIN_EXPLANATION) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(Lexicon.ceciliaMet, true);
@@ -331,7 +331,7 @@ public class CeciliaDialogue {
 				};
 
 			} else if(index == 2) {
-				return new Response("Compensation", "Demand monetary compensation from this strange manticore-girl.", COMBAT_PLAYER_WIN_MONEY) {
+				return new Response("补偿", "向这个奇怪的蝎狮女孩索要金钱补偿。", COMBAT_PLAYER_WIN_MONEY) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(Lexicon.ceciliaMet, true);
@@ -339,8 +339,8 @@ public class CeciliaDialogue {
 					}
 				};
 			} else if (index == 3 ) {
-				return new Response("'Compentsation'?",
-						"Are you sure this is a good idea? The manticore-girl doesnt exactly look defeated.", COMBAT_PLAYER_WIN_SEX_WARNING) {
+				return new Response("'补偿'？",
+						"你确定这是个好主意吗？这只蝎狮女孩看起来并没有完全被打败。", COMBAT_PLAYER_WIN_SEX_WARNING) {
 					@Override
 					public void effects() {
 						Main.game.getDialogueFlags().setFlag(Lexicon.ceciliaMet, true);
@@ -353,7 +353,7 @@ public class CeciliaDialogue {
 		}
 	};
 
-	public static final DialogueNode COMBAT_PLAYER_WIN_REPEAT = new DialogueNode("Grassland Wilderness", "", true) {
+	public static final DialogueNode COMBAT_PLAYER_WIN_REPEAT = new DialogueNode("野草旷野", "", true) {
 
 		@Override
 		public String getAuthor() {
@@ -368,29 +368,29 @@ public class CeciliaDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Money", "See if Cecilia can spare some coin for the victor.", COMBAT_PLAYER_WIN_MONEY_REPEAT) {
+				return new Response("金钱", "看看塞西莉亚能否为胜利者拿出一些金币。", COMBAT_PLAYER_WIN_MONEY_REPEAT) {
 				};
 			} else if (index == 2 ) {
 				if(Main.game.getDialogueFlags().hasFlag(Lexicon.ceciliaFucked)) {
-					return new Response("Sex",
-							"All that fighting has got you worked up.", COMBAT_PLAYER_WIN_SEX_CHOICE) {
+					return new Response("做爱",
+						"刚才的打斗让你兴奋起来了。", COMBAT_PLAYER_WIN_SEX_CHOICE) {
 					};
 				} else {
-					return new Response("Sex?",
-							"Are you sure this is a good idea? The manticore-girl doesnt exactly look defeated.", COMBAT_PLAYER_WIN_SEX_WARNING) {
+					return new Response("做爱？",
+							"你确定这是个好主意吗？这只蝎狮女孩看起来并没有完全被打败。", COMBAT_PLAYER_WIN_SEX_WARNING) {
 					};
 				}
 
 			} else if ((index == 3 ) && Main.game.getDialogueFlags().hasFlag(Lexicon.ceciliaFucked)) {
-				return new Response("Explanation?",
-						"Finally ask for an explanation why shes been picking fights with you.", COMBAT_PLAYER_WIN_EXPLANATION) {
+				return new Response("解释？",
+						"终于可以问问她为什么老是找你打架了。", COMBAT_PLAYER_WIN_EXPLANATION) {
 				};
 			} else
             return null;
         }
 	};
 
-	public static final DialogueNode COMBAT_PLAYER_WIN_SEX_WARNING = new DialogueNode("Grassland Wilderness", "", true, true) {
+	public static final DialogueNode COMBAT_PLAYER_WIN_SEX_WARNING = new DialogueNode("野草旷野", "", true, true) {
 
 		@Override
 		public String getAuthor() {
@@ -405,8 +405,8 @@ public class CeciliaDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new ResponseSex("Yes",
-						"Even better, you don't mind at all.",
+				return new ResponseSex("愿意",
+						"再好不过了，你完全不介意。",
 						false, false,
 						new SMLyingDown(
 								Util.newHashMapOfValues(new Value<>(Main.game.getNpc(Cecilia.class), SexSlotLyingDown.MISSIONARY)),
@@ -424,8 +424,8 @@ public class CeciliaDialogue {
 				};
 
 			} else if(index == 2) {
-				return new ResponseSex("'No'",
-						"You definitely certainly have a problem with it.",
+				return new ResponseSex("'不行'",
+						"你绝对、肯定觉得这有问题。",
 						false, false,
 						new SMLyingDown(
 								Util.newHashMapOfValues(new Value<>(Main.game.getNpc(Cecilia.class), SexSlotLyingDown.MISSIONARY)),
@@ -443,8 +443,8 @@ public class CeciliaDialogue {
 				};
 
 			} else if(index == 3) {
-				return new Response("Nevermind",
-						"You've changed your mind.", COMBAT_PLAYER_WIN_SEX_REFUSE) {
+				return new Response("算了",
+						"你改变主意了。", COMBAT_PLAYER_WIN_SEX_REFUSE) {
 				};
 			} else {
 				return null;
@@ -452,7 +452,7 @@ public class CeciliaDialogue {
 		}
 	};
 
-	public static final DialogueNode COMBAT_PLAYER_WIN_SEX_REFUSE = new DialogueNode("Grassland Wilderness", "", true, true) {
+	public static final DialogueNode COMBAT_PLAYER_WIN_SEX_REFUSE = new DialogueNode("野草旷野", "", true, true) {
 
 		@Override
 		public String getAuthor() {
@@ -467,7 +467,7 @@ public class CeciliaDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Continue", "Carry on your way...", null){
+				return new Response("继续", "继续上路。", null){
 					@Override
 					public DialogueNode getNextDialogue() {
 						return Main.game.getDefaultDialogue(false);
@@ -484,7 +484,7 @@ public class CeciliaDialogue {
 		}
 	};
 
-	public static final DialogueNode AFTER_SEX = new DialogueNode("Grassland Wilderness", "", true, true) {
+	public static final DialogueNode AFTER_SEX = new DialogueNode("野草旷野", "", true, true) {
 
 		@Override
 		public String getAuthor() {
@@ -499,7 +499,7 @@ public class CeciliaDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Continue", "Carry on your way...", null){
+				return new Response("继续", "继续上路。", null){
 					@Override
 					public DialogueNode getNextDialogue() {
 						return Main.game.getDefaultDialogue(false);
@@ -517,7 +517,7 @@ public class CeciliaDialogue {
 		}
 	};
 
-	public static final DialogueNode COMBAT_PLAYER_WIN_MONEY = new DialogueNode("Grassland Wilderness", "", true, true) {
+	public static final DialogueNode COMBAT_PLAYER_WIN_MONEY = new DialogueNode("野草旷野", "", true, true) {
 
 		@Override
 		public String getAuthor() {
@@ -532,7 +532,7 @@ public class CeciliaDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Continue", "Carry on your way...", null){
+				return new Response("继续", "继续上路。", null){
 					@Override
 					public DialogueNode getNextDialogue() {
 						return Main.game.getDefaultDialogue(false);
@@ -549,7 +549,7 @@ public class CeciliaDialogue {
 		}
 	};
 
-	public static final DialogueNode COMBAT_PLAYER_WIN_EXPLANATION = new DialogueNode("Grassland Wilderness", "", true, true) {
+	public static final DialogueNode COMBAT_PLAYER_WIN_EXPLANATION = new DialogueNode("野草旷野", "", true, true) {
 
 		@Override
 		public String getAuthor() {
@@ -564,7 +564,7 @@ public class CeciliaDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Continue", "Carry on your way...", null){
+				return new Response("继续", "继续上路。", null){
 					@Override
 					public DialogueNode getNextDialogue() {
 						return Main.game.getDefaultDialogue(false);
@@ -581,7 +581,7 @@ public class CeciliaDialogue {
 		}
 	};
 
-	public static final DialogueNode COMBAT_PLAYER_WIN_MONEY_REPEAT = new DialogueNode("Grassland Wilderness", "", true, true) {
+	public static final DialogueNode COMBAT_PLAYER_WIN_MONEY_REPEAT = new DialogueNode("野草旷野", "", true, true) {
 
 		@Override
 		public String getAuthor() {
@@ -596,7 +596,7 @@ public class CeciliaDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new Response("Continue", "Carry on your way...", null){
+				return new Response("继续", "继续上路。", null){
 					@Override
 					public DialogueNode getNextDialogue() {
 						return Main.game.getDefaultDialogue(false);
@@ -613,7 +613,7 @@ public class CeciliaDialogue {
 		}
 	};
 
-	public static final DialogueNode COMBAT_PLAYER_WIN_SEX_CHOICE = new DialogueNode("Grassland Wilderness", "", true, true) {
+	public static final DialogueNode COMBAT_PLAYER_WIN_SEX_CHOICE = new DialogueNode("野草旷野", "", true, true) {
 
 		@Override
 		public String getAuthor() {
@@ -628,8 +628,8 @@ public class CeciliaDialogue {
 		@Override
 		public Response getResponse(int responseTab, int index) {
 			if(index == 1) {
-				return new ResponseSex("Eager",
-						"You're quite eager for it.",
+				return new ResponseSex("渴望",
+						"你相当渴望这件事。",
 						false, false,
 						new SMLyingDown(
 								Util.newHashMapOfValues(new Value<>(Main.game.getNpc(Cecilia.class), SexSlotLyingDown.MISSIONARY)),
@@ -647,8 +647,8 @@ public class CeciliaDialogue {
 				};
 
 			} else if(index == 2) {
-				return new ResponseSex("Not at all",
-						"You definitely certainly don't want it.",
+				return new ResponseSex("完全不",
+						"你绝对、肯定不想要这件事。",
 						false, false,
 						new SMLyingDown(
 								Util.newHashMapOfValues(new Value<>(Main.game.getNpc(Cecilia.class), SexSlotLyingDown.MISSIONARY)),
@@ -666,8 +666,8 @@ public class CeciliaDialogue {
 				};
 
 			} else if(index == 3) {
-				return new ResponseSex("Gently",
-						"Please be gentle Cecilia-senpai.",
+				return new ResponseSex("温柔点",
+						"塞西莉亚前辈，请温柔一点。",
 						false, false,
 						new SMLyingDown(
 								Util.newHashMapOfValues(new Value<>(Main.game.getNpc(Cecilia.class), SexSlotLyingDown.LAP_PILLOW)),

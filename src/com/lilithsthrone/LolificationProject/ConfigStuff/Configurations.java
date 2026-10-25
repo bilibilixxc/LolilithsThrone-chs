@@ -14,28 +14,28 @@ public class Configurations {
      * this boolean, to allow further development and bug fixes without adding potentially broken content
      * to the game before it's ready.
      */
-    @Setting(comment = "When 'true' this enables some features that are currently uncertain of their reliability.")
+    @Setting(comment = "设为 'true' 时，会启用一些目前可靠性尚未确定的特性。")
     public static boolean EXPERIMENTAL = false;
 
-    @Setting(comment = "When 'true' this enables features that are currently not finished and are certainly broken.")
+    @Setting(comment = "设为 'true' 时，会启用尚未完成且很可能损坏的特性。")
     public static boolean DEVELOPER_MODE = false;
 
-    @Setting(comment = "When 'true' this attempts to resolve mod author mistakes like using InventorySlot.HANDS instead of InventorySlot.HAND and the like.")
+    @Setting(comment = "设为 'true' 时，会尝试修复模组作者的错误，例如误用 InventorySlot.HANDS 而本该使用 InventorySlot.HAND 等情况。")
     public static boolean REPAIR_MODS = true;
 
-    @Setting(comment = "When 'true' all the old settings will return and function exactly as before")
+    @Setting(comment = "设为 'true' 时，所有旧设置将恢复并像以前一样发挥功能。")
     public static boolean DEGEN_MODE = false;
 
-    @Setting(comment = "When 'true' it will attempt to change the above setting if it detects you loading a save with underaged characters.")
+    @Setting(comment = "设为 'true' 时，若检测到你加载了含未成年角色的存档，将尝试修改上面的设置。")
     public static boolean AUTOMATIC_DEGEN_MODE = true;
 
-    @Setting(comment = "When 'true' this logs all lines seen in game in their unparsed form to be used for changing/altering them")
+    @Setting(comment = "设为 'true' 时，会将游戏中出现的所有尚未解析的行以其原始形式记录到日志，供修改或调整。")
     public static boolean LOG_UNPARSED_LINES = false;
 
-    @Setting(comment = "Unfinished, when it is finished it will allow your saves to save to the folder this config is located in, instead of game folder.")
+    @Setting(comment = "尚未完成；完成后将允许你的存档保存到本配置文件所在文件夹，而非游戏文件夹。")
     public static boolean GLOBAL_SAVES = false;
 
-    @Setting(comment = "When 'true' checks for updates by checking https://github.com/DegenDomain/LolilithsThroneIssueTracker/blob/main/LatestVersion.txt and comparing against current version")
+    @Setting(comment = "设为 'true' 时，通过检查 https://github.com/DegenDomain/LolilithsThroneIssueTracker/blob/main/LatestVersion.txt 并与当前版本比较来检查更新。")
     public static boolean CHECK_FOR_UPDATES = true;
 
     @Setting(comment = "Do not edit this, this is a sanity check for error log expected length")
@@ -56,7 +56,7 @@ public class Configurations {
      * ~ NMS Mass Adjust Settings                       <br>
      * ~ ... more?                                      <br>
      */
-    @Setting(comment = "When 'true' it changes some default settings to values that are approved by Drake Faewylde")
+    @Setting(comment = "设为 'true' 时，会将一些默认设置更改为 Drake Faewylde 认可的值。")
     public static boolean DRAKE_MODE = false; // Now enabled on using key code DRAKE similar to BUGGY
     /*
         FAETODO NewQuestTree.java test and deploy, set up the rest of the game to run NewQuestTree while DRAKE_MODE is true
@@ -73,31 +73,31 @@ public class Configurations {
             Simply hides the option, as it defaults to false. This was done primarily as bug prevention, and to get rid of an eyesore lol.
     */
 
-    @Setting(comment = "When on, this enables additions made by Archer, such as extra self-fuck actions.")
+    @Setting(comment = "开启时，将启用 Archer 添加的内容，例如额外的自慰插入动作。")
     public static boolean ARCHER_CONTENT = true;
 
-    @Setting(comment = "When 'true' this enables custom content added by Lexi such as Tail Pussy")
+    @Setting(comment = "设为 'true' 时，将启用 Lexi 添加的自定义内容，例如尾巴穴。")
     public static boolean LEXI_CONTENT = true;
 
-    @Setting(comment = "When 'true' this speeds up game loading by decoupling NPC initialization from the main thread, 95% stable")
+    @Setting(comment = "设为 'true' 时，通过将 NPC 初始化与主线程解耦来加快游戏加载，稳定度 95%。")
     public static boolean MULTITHREAD_NPC_GENERATION = true;
 
-    @Setting(comment = "When 'true' this speed tests NPC initialization")
+    @Setting(comment = "设为 'true' 时，对 NPC 初始化进行速度测试。")
     public static boolean TIME_TEST_NPC_GEN = false;
 
-    @Setting(comment = "Then 'true' this speeds up game loading by decoupling body part registration from the main thread, 80% stable")
+    @Setting(comment = "设为 'true' 时，通过将身体部件注册与主线程解耦来加快游戏加载，稳定度 80%。")
     public static boolean MULTITHREADED_PRELOADING = true;
 
-    @Setting(comment = "When 'true' this speed tests body part registration")
+    @Setting(comment = "设为 'true' 时，对身体部件注册进行速度测试。")
     public static boolean TIME_TEST_PRELOADING = false;
 
-    @Setting(comment = "When 'true' this logs what happens in height calculation")
+    @Setting(comment = "设为 'true' 时，记录身高计算中发生的事件。")
     public static boolean LOG_HEIGHT_GEN = false;
 
-    @Setting(comment = "When 'true' this logs what happens in virginity calculation")
+    @Setting(comment = "设为 'true' 时，记录处子身计算中发生的事件。")
     public static boolean LOG_VIRGIN_GEN = false;
 
-    @Setting(comment = "Then 'true' this makes a backup of saves incase something goes wrong with saving.")
+    @Setting(comment = "设为 'true' 时，会在保存时创建存档备份，以防保存过程出现异常。")
     public static boolean BACKUP_SAVES = true;
 
 

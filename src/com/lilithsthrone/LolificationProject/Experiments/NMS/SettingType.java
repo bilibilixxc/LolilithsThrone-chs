@@ -1,16 +1,16 @@
 package com.lilithsthrone.LolificationProject.Experiments.NMS;
 
 public enum SettingType {
-    GENERAL("", "", "General"),
-    FACE("oral", "Oral", "Face / Mouth"),
-    BREAST("nipple", "Nipple", "Breasts / Nipples"),
-    VAGINA("vaginal", "Vaginal", "Vagina"),
-    PENIS("penile", "Penile", "Penis / Testicles"),
-    ASS("anal", "Anal", "Ass / Hips"),
-    SPINNERET("spinneret", "Spinneret", "Spinneret"),
-    CROTCH_BREAST("crotchNipple", "Nipple Crotch", "Crotch Breasts / Nipples"),
-    PENILE_URETHRA("penileUrethra", "Penile Urethra", "Penile Urethra"),
-    VAGINAL_URETHRA("vaginalUrethra", "Vaginal Urethra", "Vaginal Urethra"),
+    GENERAL("", "", "通用设置"),
+    FACE("oral", "口部", "面部 / 口腔"),
+    BREAST("nipple", "乳房", "乳房 / 乳头"),
+    VAGINA("vaginal", "阴道", "阴道"),
+    PENIS("penile", "阴茎", "阴茎 / 睾丸"),
+    ASS("anal", "肛门", "臀部 / 髋部"),
+    SPINNERET("spinneret", "丝囊", "丝囊"),
+    CROTCH_BREAST("crotchNipple", "胯部乳房", "胯部乳房 / 乳头"),
+    PENILE_URETHRA("penileUrethra", "阴茎尿道", "阴茎尿道"),
+    VAGINAL_URETHRA("vaginalUrethra", "阴道尿道", "阴道尿道"),
     ;
 
     final String settingName, displayName, categoryName;

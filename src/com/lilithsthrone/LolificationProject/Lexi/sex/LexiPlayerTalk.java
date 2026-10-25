@@ -27,15 +27,15 @@ public class LexiPlayerTalk {
 
         @Override
         public String getActionTitle() {
-            return "Offer tussy";
+            return "提供尾穴";
         }
 
         @Override
         public String getActionDescription() {
             if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
-                return "Wave your tail around in an attempt to entice [npc2.name] into using your tussy.";
+                return "摆动你的尾巴，试图引诱[npc2.name]使用你的尾穴。";
             }
-            return "Tell [npc2.name] that you'd like [npc2.herHim] to use your tussy.";
+            return "告诉[npc2.name]你希望[npc2.herHim]使用你的尾穴。";
         }
 
         @Override
@@ -54,14 +54,14 @@ public class LexiPlayerTalk {
             if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
                 UtilText.nodeContentSB.append(
                         UtilText.returnStringAtRandom(
-                                "As [npc.namePos] mouth is blocked, [npc.she] [npc.verb(resort)] to waving [npc.her] [npc.tail] out at [npc2.name] in an attempt to get [npc2.herHim] to use [npc.her] [npc.tussy+].",
-                                "With [npc.her] mouth being blocked, [npc.name] [npc.verb(fall)] back on simply making a suggestive move with [npc.her] [npc.tail] in order to entice [npc2.name] into using [npc.her] [npc.tussy+].")
+                                "由于[npc.namePos]嘴巴被堵住，[npc.she] [npc.verb(resort)]向[npc2.name]挥舞[npc.her] [npc.tail]，试图让[npc2.herHim]来使用[npc.her] [npc.tussy+]。",
+                                "因为[npc.her]嘴巴被堵住，[npc.name] [npc.verb(fall)]只是简单地用[npc.her] [npc.tail]做出暗示性的动作，以引诱[npc2.name]来使用[npc.her] [npc.tussy+]。")
                                 +"<br/><br/>");
             } else {
-                UtilText.nodeContentSB.append("Putting on the most pleading expression you can muster, you cry out to [npc2.name], "
+                UtilText.nodeContentSB.append("你摆出一副你能做出的最恳求的表情，向[npc2.name]喊道："
                         +UtilText.returnStringAtRandom(
-                        "[npc.speech(Please, use my tussy!)]",
-                        "[npc.speech(Use my little tussy, please!)]")
+                        "[npc.speech(求你了，用我的尾穴吧！)]",
+                        "[npc.speech(用我的小尾穴吧，求你了！)]")
                         +"<br/><br/>");
             }
 
@@ -94,15 +94,15 @@ public class LexiPlayerTalk {
 
         @Override
         public String getActionTitle() {
-            return "Request tussy";
+            return "请求使用尾穴";
         }
 
         @Override
         public String getActionDescription() {
             if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
-                return "Move closer to [npc2.namePos] tussy in an attempt to show [npc2.herHim] that that's what you want.";
+                return "靠近[npc2.namePos]的尾穴，试图向[npc2.herHim]表明这正是你想要的。";
             }
-            return "Tell [npc2.name] that you'd like to use [npc2.her] tussy.";
+            return "告诉[npc2.name]你想使用[npc2.her]的尾穴。";
         }
 
         @Override
@@ -123,14 +123,14 @@ public class LexiPlayerTalk {
             if(Main.sex.getCharacterPerformingAction().isSpeechMuffled()) {
                 UtilText.nodeContentSB.append(
                         UtilText.returnStringAtRandom(
-                                "As [npc.namePos] mouth is blocked, [npc.she] [npc.verb(resort)] to trying to move closer to [npc2.namePos] [npc2.tussy+] in an attempt to show [npc2.herHim] that that's what [npc.sheIs] interested in.",
-                                "With [npc.her] mouth being blocked, [npc.name] [npc.verb(fall)] back on simply moving closer to [npc2.namePos] [npc2.tussy+] as [npc.she] [npc.verb(try)] to indicate that that's what [npc.she] [npc.verb(want)].")
+                                "由于[npc.namePos]嘴巴被堵住，[npc.she] [npc.verb(resort)]试图靠近[npc2.namePos] [npc2.tussy+]，向[npc2.herHim]表明这正是[npc.sheIs]想要的。",
+                                "因为[npc.her]嘴巴被堵住，[npc.name] [npc.verb(fall)]只是简单地靠近[npc2.namePos] [npc2.tussy+]，[npc.she] [npc.verb(try)]以此表示这正是[npc.she] [npc.verb(want)]的。")
                                 +"<br/><br/>");
             } else {
-                UtilText.nodeContentSB.append("Putting on the most pleading expression you can muster, you cry out to [npc2.name], "
+                UtilText.nodeContentSB.append("你摆出一副你能做出的最恳求的表情，向[npc2.name]喊道："
                         +UtilText.returnStringAtRandom(
-                        "[npc.speech(Please, I want to use your tussy!)]",
-                        "[npc.speech(I want to use your tussy, please!)]")
+                        "[npc.speech(求你了，我想用你的尾穴！)]",
+                        "[npc.speech(我想用你的尾穴，求你了！)]")
                         +"<br/><br/>");
             }
 

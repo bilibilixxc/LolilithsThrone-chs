@@ -31,7 +31,7 @@ import static com.lilithsthrone.game.dialogue.utils.OptionsDialogue.startingNewG
 
 public class MenuOverrides {
 
-    public static final DialogueNode MENU = new DialogueNode("Menu", "Menu", true) {
+    public static final DialogueNode MENU = new DialogueNode("主菜单", "主菜单", true) {
 
         @Override
         public String getLabel() {
@@ -46,7 +46,7 @@ public class MenuOverrides {
                     + (Main.game.isSillyMode()// More like cheesy mode
                         ? "<p class='special-text' style='text-align:center; margin:0 0; padding:0 0;'><i>或者，我真不敢相信我掉进了一面魔镜，进入了一个我阿姨是恶魔的世界？！</i></p>"
                         : "")
-                    + "<h5 class='special-text' style='text-align:center;'>Modded by " + (Configurations.DEGEN_MODE ? Main.AUTHOR : "KeldonSlayer") + "</h5>"
+                    + "<h5 class='special-text' style='text-align:center;'>由 " + (Configurations.DEGEN_MODE ? Main.AUTHOR : "KeldonSlayer") + " 修改</h5>"
                     + "<br/>"
                     + (Configurations.DEVELOPER_MODE ? paragraphWrap("开发者模式已启用，如果你不是开发者，请将其关闭，否则可能会遇到各种问题",
                     PresetColour.BASE_RED_LIGHT.toWebHexString()) : "")
