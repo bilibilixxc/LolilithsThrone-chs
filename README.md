@@ -30,7 +30,7 @@ git clone https://github.com/bilibilixxc/LolilithsThrone-chs.git
 
 ## 🛠️ 汉化说明
 
-汉化由本人及ai辅助，部分内容会有润色修正
+汉化由本人及蓝色大肥鱼辅助汉化，部分内容会有润色修正，如果哪里需要润色请提交 issue。
 
 正在等待原游戏更新
 
